@@ -1,0 +1,31 @@
+Job files were run as below:
+
+Figure 1:
+fio Figure1.fio --output-format=json --output=Figure1.json
+# in another shell window run the line below
+./signal_fio.sh
+
+# From the multiple output summaries in Figure1.json assemble a single time
+# series of steady state IOPS measurements and insert in Figure1.py.
+# Then run:
+python3 Figure1.py
+
+
+Figure 2:
+fio Figure2.fio --output-format=json --output=Figure2.json
+# in another shell window run the line below
+./signal_fio.sh
+
+# From the multiple output summaries in Figure2.json assemble a single time
+# series of steady state bandwidth measurements and insert in Figure2.py.
+# Then run:
+python3 Figure2.py
+
+
+Example 1:
+fio iops_mean.fio
+
+
+Example 2:
+fio bw_slope.fio
+fio bw_slope.fio --output-format=json --output=bw_slope.json

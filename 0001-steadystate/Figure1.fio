@@ -1,0 +1,11 @@
+[iops_mean]
+ioengine=null
+size=1T
+rw=randwrite
+time_based=1
+runtime=10m
+randrepeat=0
+norandommap=1
+steadystate=iops:0.5%
+steadystate_duration=30s
+steadystate_ramp_time=10s
