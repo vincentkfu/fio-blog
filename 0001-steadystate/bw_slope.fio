@@ -1,0 +1,12 @@
+[bw_slope]
+direct=1
+ioengine=psync
+size=1G
+rw=randread
+time_based=1
+runtime=10m
+randrepeat=0
+norandommap=1
+steadystate=bw_slope:4k
+steadystate_duration=30s
+steadystate_ramp_time=30s
