@@ -1,0 +1,15 @@
+; -- start xnvme.fio job file --
+[test]
+ioengine=xnvme
+direct=1
+filename=/dev/nvme0n1
+iodepth=1
+thread=1
+time_based
+runtime=1m
+numjobs=1
+rw=randread
+bs=4k
+xnvme_async=libaio
+; -- end xnvme.fio job file --
+
