@@ -1,0 +1,22 @@
+[global]
+ioengine=null
+
+[readjob]
+filesize=1G
+numjobs=4
+rw=read
+group_reporting=1
+
+[writejob]
+filesize=1T
+io_size=1G
+rw=write
+exec_prerun=echo "exec_prerun example"
+
+[rwjob]
+stonewall
+rw=randrw
+filesize=1M
+time_based
+runtime=1m
+exec_postrun=echo "exec_postrun example"
