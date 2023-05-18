@@ -1,0 +1,5 @@
+fio-3.35/t/latency_percentiles.py:                    'cmdprio_percentage', 'bssplit', 'cmdprio_bssplit']:
+fio-3.35/t/latency_percentiles.py:            # test bssplit and cmdprio_bssplit
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:             ('cmdprio_percentage' in test or 'cmdprio_bssplit' in test):

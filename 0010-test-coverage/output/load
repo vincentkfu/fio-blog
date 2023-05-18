@@ -1,0 +1,16 @@
+fio-3.35/t/latency_percentiles.py:                self.json_data = json.loads(file_data)
+fio-3.35/t/run-fio-tests.py:            self.json_data = json.loads(file_data)
+fio-3.35/t/run-fio-tests.py:    This is a 50/50 seq read/write workload. Since fio flips a coin to
+fio-3.35/t/sgunmap-perf.py:    jsondata = json.loads(output)
+fio-3.35/t/sgunmap-perf.py:    jsondata = json.loads(output)
+fio-3.35/t/sgunmap-test.py:# Limited functionality test for trim workloads using fio's sg ioengine
+fio-3.35/t/sgunmap-test.py:            jsondata = json.loads(output)
+fio-3.35/t/sgunmap-test.py:    jsondata = json.loads(output)
+fio-3.35/t/steadystate_tests.py:# test some read workloads
+fio-3.35/t/steadystate_tests.py:            jsondata = json.loads(source.read())
+fio-3.35/t/zbd/test-zbd-support:	local -a workloads=(write randwrite rw randrw)
+fio-3.35/t/zbd/test-zbd-support:	for w in "${workloads[@]}"; do
+fio-3.35/t/jobs/t0006-82af2a7c.fio:# Expected results: workload runs and switches between 'm' and 'V' state
+fio-3.35/t/jobs/t0006-82af2a7c.fio:# Buggy result: workload stays in 'm' mode, never doing actual verifies
+fio-3.35/t/jobs/t0010-b7aae4ba.fio:io_submit_mode=offload
+fio-3.35/t/jobs/t0013.fio:io_submit_mode=offload

@@ -1,0 +1,27 @@
+fio-3.35/t/strided.py:        # skip next section if norandommap is enabled with no
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t-L List the device layouts for every section without running"
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t-s <#section> Only run the section with the given number."
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t-t <#test> Only run the test with the given number in every section."
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t   or an individual section/test."
+fio-3.35/t/zbd/run-tests-against-nullb:# Test sections.
+fio-3.35/t/zbd/run-tests-against-nullb:section1()
+fio-3.35/t/zbd/run-tests-against-nullb:section2()
+fio-3.35/t/zbd/run-tests-against-nullb:section3()
+fio-3.35/t/zbd/run-tests-against-nullb:section4()
+fio-3.35/t/zbd/run-tests-against-nullb:section5()
+fio-3.35/t/zbd/run-tests-against-nullb:section6()
+fio-3.35/t/zbd/run-tests-against-nullb:section7()
+fio-3.35/t/zbd/run-tests-against-nullb:section8()
+fio-3.35/t/zbd/run-tests-against-nullb:section9()
+fio-3.35/t/zbd/run-tests-against-nullb:section10()
+fio-3.35/t/zbd/run-tests-against-nullb:section11()
+fio-3.35/t/zbd/run-tests-against-nullb:section12()
+fio-3.35/t/zbd/run-tests-against-nullb:section13()
+fio-3.35/t/zbd/run-tests-against-nullb:sections=()
+fio-3.35/t/zbd/run-tests-against-nullb:		-s) sections+=("$2"); shift; shift;;
+fio-3.35/t/zbd/run-tests-against-nullb:if [ "${#sections[@]}" = 0 ]; then
+fio-3.35/t/zbd/run-tests-against-nullb:	readarray -t sections < <(declare -F | grep "section[0-9]*" |  tr -c -d "[:digit:]\n" | sort -n)
+fio-3.35/t/zbd/run-tests-against-nullb:	for section_number in "${sections[@]}"; do
+fio-3.35/t/zbd/run-tests-against-nullb:		echo "---------- Section $(printf "%02d" $section_number) ----------"
+fio-3.35/t/zbd/run-tests-against-nullb:		section$section_number
+fio-3.35/t/zbd/run-tests-against-nullb:			echo "can't set up nullb for section $(printf "%02d" $section_number)"

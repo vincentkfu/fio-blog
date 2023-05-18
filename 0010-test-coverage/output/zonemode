@@ -1,0 +1,57 @@
+fio-3.35/t/strided.py:# Test zonemode=strided. This uses the null ioengine when no file is
+fio-3.35/t/strided.py:# --zonemode=strided, zoneskip unset
+fio-3.35/t/strided.py:                "--zonemode=strided",
+fio-3.35/t/zbd/test-zbd-support:		      --bs="${min_seq_write_size}" --zonemode=zbd \
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--size=$((4 * zone_size))" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--offset=$off" "--bs=$bs" "--size=$bs")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--size=$size" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	    --size="${size}" --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}"		\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" --group_reporting=1	\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--thread=1" "--direct=1" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off\
+fio-3.35/t/zbd/test-zbd-support:    # write. Utilize zonemode strided for such write patterns.
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=strided" "--zonesize=${bs}" "--zonerange=${inc}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--thread=1" "--time_based" "--runtime=30" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--max_open_zones=$max_open_zones" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:			--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio accepts --zonemode=none for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio accepts --zonemode=strided for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonesize must be specified when using --zonemode=strided' ||
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided --zonesize=$bs >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=$((2 * zone_size)) |
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=0 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'Specifying the zone size is mandatory for regular file/block device with --zonemode=zbd'
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'zone size must be at least 512 bytes for --zonemode=zbd'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonemode=none --zonesize=1 correctly.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonemode=none and --zonesize are not compatible'
+fio-3.35/t/zbd/test-zbd-support:	grep -q "fio: first I/O failed. If .* is a zoned block device, consider --zonemode=zbd"
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonemode=zbd --zoneskip=1 correctly.
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		--time_based --runtime=3 --zonemode=zbd --zonesize=${zone_size}\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--direct=1" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd		\
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=strided	\
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio --zonemode=zbd --direct=1 --zonesize="${zone_size}" --thread=1 \
+fio-3.35/t/zbd/test-zbd-support:# Test fio errors out experimental_verify option with zonemode=zbd.
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize="$zone_size" --direct=1 \

@@ -1,0 +1,16 @@
+fio-3.35/t/sgunmap-perf.py:                  "--random_generator=lfsr",
+fio-3.35/t/sgunmap-perf.py:                  "--random_generator=tausworthe64",
+fio-3.35/t/strided.py:    if 'random_generator' in test:
+fio-3.35/t/strided.py:        fio_args.append('--random_generator={random_generator}'.format(**test))
+fio-3.35/t/strided.py:        # random_generator or with a random_generator != lfsr
+fio-3.35/t/strided.py:            if 'random_generator' in test:
+fio-3.35/t/strided.py:                if test['random_generator'] != 'lfsr':
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/strided.py:                    "random_generator": "lfsr",
+fio-3.35/t/zbd/test-zbd-support:		--alloc-size=65536 --random_generator=tausworthe64 \
+fio-3.35/t/jobs/t0021.fio:random_generator=lfsr

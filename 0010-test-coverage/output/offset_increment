@@ -1,0 +1,3 @@
+fio-3.35/t/zbd/test-zbd-support:	# offset=1z + offset_increment=10z + size=2z
+fio-3.35/t/zbd/test-zbd-support:		--offset_increment=10z	\
+fio-3.35/t/zbd/test-zbd-support:		       --numjobs=2 --offset_increment="$zone_size" \

@@ -1,0 +1,7 @@
+fio-3.35/t/log_compression.py:        '--write_bw_log=test',
+fio-3.35/t/jobs/t0019.fio:write_bw_log=test
+fio-3.35/t/jobs/t0020.fio:write_bw_log=test
+fio-3.35/t/jobs/t0021.fio:write_bw_log=test
+fio-3.35/t/jobs/t0022.fio:write_bw_log=test
+fio-3.35/t/jobs/t0023.fio:write_bw_log
+fio-3.35/t/jobs/t0024.fio:write_bw_log

@@ -1,0 +1,9 @@
+fio-3.35/t/log_compression.py:# log_compression.py
+fio-3.35/t/log_compression.py:# Test log_compression and log_store_compressed. Uses null ioengine.
+fio-3.35/t/log_compression.py:# python log_compression.py [-f fio-executable]
+fio-3.35/t/log_compression.py:# python t/log_compression.py
+fio-3.35/t/log_compression.py:# python t/log_compression.py -f ./fio
+fio-3.35/t/log_compression.py:# With log_compression=10K
+fio-3.35/t/log_compression.py:# With log_store_compressed=1 and log_compression=10K
+fio-3.35/t/log_compression.py:        '--log_compression=10K',
+fio-3.35/t/run-fio-tests.py:        'exe':              't/log_compression.py',

@@ -1,0 +1,30 @@
+fio-3.35/t/strided.py:# Some of the zoneranges in the tests are 16MiB. So when using a file
+fio-3.35/t/strided.py:#       zonesize=zonerange  all blocks in zonerange touched
+fio-3.35/t/strided.py:#       zonesize>zonerange  all blocks touched and roll-over back into zone
+fio-3.35/t/strided.py:#       zonesize<zonerange  all blocks inside zone
+fio-3.35/t/strided.py:                "--zonerange={zonerange}".format(**test),
+fio-3.35/t/strided.py:    iosperrange = test['zonerange'] / test['bs']
+fio-3.35/t/strided.py:            zonestart += test['zonerange']
+fio-3.35/t/strided.py:        if offset < zonestart or offset >= zonestart + test['zonerange']:
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 8192,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096*1024,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096*1024,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 8192*1024,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 4096,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonerange": 8192,
+fio-3.35/t/strided.py:                    "zonerange": 16*1024*1024,
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=strided" "--zonesize=${bs}" "--zonerange=${inc}")

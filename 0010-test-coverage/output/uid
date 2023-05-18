@@ -1,0 +1,2 @@
+fio-3.35/t/latency_percentiles.py:        elif (platform.system() != 'Linux' or os.geteuid() != 0) and \
+fio-3.35/t/run-fio-tests.py:            Requirements._root = (os.geteuid() == 0)

@@ -1,0 +1,599 @@
+          Category       Option  ...     Unnamed: 7 Unnamed: 8
+0            Units      kb_base  ...            NaN        NaN
+1            Units    unit_base  ...            NaN        NaN
+2  Job description         name  ...  Count of none        NaN
+3  Job description  description  ...             24   0.067227
+4  Job description        loops  ...             29   0.081232
+
+[5 rows x 9 columns]
+
+
+Global category
+                                             count  proportion
+I/O engine specific parameters                94.0    0.259669
+Command-line options                          36.0    0.099448
+Measurements and reporting                    33.0    0.091160
+Target file/device                            30.0    0.082873
+I/O type                                      29.0    0.080110
+Threads, processes, and job synchronization   23.0    0.063536
+Verification                                  19.0    0.052486
+Buffers and memory                            16.0    0.044199
+I/O replay                                    12.0    0.033149
+I/O rate                                      12.0    0.033149
+I/O depth                                      7.0    0.019337
+Time-related parameters                        7.0    0.019337
+Act profile options                            7.0    0.019337
+Block size                                     6.0    0.016575
+I/O latency                                    5.0    0.013812
+I/O size                                       5.0    0.013812
+Tiobench profile options                       5.0    0.013812
+Job description                                4.0    0.011050
+Steadystate                                    4.0    0.011050
+Error handling                                 4.0    0.011050
+Units                                          2.0    0.005525
+I/O engine                                     1.0    0.002762
+Predefined workloads                           1.0    0.002762
+Total                                        362.0    1.000000
+
+
+Global coverage
+                     count  proportion
+none                 263.0    0.726519
+no explicit testing   44.0    0.121547
+limited               32.0    0.088398
+basic                 23.0    0.063536
+Total                362.0    1.000000
+
+
+I/O engine specific parameters coverage
+         count  proportion
+none      92.0    0.978723
+limited    2.0    0.021277
+Total     94.0    1.000000
+
+
+Command-line options coverage
+                     count  proportion
+none                  27.0    0.750000
+no explicit testing    7.0    0.194444
+basic                  2.0    0.055556
+Total                 36.0    1.000000
+
+
+Measurements and reporting coverage
+                     count  proportion
+none                  19.0    0.575758
+limited                7.0    0.212121
+basic                  5.0    0.151515
+no explicit testing    2.0    0.060606
+Total                 33.0    1.000000
+
+
+Target file/device coverage
+                     count  proportion
+none                  18.0    0.600000
+basic                 10.0    0.333333
+no explicit testing    1.0    0.033333
+limited                1.0    0.033333
+Total                 30.0    1.000000
+
+
+I/O type coverage
+                     count  proportion
+none                  12.0    0.413793
+no explicit testing   10.0    0.344828
+limited                4.0    0.137931
+basic                  3.0    0.103448
+Total                 29.0    1.000000
+
+
+Threads, processes, and job synchronization coverage
+                     count  proportion
+none                  15.0    0.652174
+no explicit testing    6.0    0.260870
+limited                2.0    0.086957
+Total                 23.0    1.000000
+
+
+Verification coverage
+                     count  proportion
+none                   9.0    0.473684
+limited                6.0    0.315789
+no explicit testing    4.0    0.210526
+Total                 19.0    1.000000
+
+
+Buffers and memory coverage
+         count  proportion
+none      15.0      0.9375
+limited    1.0      0.0625
+Total     16.0      1.0000
+
+
+I/O replay coverage
+         count  proportion
+none      11.0    0.916667
+limited    1.0    0.083333
+Total     12.0    1.000000
+
+
+I/O rate coverage
+         count  proportion
+none      11.0    0.916667
+limited    1.0    0.083333
+Total     12.0    1.000000
+
+
+I/O depth coverage
+                     count  proportion
+limited                4.0    0.571429
+none                   2.0    0.285714
+no explicit testing    1.0    0.142857
+Total                  7.0    1.000000
+
+
+Time-related parameters coverage
+                     count  proportion
+none                   4.0    0.571429
+no explicit testing    3.0    0.428571
+Total                  7.0    1.000000
+
+
+Act profile options coverage
+       count  proportion
+none     7.0         1.0
+Total    7.0         1.0
+
+
+Block size coverage
+                     count  proportion
+no explicit testing    3.0         0.5
+none                   3.0         0.5
+Total                  6.0         1.0
+
+
+I/O latency coverage
+       count  proportion
+none     5.0         1.0
+Total    5.0         1.0
+
+
+I/O size coverage
+                     count  proportion
+no explicit testing    3.0         0.6
+none                   2.0         0.4
+Total                  5.0         1.0
+
+
+Tiobench profile options coverage
+       count  proportion
+none     5.0         1.0
+Total    5.0         1.0
+
+
+Job description coverage
+                     count  proportion
+no explicit testing    2.0        0.50
+none                   1.0        0.25
+limited                1.0        0.25
+Total                  4.0        1.00
+
+
+Steadystate coverage
+         count  proportion
+basic      3.0        0.75
+limited    1.0        0.25
+Total      4.0        1.00
+
+
+Error handling coverage
+                     count  proportion
+none                   2.0        0.50
+no explicit testing    1.0        0.25
+limited                1.0        0.25
+Total                  4.0        1.00
+
+
+Units coverage
+       count  proportion
+none     2.0         1.0
+Total    2.0         1.0
+
+
+I/O engine coverage
+                     count  proportion
+no explicit testing    1.0         1.0
+Total                  1.0         1.0
+
+
+Predefined workloads coverage
+       count  proportion
+none     1.0         1.0
+Total    1.0         1.0
+| | | | |
+| **Category** | Option | Coverage | Notes |
+| | | | |
+| **Units** | kb_base | none |  |
+|  | unit_base | none |  |
+| | | | |
+| **Job description** | name | no explicit testing | low priority |
+|  | description | none | low priority |
+|  | loops | limited | a few tests in t/zbd/test-zbd-support |
+|  | numjobs | no explicit testing |  |
+| | | | |
+| **Time-related parameters** | runtime | no explicit testing |  |
+|  | time_based | no explicit testing |  |
+|  | startdelay | none |  |
+|  | ramp_time | none |  |
+|  | clocksource | none |  |
+|  | gtod_reduce | none |  |
+|  | gtod_cpu | no explicit testing |  |
+| | | | |
+| **Target file/device** | directory | none |  |
+|  | filename | no explicit testing |  |
+|  | filename_format | none |  |
+|  | unique_filename | none |  |
+|  | opendir | none |  |
+|  | lockfile | none |  |
+|  | nrfiles | none |  |
+|  | openfiles | none |  |
+|  | file_service_type | none |  |
+|  | ioscheduler | none |  |
+|  | create_serialize | none |  |
+|  | create_fsync | none |  |
+|  | create_on_open | none |  |
+|  | create_only | none |  |
+|  | allow_file_create | limited | two appearances in t/zbd/test-zbd-support |
+|  | allow_mounted_write | none |  |
+|  | pre_read | none |  |
+|  | unlink | none |  |
+|  | unlink_each_loop | none |  |
+|  | zonemode | basic | strided.py, t/zbd |
+|  | zonerange | basic |  |
+|  | zonesize | basic |  |
+|  | zonecapacity | basic |  |
+|  | zoneskip | basic |  |
+|  | read_beyod_wp | basic |  |
+|  | max_open_zones | basic |  |
+|  | job_max_open_zones | none |  |
+|  | ignore_zone_limits | basic |  |
+|  | zone_reset_threshold | basic |  |
+|  | zone_reset_frequency | basic |  |
+| | | | |
+| **I/O type** | direct | no explicit testing |  |
+|  | buffered | no explicit testing |  |
+|  | readwrite | no explicit testing | test should include rw=randread:8 |
+|  | rw_sequencer | no explicit testing |  |
+|  | unified_rw_reporting | limited | t/latency_percentiles |
+|  | randrepeat | basic | t/random_seed.py |
+|  | allrandrepeat | basic | t/random_seed.py |
+|  | randseed | basic | t/random_seed.py |
+|  | fallocate | none |  |
+|  | fadvise_hint | none |  |
+|  | write_hint | none |  |
+|  | offset | limited | t/strided.py, t/zbd, t/jobs/0002, t/jobs/0003 |
+|  | offset_align | none |  |
+|  | offset_increment | no explicit testing | t/zbd |
+|  | number_ios | no explicit testing | t/jobs/t0009 |
+|  | fsync | limited | t/latency_percentiles |
+|  | fdatasync | none |  |
+|  | write_barrier | none |  |
+|  | sync_file_range | none |  |
+|  | overwrite | none |  |
+|  | end_fsync | none |  |
+|  | fsync_on_close | none |  |
+|  | rwmixread | no explicit testing | t/latency_percentiles, t/steadystate_tests |
+|  | rwmixwrite | no explicit testing | t/zbd |
+|  | random_distribution | none |  |
+|  | percentage_random | none |  |
+|  | norandommap | no explicit testing | t/latency_percentiles, t/strided, t/zbd, t/jobs/0007,0009,0021,0022,0023 |
+|  | softrandommap | no explicit testing | t/zbd |
+|  | random_generator | limited | t/sgunmap-perf, t/strided, t/zbd, t/jobs/t0021 |
+| | | | |
+| **Block size** | blocksize | no explicit testing |  |
+|  | blocksize_range | no explicit testing | t/zbd, t/jobs/0001,0002,0023,0024 |
+|  | bssplit | no explicit testing |  |
+|  | blocksize_unaligned | none |  |
+|  | bs_is_seq_rand | none |  |
+|  | blockalign | none |  |
+| | | | |
+| **Buffers and memory** | zero_buffers | none |  |
+|  | refill_buffers | none |  |
+|  | scramble_buffers | none |  |
+|  | buffer_compress_percentage | none |  |
+|  | buffer_compress_chunk | none |  |
+|  | buffer_pattern | limited | t0027, t0028 |
+|  | dedupe_percentage | none |  |
+|  | dedupe_mode | none |  |
+|  | dedupe_working_set_percentage | none |  |
+|  | dedupe_global | none |  |
+|  | invalidate | none |  |
+|  | sync | none |  |
+|  | iomem | none |  |
+|  | iomem_align | none |  |
+|  | hugepage-size | none |  |
+|  | lockmem | none |  |
+| | | | |
+| **I/O size** | size | no explicit testing | t/latency_percentiles, t/strided, t/zbd, t/jobs |
+|  | io_size | no explicit testing | t/strided.py, t/zbd |
+|  | filesize | no explicit testing | t/log_compression, t/random_seed, t-strided, t/jobs |
+|  | file_append | none |  |
+|  | fill_device | none |  |
+| | | | |
+| **I/O engine** | ioengine | no explicit testing |  |
+| | | | |
+| **I/O engine specific parameters** | cmdprio_percentage | limited | t/latency_percentiles |
+|  | cmdprio_class | none |  |
+|  | cmdprio | none |  |
+|  | cmdprio_bssplit | limited |  |
+|  | fixedbufs | none |  |
+|  | nonvectored | none |  |
+|  | force_async | none |  |
+|  | registerfiles | none |  |
+|  | sqthread_poll | none |  |
+|  | sqthread_poll_cpu | none |  |
+|  | cmd_type | none |  |
+|  | hipri | none |  |
+|  | userspace_reap | none |  |
+|  | hipri_percentage | none |  |
+|  | nowait | none |  |
+|  | fdp | none |  |
+|  | fdp_pli | none |  |
+|  | cpuload | none |  |
+|  | cpuchunks | none |  |
+|  | cpumode | none |  |
+|  | exit_on_io_done | none |  |
+|  | namenode | none |  |
+|  | port | none |  |
+|  | hostname | none |  |
+|  | serverip | none |  |
+|  | direct_write_to_pmem | none |  |
+|  | busy_wait_polling | none |  |
+|  | interface | none |  |
+|  | ttl | none |  |
+|  | nodelay | none |  |
+|  | protocol | none |  |
+|  | listen | none |  |
+|  | pingpong | none |  |
+|  | window_size | none |  |
+|  | mss | none |  |
+|  | donorname | none |  |
+|  | inplace | none |  |
+|  | clustername | none |  |
+|  | rbdname | none |  |
+|  | clientname | none |  |
+|  | conf | none |  |
+|  | busy_poll | none |  |
+|  | touch_objects | none |  |
+|  | pool | none |  |
+|  | cont | none |  |
+|  | chunk_size | none |  |
+|  | object_class | none |  |
+|  | skip_bad | none |  |
+|  | hdfsdirectory | none |  |
+|  | verb | none |  |
+|  | bindname | none |  |
+|  | stat_type | none |  |
+|  | readfua | none |  |
+|  | writefua | none |  |
+|  | sg_write_mode | none |  |
+|  | stream_id | none |  |
+|  | http_host | none |  |
+|  | http_user | none |  |
+|  | http_pass | none |  |
+|  | https | none |  |
+|  | http_mode | none |  |
+|  | http_s3_region | none |  |
+|  | http_s3_key | none |  |
+|  | http_s3_keyid | none |  |
+|  | http_s3_sse_customer_key | none |  |
+|  | http_s3_sse_customer_algorithm | none |  |
+|  | http_s3_storage_class | none |  |
+|  | http_swith_auth_token | none |  |
+|  | http_verbose | none |  |
+|  | uri | none |  |
+|  | gpu_dev_ids | none |  |
+|  | cuda_io | none |  |
+|  | nfs_url | none |  |
+|  | program | none |  |
+|  | arguments | none |  |
+|  | grace_time | none |  |
+|  | std_redirect | none |  |
+|  | xnvme_async | none |  |
+|  | xnvme_sync | none |  |
+|  | xnvme_admin | none |  |
+|  | xnvme_dev_nsid | none |  |
+|  | xnvme_dev_subnqn | none |  |
+|  | xnvme_mem | none |  |
+|  | xnvme_iovec | none |  |
+|  | libblkio_driver | none |  |
+|  | libblkio_path | none |  |
+|  | libblkio_pre_connect_props | none |  |
+|  | libblkio_num_entries | none |  |
+|  | libblkio_queue_size | none |  |
+|  | libblkio_pre_start_props | none |  |
+|  | libblkio_vectored | none |  |
+|  | libblkio_write_zeroes_on_trim | none |  |
+|  | libblkio_wait_mode | none |  |
+|  | libblkio_force_enable_completion_eventfd | none |  |
+| | | | |
+| **I/O depth** | iodepth | no explicit testing |  |
+|  | iodepth_batch_submit | limited | t/sgunmap-test.py |
+|  | iodepth_batch_complete_min | limited | t/jobs/t0009 |
+|  | iodepth_batch_complete_max | none |  |
+|  | iodepth_low | none |  |
+|  | serialize_overlap | limited | t/jobs/0013 |
+|  | io_submit_mode | limited | t/jobs/0010. t/jobs/0013 |
+| | | | |
+| **I/O rate** | thinktime | none |  |
+|  | thinktime_spin | none |  |
+|  | thinktime_blocks | none |  |
+|  | thinktime_blocks_types | none |  |
+|  | thinktime_iotime | none |  |
+|  | rate | none |  |
+|  | rate_min | none |  |
+|  | rate_iops | limited | t/jobs/0011 |
+|  | rate_iops_min | none |  |
+|  | rate_process | none |  |
+|  | rate_ignore_thinktime | none |  |
+|  | rate_cycle | none |  |
+| | | | |
+| **I/O latency** | latency_target | none |  |
+|  | latency_window | none |  |
+|  | latency_percentile | none |  |
+|  | latency_run | none |  |
+|  | max_latency | none |  |
+| | | | |
+| **I/O replay** | write_iolog | limited | t0007 |
+|  | read_iolog | none |  |
+|  | read_iolog_chunked | none |  |
+|  | merge_blktrace_file | none |  |
+|  | merge_blktrace_scalars | none |  |
+|  | merge_blktrace_iters | none |  |
+|  | replay_no_stall | none |  |
+|  | replay_time_scale | none |  |
+|  | replace_redirect | none |  |
+|  | replay_align | none |  |
+|  | replay_scale | none |  |
+|  | replay_skip | none |  |
+| | | | |
+| **Threads, processes, and job synchronization** | thread | no explicit testing | t/jsonplus2csv_test, steadystate_tests, t/zbd, t/jobs |
+|  | wait_for | no explicit testing | t/zbd |
+|  | nice | none |  |
+|  | prio | none |  |
+|  | prioclass | none |  |
+|  | cpus_allowed | no explicit testing | t/jobs/0009 |
+|  | cpus_allowed_policy | no explicit testing | t/jobs/0009 |
+|  | cpumask | none |  |
+|  | numa_cpu_nodes | none |  |
+|  | numa_mem_policy | none |  |
+|  | cgroup | none |  |
+|  | cgroup_weight | none |  |
+|  | cgroup_nodelete | none |  |
+|  | flow_id | limited | t0011, t0012, t0014 |
+|  | flow | limited | t0011, t0012, t0014 |
+|  | flow_sleep | no explicit testing | t0012 |
+|  | stonewall/wait_for_previous | no explicit testing |  |
+|  | exitall | none |  |
+|  | exit_what | none |  |
+|  | exec_prerun | none |  |
+|  | exec_postrun | none |  |
+|  | uid | none |  |
+|  | gid | none |  |
+| | | | |
+| **Verification** | verify_only | none |  |
+|  | do_verify | limited | t/zbd, t0002-t0006, t0008, t0009, t0024-0027 |
+|  | verify | limited | t/zbd, t0002-t0006, t0008, t0009, t0024-0027 |
+|  | verify_offset | none |  |
+|  | verify_interval | no explicit testing | t0004 |
+|  | verify_pattern | limited | t0006, t0027 |
+|  | verify_fatal | limited | t0002, t0003 |
+|  | verify_dump | no explicit testing | t0003, t0004 |
+|  | verify_async | no explicit testing | t0009 |
+|  | verify_async_cpus | no explicit testing | t0009 |
+|  | verify_backlog | limited | t0005, t0006, t0008, t0009, t/zbd |
+|  | verify_backlog_batch | none |  |
+|  | verify_state_save | none |  |
+|  | verify_state_load | none |  |
+|  | trim_percentage | none |  |
+|  | trim_verify_zero | none |  |
+|  | trim_backlog | none |  |
+|  | trim_backlog_batch | none |  |
+|  | experimental_verify | limited | t0025, t0026 |
+| | | | |
+| **Steadystate** | steadystate | basic | t/steadystate_tests.py |
+|  | steadystate_duration | basic | t/steadystate_tests.py |
+|  | steadystate_ramp_time | basic | t/steadystate_tests.py |
+|  | steadystate_check_interval | limited | t/steadystate_tests.py |
+| | | | |
+| **Measurements and reporting** | per_job_logs | limited | t0019-t0024, t/log_compression.py |
+|  | group_reporting | limited | t0002-t0004, t0009, t/latency_percentiles, t/zbd/test-zbd-support |
+|  | new_group | none |  |
+|  | stats | none |  |
+|  | write_bw_log | limited | t0019-0024, t/log_compression.py |
+|  | write_lat_log | limited | latency_percentiles.py |
+|  | write_hist_log | none |  |
+|  | write_iops_log | limited | t0012, t0014, strided.py |
+|  | log_entries | none |  |
+|  | log_avg_msec | limited | t0012, t0014 |
+|  | log_hist_msec | none |  |
+|  | log_hist_coarseness | none |  |
+|  | log_max_value | none |  |
+|  | log_offset | limited | t0019-t0024, log_compression.py, strided.py |
+|  | log_compression | basic | log_compression.py |
+|  | log_compression_cpus | none |  |
+|  | log_store_complressed | basic | log_compression.py |
+|  | log_unix_epoch | none |  |
+|  | log_alternate_epoch | none |  |
+|  | log_alternate_epoch_clock_id | none |  |
+|  | block_error_percentiles | none |  |
+|  | bwavgtime | none |  |
+|  | iopsavgtime | none |  |
+|  | disk_util | none |  |
+|  | disable_lat | no explicit testing | t/zbd |
+|  | disable_clat | none |  |
+|  | disable_slat | none |  |
+|  | disable_bw_measurement | none |  |
+|  | slat_percentiles | basic | t/latency_percentiles |
+|  | clat_percentiles | basic | t/latency_percentiles |
+|  | lat_percentiles | basic | t/latency_percentiles |
+|  | percentile_list | none |  |
+|  | significant_figures | no explicit testing | t/zbd/test-zbd-support |
+| | | | |
+| **Error handling** | exitall_on_error | no explicit testing | t/zbd/test-zbd-support |
+|  | continue_on_error | limited | t/zbd |
+|  | ignore_error | none |  |
+|  | error_dump | none |  |
+| | | | |
+| **Predefined workloads** | profile | none |  |
+| | | | |
+| **Act profile options** | device-names | none |  |
+|  | load | none |  |
+|  | test-duration | none |  |
+|  | threads-per-queue | none |  |
+|  | read-req-num-512-blocks | none |  |
+|  | large-block-op-kbytes | none |  |
+|  | prep | none |  |
+| | | | |
+| **Tiobench profile options** | size | none |  |
+|  | block | none |  |
+|  | numruns | none |  |
+|  | dir | none |  |
+|  | threads | none |  |
+| | | | |
+| **Command-line options** | debug | no explicit testing | t/random_seed, t/steadystate_tests, t/zbd/test-zbd-support |
+|  | parse-only | no explicit testing | t/steadystate_tests |
+|  | merge-blktrace-only | none |  |
+|  | output | no explicit testing | various |
+|  | output-format | no explicit testing | various |
+|  | bandwidth-log | none |  |
+|  | minimal | none |  |
+|  | append-terse | none |  |
+|  | terse-version | none |  |
+|  | version | none |  |
+|  | help | none |  |
+|  | cpuclock-test | none |  |
+|  | crctest | none |  |
+|  | cmdhelp | none |  |
+|  | enghelp | none |  |
+|  | showcmd | none |  |
+|  | readonly | basic | t/readonly.py |
+|  | eta | none |  |
+|  | eta-interval | none |  |
+|  | eta-newline | none |  |
+|  | status-interval | none |  |
+|  | section | none |  |
+|  | alloc-size | no explicit testing | t/zbd/test-zbd-support |
+|  | warnings-fatal | none |  |
+|  | max-jobs | no explicit testing | various |
+|  | server | none |  |
+|  | daemonize | none |  |
+|  | client | none |  |
+|  | remote-config | none |  |
+|  | idle-prof | none |  |
+|  | inflate-log | basic | t/log_compression.py |
+|  | trigger-file | none |  |
+|  | trigger-timeout | none |  |
+|  | trigger | none |  |
+|  | trigger-remote | none |  |
+|  | aux-path | no explicit testing | t/zbd/test-zbd-support |

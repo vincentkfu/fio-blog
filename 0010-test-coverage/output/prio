@@ -1,0 +1,74 @@
+fio-3.35/t/latency_percentiles.py:                    'cmdprio_percentage', 'bssplit', 'cmdprio_bssplit']:
+fio-3.35/t/latency_percentiles.py:    def check_nocmdprio_lat(self, job):
+fio-3.35/t/latency_percentiles.py:        Make sure no per priority latencies appear.
+fio-3.35/t/latency_percentiles.py:                if 'prios' in job[ddir]:
+fio-3.35/t/latency_percentiles.py:                    print("Unexpected per priority latencies found in %s output" % ddir)
+fio-3.35/t/latency_percentiles.py:            print("No per priority latencies found")
+fio-3.35/t/latency_percentiles.py:    def check_prio_latencies(self, jsondata, clat=True, plus=False):
+fio-3.35/t/latency_percentiles.py:        """Check consistency of per priority latencies.
+fio-3.35/t/latency_percentiles.py:        if not 'prios' in jsondata or not combined in jsondata:
+fio-3.35/t/latency_percentiles.py:            print("Error identifying per priority latencies")
+fio-3.35/t/latency_percentiles.py:        sum_sample_size = sum([x[obj]['N'] for x in jsondata['prios']])
+fio-3.35/t/latency_percentiles.py:            print("Per prio sample size sum %d != combined sample size %d" %
+fio-3.35/t/latency_percentiles.py:            print("Per prio sample size sum %d == combined sample size %d" %
+fio-3.35/t/latency_percentiles.py:        min_val = min([x[obj]['min'] for x in jsondata['prios']])
+fio-3.35/t/latency_percentiles.py:            print("Min per prio min latency %d does not match min %d from combined data" %
+fio-3.35/t/latency_percentiles.py:            print("Min per prio min latency %d matches min %d from combined data" %
+fio-3.35/t/latency_percentiles.py:        max_val = max([x[obj]['max'] for x in jsondata['prios']])
+fio-3.35/t/latency_percentiles.py:            print("Max per prio max latency %d does not match max %d from combined data" %
+fio-3.35/t/latency_percentiles.py:            print("Max per prio max latency %d matches max %d from combined data" %
+fio-3.35/t/latency_percentiles.py:        weighted_vals = [x[obj]['mean'] * x[obj]['N'] for x in jsondata['prios']]
+fio-3.35/t/latency_percentiles.py:            print("Difference between merged per prio weighted average %f mean "
+fio-3.35/t/latency_percentiles.py:            print("Merged per prio weighted average %f mean matches actual mean %f" %
+fio-3.35/t/latency_percentiles.py:            for prio in jsondata['prios']:
+fio-3.35/t/latency_percentiles.py:                if not self.check_jsonplus(prio[obj]):
+fio-3.35/t/latency_percentiles.py:            for prio in jsondata['prios']:
+fio-3.35/t/latency_percentiles.py:                counter.update(prio[obj]['bins'])
+fio-3.35/t/latency_percentiles.py:                    print("Merged per prio count does not match overall count for duration %d" %
+fio-3.35/t/latency_percentiles.py:        print("Merged per priority latency data match combined latency data")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        if not self.check_nocmdprio_lat(job):
+fio-3.35/t/latency_percentiles.py:            print("Unexpected per priority latencies found")
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['read'], clat=False, plus=True)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['write'], clat=False, plus=True)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['read'], plus=True)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['write'], plus=False)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['read'], plus=False)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['mixed'], clat=False, plus=True)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['read'], clat=True, plus=True)
+fio-3.35/t/latency_percentiles.py:        retval &= self.check_prio_latencies(job['write'], clat=True, plus=True)
+fio-3.35/t/latency_percentiles.py:            # same as Test 4 except add cmdprio_percentage
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            # same as Test 5 except add cmdprio_percentage
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            # same as Test 6 except add cmdprio_percentage
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            # same as Test 7 except add cmdprio_percentage
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            # same as Test 8 except add cmdprio_percentage
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            'cmdprio_percentage': 50,
+fio-3.35/t/latency_percentiles.py:            # test bssplit and cmdprio_bssplit
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:             ('cmdprio_percentage' in test or 'cmdprio_bssplit' in test):
+fio-3.35/t/latency_percentiles.py:            outcome = 'SKIPPED (Linux root required for cmdprio tests)'

@@ -1,0 +1,503 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--size=1M",
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:#./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:            "--size=16M",
+fio-3.35/t/latency_percentiles.py:        groups similar latency measurements into variable-sized bins. The theory in stat.h says
+fio-3.35/t/latency_percentiles.py:        sample size reported by fio
+fio-3.35/t/latency_percentiles.py:        sampsize = sum(values)
+fio-3.35/t/latency_percentiles.py:        if sampsize != jsondata['N']:
+fio-3.35/t/latency_percentiles.py:            print('reported sample size %d does not match json+ total count %d' % \
+fio-3.35/t/latency_percentiles.py:                    (jsondata['N'], sampsize))
+fio-3.35/t/latency_percentiles.py:            print('json+ sample sizes match: %d' % sampsize)
+fio-3.35/t/latency_percentiles.py:            print('Mismatch between total_ios and lat_ns sample size')
+fio-3.35/t/latency_percentiles.py:            print('sync sample sizes match: %d' % jsondata['total_ios'])
+fio-3.35/t/latency_percentiles.py:        sum_sample_size = sum([x[obj]['N'] for x in jsondata['prios']])
+fio-3.35/t/latency_percentiles.py:        if sum_sample_size != jsondata[combined]['N']:
+fio-3.35/t/latency_percentiles.py:            print("Per prio sample size sum %d != combined sample size %d" %
+fio-3.35/t/latency_percentiles.py:                  (sum_sample_size, jsondata[combined]['N']))
+fio-3.35/t/latency_percentiles.py:            print("Per prio sample size sum %d == combined sample size %d" %
+fio-3.35/t/latency_percentiles.py:                  (sum_sample_size, jsondata[combined]['N']))
+fio-3.35/t/log_compression.py:        '--filesize=1000M',
+fio-3.35/t/log_compression.py:    filesize = 1000*1024*1024
+fio-3.35/t/log_compression.py:    ios = filesize//bs
+fio-3.35/t/random_seed.py:            "--filesize=32k",
+fio-3.35/t/readonly.py:                "--size=1M",
+fio-3.35/t/run-fio-tests.py:        stderr_size = os.path.getsize(self.stderr_file)
+fio-3.35/t/run-fio-tests.py:                if stderr_size != 0:
+fio-3.35/t/run-fio-tests.py:                if stderr_size == 0:
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        if len(offsets) == filesize/bs:
+fio-3.35/t/run-fio-tests.py:        """Make sure that trims are followed by writes of the same size at the same offset."""
+fio-3.35/t/run-fio-tests.py:                        self.failure_reason += " {0}: block size does not match: {1}".format(
+fio-3.35/t/run-fio-tests.py:    def check_all_offsets(self, filename, sectorsize, filesize):
+fio-3.35/t/run-fio-tests.py:            if offset % sectorsize != 0:
+fio-3.35/t/run-fio-tests.py:                self.failure_reason += " {0}: offset {1} not a multiple of sector size {2}".format(
+fio-3.35/t/run-fio-tests.py:                    filename, offset, sectorsize)
+fio-3.35/t/run-fio-tests.py:            if bs % sectorsize != 0:
+fio-3.35/t/run-fio-tests.py:                self.failure_reason += " {0}: block size {1} not a multiple of sector size " \
+fio-3.35/t/run-fio-tests.py:                    "{2}".format(filename, bs, sectorsize)
+fio-3.35/t/run-fio-tests.py:            for i in range(int(bs/sectorsize)):
+fio-3.35/t/run-fio-tests.py:                offsets.add(offset/sectorsize + i)
+fio-3.35/t/run-fio-tests.py:        if len(offsets) != filesize/sectorsize:
+fio-3.35/t/run-fio-tests.py:                filename, len(offsets), filesize/sectorsize)
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/sgunmap-perf.py:                  "--blocksize={0}".format(bs),
+fio-3.35/t/steadystate_tests.py:                            "--size=1G",
+fio-3.35/t/strided.py:# a minimum size of 32MiB is recommended.
+fio-3.35/t/strided.py:#       zonesize=zonerange  all blocks in zonerange touched
+fio-3.35/t/strided.py:#       zonesize>zonerange  all blocks touched and roll-over back into zone
+fio-3.35/t/strided.py:#       zonesize<zonerange  all blocks inside zone
+fio-3.35/t/strided.py:                "--zonesize={zonesize}".format(**test),
+fio-3.35/t/strided.py:        fio_args.append('--filesize={filesize})'.format(**test))
+fio-3.35/t/strided.py:        fio_args.append('--size={size}'.format(**test))
+fio-3.35/t/strided.py:        fio_args.append('--io_size={io_size}'.format(**test))
+fio-3.35/t/strided.py:        fio_args.append('--filesize={size})'.format(**test))
+fio-3.35/t/strided.py:    iospersize = test['zonesize'] / test['bs']
+fio-3.35/t/strided.py:        if iosperzone == iospersize:
+fio-3.35/t/strided.py:            if zonestart >= test['filesize']:
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4*4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4*4096*1024,
+fio-3.35/t/strided.py:                    "size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 8192,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/strided.py:                    "size": 256*1024*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*1024,
+fio-3.35/t/strided.py:        filesize = statinfo.st_size
+fio-3.35/t/strided.py:        if filesize == 0:
+fio-3.35/t/strided.py:            filesize = os.lseek(f, 0, os.SEEK_END)
+fio-3.35/t/strided.py:            test['filesize'] = filesize
+fio-3.35/t/strided.py:            test['filesize'] = test['size']
+fio-3.35/t/zbd/functions:# than zone size.
+fio-3.35/t/zbd/functions:		   $(<"${f}/zone_capacity") -lt $(<"${f}/zone_size") ]]
+fio-3.35/t/zbd/functions:# Check zone capacity of each zone and report block size aligned to the zone
+fio-3.35/t/zbd/functions:# capacities. If zone capacity is same as zone size for zones, report zone size.
+fio-3.35/t/zbd/functions:	local zone_size="${2}"
+fio-3.35/t/zbd/functions:	local cap bs="$zone_size"
+fio-3.35/t/zbd/functions:	# assume that zone capacity is same as zone size for all zones.
+fio-3.35/t/zbd/functions:		echo "$zone_size"
+fio-3.35/t/zbd/functions:		# For regular block devices, handle zone size as zone capacity.
+fio-3.35/t/zbd/functions:		echo $((zone_size * nr_zones))
+fio-3.35/t/zbd/functions:		# ZBC devices do not have zone capacity. Use zone size.
+fio-3.35/t/zbd/functions:# Get minimum block size to write to seq zones. Refer the sysfs attribute
+fio-3.35/t/zbd/functions:# zone_write_granularity which shows the valid minimum size regardless of zoned
+fio-3.35/t/zbd/functions:# block size for rotational SMR drives. For non-rotational devices such as ZNS
+fio-3.35/t/zbd/functions:# devices, refer logical block size.
+fio-3.35/t/zbd/functions:min_seq_write_size() {
+fio-3.35/t/zbd/functions:	local -i size=0
+fio-3.35/t/zbd/functions:		size=$(<"$sys_path/zone_write_granularity")
+fio-3.35/t/zbd/functions:	if ((size)); then
+fio-3.35/t/zbd/functions:		echo "$size"
+fio-3.35/t/zbd/functions:		cat "$sys_path/physical_block_size"
+fio-3.35/t/zbd/functions:		cat "$sys_path/logical_block_size"
+fio-3.35/t/zbd/functions:zbc_physical_block_size() {
+fio-3.35/t/zbd/run-tests-against-nullb:		echo ${dev_blocksize} > blocksize &&
+fio-3.35/t/zbd/run-tests-against-nullb:		echo ${dev_size} > size &&
+fio-3.35/t/zbd/run-tests-against-nullb:			echo "${zone_size}" > zone_size || return $?
+fio-3.35/t/zbd/run-tests-against-nullb:		if ((zone_capacity < zone_size)); then
+fio-3.35/t/zbd/run-tests-against-nullb:			nr_conv=$((dev_size/zone_size*conv_pcnt/100))
+fio-3.35/t/zbd/run-tests-against-nullb:		echo "    $(printf "Zone Size: %d MB" ${zone_size})"
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	dev_size=2048
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:	dev_size=1024
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=1
+fio-3.35/t/zbd/run-tests-against-nullb:	dev_size=2048
+fio-3.35/t/zbd/run-tests-against-nullb:	zone_size=4
+fio-3.35/t/zbd/run-tests-against-nullb:dev_size=1024
+fio-3.35/t/zbd/run-tests-against-nullb:dev_blocksize=4096
+fio-3.35/t/zbd/test-zbd-support:    local write_size="${2}"
+fio-3.35/t/zbd/test-zbd-support:		      --bs="${min_seq_write_size}" --zonemode=zbd \
+fio-3.35/t/zbd/test-zbd-support:		      --zonesize="${zone_size}" --thread=1 --direct=1 \
+fio-3.35/t/zbd/test-zbd-support:		      --offset="${write_offset}" --size="${write_size}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--size=$((4 * zone_size))" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	local seq_bytes=$((disk_size - first_sequential_zone_sector * 512))
+fio-3.35/t/zbd/test-zbd-support:	if ((req_seq_zones > seq_bytes / zone_size)); then
+fio-3.35/t/zbd/test-zbd-support:	if ((req_c_zones > conv_bytes / zone_size)); then
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" --size="${zone_size}" --thread=1	\
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:# Block size exceeds zone size.
+fio-3.35/t/zbd/test-zbd-support:    bs=$((2 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--offset=$off" "--bs=$bs" "--size=$bs")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'buflen exceeds zone size' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:    off=$((first_sequential_zone_sector * 512 + 128 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--size=$size" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    off=$((first_sequential_zone_sector * 512 + 129 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:    opts+=(--bs="$(min $((min_seq_write_size * 256)) $size)")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--size=$size" "--thread=1" "--read_beyond_wp=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    check_read $size || return $?
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity bs
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    bs=$(min "$(max $((zone_size / 64)) "$min_seq_write_size")" "$zone_cap_bs")
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity bs
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    bs=$(min "$(max $((zone_size / 64)) "$min_seq_write_size")" "$zone_cap_bs")
+fio-3.35/t/zbd/test-zbd-support:	    $((first_sequential_zone_sector * 512)) "${size}" \
+fio-3.35/t/zbd/test-zbd-support:	    --size="${size}" --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    local size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:		   --bs="$(min 16384 "${zone_size}")"			\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5 --size="$size"		\
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:		   --bs="$(min 16384 "${zone_size}")"			\
+fio-3.35/t/zbd/test-zbd-support:    local size
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    check_written $size || return $?
+fio-3.35/t/zbd/test-zbd-support:    check_read $size || return $?
+fio-3.35/t/zbd/test-zbd-support:    local size
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    check_written $size || return $?
+fio-3.35/t/zbd/test-zbd-support:    check_read $size || return $?
+fio-3.35/t/zbd/test-zbd-support:# Random write to sequential zones, libaio, queue depth 64, random block size.
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity
+fio-3.35/t/zbd/test-zbd-support:    size=$((8 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=1 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:    local size off capacity
+fio-3.35/t/zbd/test-zbd-support:    size=$((8 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=4 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:    local off size
+fio-3.35/t/zbd/test-zbd-support:    size=$((16 * 2**20)) # 20 MB
+fio-3.35/t/zbd/test-zbd-support:    require_conv_zone_bytes "${size}" || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:		    --verify=md5 --offset=$off --size=$size\
+fio-3.35/t/zbd/test-zbd-support:    check_written $((size)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    check_read $((size)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    local i off size bs
+fio-3.35/t/zbd/test-zbd-support:    local w_off w_size w_capacity
+fio-3.35/t/zbd/test-zbd-support:    w_size=$((2 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    bs=$(min $((zone_size / 16)) "$zone_cap_bs")
+fio-3.35/t/zbd/test-zbd-support:    write_and_run_one_fio_job "${w_off}" "${w_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --size=$((size)) >>"${logfile}.${test_number}" 2>&1 ||
+fio-3.35/t/zbd/test-zbd-support:    local off size
+fio-3.35/t/zbd/test-zbd-support:    local i w_off w_size w_capacity
+fio-3.35/t/zbd/test-zbd-support:    w_size=$((2 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    write_and_run_one_fio_job "${w_off}" "${w_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --size=$size >>"${logfile}.${test_number}" 2>&1 || return $?
+fio-3.35/t/zbd/test-zbd-support:    check_read $size || return $?
+fio-3.35/t/zbd/test-zbd-support:    local io off last read size written
+fio-3.35/t/zbd/test-zbd-support:    off=$(((disk_size / zone_size - 1) * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((disk_size - off))
+fio-3.35/t/zbd/test-zbd-support:	size=$zone_size
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}"		\
+fio-3.35/t/zbd/test-zbd-support:		    --size="$size"\
+fio-3.35/t/zbd/test-zbd-support:    echo "Total number of bytes read and written: $io <> $size" \
+fio-3.35/t/zbd/test-zbd-support:    [ $io = $((size * 2)) ];
+fio-3.35/t/zbd/test-zbd-support:    local bs loops=9 size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:    bs=$(min $((256*1024)) "$zone_size")
+fio-3.35/t/zbd/test-zbd-support:		   --size=$size --loops=$loops				\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--offset=$((first_sequential_zone_sector*512 + zone_size*i))")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "$(ioengine "psync")" "--rw=write" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	    --size=$zone_size --loops=$loops --randseed="$r"		\
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" --group_reporting=1	\
+fio-3.35/t/zbd/test-zbd-support:    off=$((first_sequential_zone_sector * 512 + 64 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "--io_size=$capacity" "$(ioengine "psync")" "--rw=randwrite")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:    off=$((first_sequential_zone_sector * 512 + 64 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((16*zone_size))
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$size" "--io_size=$zone_size" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    check_written $((jobs * zone_size)) || return $?
+fio-3.35/t/zbd/test-zbd-support:		    --bs="$(max $((zone_size / 128)) "$min_seq_write_size")"\
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off\
+fio-3.35/t/zbd/test-zbd-support:    local bs inc nz off opts size
+fio-3.35/t/zbd/test-zbd-support:    size=$((disk_size - off))
+fio-3.35/t/zbd/test-zbd-support:    inc=$(((size / nz / zone_size) * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--offset=$off" "--size=$((inc * nz))" "--io_size=$((bs * nz))")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=strided" "--zonesize=${bs}" "--zonerange=${inc}")
+fio-3.35/t/zbd/test-zbd-support:    opts=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    local off opts=() size
+fio-3.35/t/zbd/test-zbd-support:    size=$((disk_size - off))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:# Write to sequential zones with a block size that is not a divisor of the
+fio-3.35/t/zbd/test-zbd-support:# zone size.
+fio-3.35/t/zbd/test-zbd-support:    local bs io_size size
+fio-3.35/t/zbd/test-zbd-support:    size=$((2 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    io_size=$((5 * capacity))
+fio-3.35/t/zbd/test-zbd-support:		   --size=$size --io_size=$io_size --bs=$bs	\
+fio-3.35/t/zbd/test-zbd-support:    check_written $((io_size / bs * bs)) || return $?
+fio-3.35/t/zbd/test-zbd-support:# Test repeated async write job with verify using two unaligned block sizes.
+fio-3.35/t/zbd/test-zbd-support:	local -a block_sizes
+fio-3.35/t/zbd/test-zbd-support:	block_sizes=($((4096 * 7)) $(($(min ${zone_capacity} 4194304) - 4096)))
+fio-3.35/t/zbd/test-zbd-support:	for bs in ${block_sizes[@]}; do
+fio-3.35/t/zbd/test-zbd-support:			--size=$((4 * zone_size)) --iodepth=256 \
+fio-3.35/t/zbd/test-zbd-support:			--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:# Test 1/4 for the I/O boundary rounding code: $size < $zone_size.
+fio-3.35/t/zbd/test-zbd-support:    local bs off io_size size
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size - 2 * 512))
+fio-3.35/t/zbd/test-zbd-support:    bs=$((zone_size / 4))
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:# Test 2/4 for the I/O boundary rounding code: $size < $zone_size.
+fio-3.35/t/zbd/test-zbd-support:    local bs off io_size size
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size - 512))
+fio-3.35/t/zbd/test-zbd-support:    bs=$((zone_size / 4))
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:# Test 3/4 for the I/O boundary rounding code: $size > $zone_size.
+fio-3.35/t/zbd/test-zbd-support:    local bs off size capacity
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size + 2 * 512))
+fio-3.35/t/zbd/test-zbd-support:    bs=$(min $((zone_size / 4)) "$zone_cap_bs")
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:# Test 4/4 for the I/O boundary rounding code: $offset > $disk_size - $zone_size
+fio-3.35/t/zbd/test-zbd-support:    local bs off size
+fio-3.35/t/zbd/test-zbd-support:    size=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:    off=$((disk_size - min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:    bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:    bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:		    --size=$bs "$@" 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:    check_read $((min_seq_write_size)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonesize must be specified when using --zonemode=strided' ||
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided --zonesize=$bs >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio checks the zone size for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=$((2 * zone_size)) |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'job parameter zonesize.*does not match disk zone size'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=0 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=0 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'Specifying the zone size is mandatory for regular file/block device with --zonemode=zbd'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=1 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'zone size must be at least 512 bytes for --zonemode=zbd'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonemode=none --zonesize=1 correctly.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonemode=none and --zonesize are not compatible'
+fio-3.35/t/zbd/test-zbd-support:    bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:		    --size="$zone_size" --do_verify=1 --verify=md5 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:    local size
+fio-3.35/t/zbd/test-zbd-support:    size=$((4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    check_written $((size * 8)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'zoneskip 1 is not a multiple of the device zone size' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:    off=$((first_sequential_zone_sector * 512 + 64 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    size=$((16*zone_size))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--io_size=$zone_size" "--iodepth=256" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$size" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:    size=$((2 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:    capacity=$((zone_size * 3 / 4))
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --verify=md5  --size=${size} >>"${logfile}.${test_number}" 2>&1 ||
+fio-3.35/t/zbd/test-zbd-support:	off=$((first_sequential_zone_sector * 512 - 8 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:		--size=$((16 * zone_size)) "$(ioengine "libaio")" --rw=randread\
+fio-3.35/t/zbd/test-zbd-support:		--time_based --runtime=3 --zonemode=zbd --zonesize=${zone_size}\
+fio-3.35/t/zbd/test-zbd-support:	off=$((first_sequential_zone_sector * 512 - 8 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$((16 * zone_size))" "$(ioengine "libaio")")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--direct=1" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	local off io_size
+fio-3.35/t/zbd/test-zbd-support:	# Total I/O size is 1/8 = 0.125 of the I/O range of cont + seq zones.
+fio-3.35/t/zbd/test-zbd-support:	# Set zone_reset_threshold as 0.1. The threshold size is less than
+fio-3.35/t/zbd/test-zbd-support:	off=$((first_sequential_zone_sector * 512 - 8 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:	io_size=$((zone_size * 16 / 8))
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=$dev --rw=randwrite --bs=$((zone_size/16))\
+fio-3.35/t/zbd/test-zbd-support:		--size=$((zone_size * 16)) --softrandommap=1 \
+fio-3.35/t/zbd/test-zbd-support:		--io_size=$((io_size)) "$(ioengine "psync")" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:	check_written ${io_size} || return $?
+fio-3.35/t/zbd/test-zbd-support:	off=$((first_sequential_zone_sector * 512 - 4 * zone_size))
+fio-3.35/t/zbd/test-zbd-support:		--size=$((4 * zone_size)) "$(ioengine "psync")" --offset=${off}\
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((8*zone_size)) --direct=1 --iodepth=1 \
+fio-3.35/t/zbd/test-zbd-support:		--rw=randrw:2 --rwmixwrite=25 --bsrange=4k-${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--alloc-size=65536 --random_generator=tausworthe64 \
+fio-3.35/t/zbd/test-zbd-support:	bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:	# offset=1z + offset_increment=10z + size=2z
+fio-3.35/t/zbd/test-zbd-support:		--zonesize=${zone_size}	\
+fio-3.35/t/zbd/test-zbd-support:		--size=2z		\
+fio-3.35/t/zbd/test-zbd-support:		--io_size=3z		\
+fio-3.35/t/zbd/test-zbd-support:	bs=$((min_seq_write_size))
+fio-3.35/t/zbd/test-zbd-support:		--zonesize=${zone_size}	\
+fio-3.35/t/zbd/test-zbd-support:		--size=10z		\
+fio-3.35/t/zbd/test-zbd-support:# in-flight, when the block size is not a divisor of the zone size.
+fio-3.35/t/zbd/test-zbd-support:		--offset="${off}" --size=$((4 * zone_size)) --iodepth=256 \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    local off size bs
+fio-3.35/t/zbd/test-zbd-support:    size=$((zone_size * 128))
+fio-3.35/t/zbd/test-zbd-support:    bs="$(max $((zone_size / 128)) "$min_seq_write_size")"
+fio-3.35/t/zbd/test-zbd-support:    run_fio --zonemode=zbd --direct=1 --zonesize="${zone_size}" --thread=1 \
+fio-3.35/t/zbd/test-zbd-support:            --offset="${off}" --size=$((zone_size * 16)) --bs="${bs}" \
+fio-3.35/t/zbd/test-zbd-support:	    --offset="${off}" --size="${size}" --bs="${bs}" \
+fio-3.35/t/zbd/test-zbd-support:	    --offset="${off}" --size="${size}" --bs="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:	local off bs loops=2 size=$((zone_size)) w
+fio-3.35/t/zbd/test-zbd-support:	bs=$(min $((256*1024)) "$zone_size")
+fio-3.35/t/zbd/test-zbd-support:			       --size=$size --loops=$loops --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size=$zone_size \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size="$zone_size" \
+fio-3.35/t/zbd/test-zbd-support:		       --numjobs=2 --offset_increment="$zone_size" \
+fio-3.35/t/zbd/test-zbd-support:	local bs loops=2 size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:	bs=$(min $((256*1024)) $((zone_size / 4)))
+fio-3.35/t/zbd/test-zbd-support:		       --size=$size --loops=$loops --numjobs=2 \
+fio-3.35/t/zbd/test-zbd-support:	check_written $((size * loops * 2)) || return $?
+fio-3.35/t/zbd/test-zbd-support:	local bs loops=2 size=$((zone_size)) off1 off2
+fio-3.35/t/zbd/test-zbd-support:	off2=$((off1 + zone_size))
+fio-3.35/t/zbd/test-zbd-support:	bs=$(min $((256*1024)) $((zone_size / 4)))
+fio-3.35/t/zbd/test-zbd-support:	run_fio "$(ioengine "psync")" --bs="$bs" --size=$size --loops=$loops \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize="$zone_size" --direct=1 \
+fio-3.35/t/zbd/test-zbd-support:	check_written $((size * loops)) || return $?
+fio-3.35/t/zbd/test-zbd-support:	disk_size=$(($(<"/sys/dev/block/$major:$minor/size")*512))
+fio-3.35/t/zbd/test-zbd-support:	min_seq_write_size=$(min_seq_write_size "$basename")
+fio-3.35/t/zbd/test-zbd-support:		zone_size=$((sectors_per_zone * 512))
+fio-3.35/t/zbd/test-zbd-support:		first_sequential_zone_sector=$(((disk_size / 2) &
+fio-3.35/t/zbd/test-zbd-support:						(min_seq_write_size - 1)))
+fio-3.35/t/zbd/test-zbd-support:		zone_size=$(max 65536 "$min_seq_write_size")
+fio-3.35/t/zbd/test-zbd-support:		sectors_per_zone=$((zone_size / 512))
+fio-3.35/t/zbd/test-zbd-support:	if ! disk_size=($(( $(zbc_disk_sectors "$dev") * 512))); then
+fio-3.35/t/zbd/test-zbd-support:		echo "Failed to determine disk size"
+fio-3.35/t/zbd/test-zbd-support:	if ! min_seq_write_size=($(zbc_physical_block_size "$dev")); then
+fio-3.35/t/zbd/test-zbd-support:		echo "Failed to determine physical block size"
+fio-3.35/t/zbd/test-zbd-support:	zone_size=$((sectors_per_zone * 512))
+fio-3.35/t/zbd/test-zbd-support:echo " zone size: $((zone_size >> 20)) MB"
+fio-3.35/t/zbd/test-zbd-support:zone_cap_bs=$(zone_cap_bs "$dev" "$zone_size")
+fio-3.35/t/jobs/t0001-52c58027.fio:size=20000
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:size=1G
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:size=1G
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:size=1G
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:size=1G
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:size=1M
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=1M
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:size=10M
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=1M
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:size=10M
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=512
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=1M
+fio-3.35/t/jobs/t0005-f7078f7b.fio:size=100m
+fio-3.35/t/jobs/t0006-82af2a7c.fio:size=4g
+fio-3.35/t/jobs/t0007-37cf9e3c.fio:size=128mb
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:size=32m
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:size=20g
+fio-3.35/t/jobs/t0010-b7aae4ba.fio:size=10g
+fio-3.35/t/jobs/t0011-5d2788d5.fio:size=100g
+fio-3.35/t/jobs/t0012.fio:size=100g
+fio-3.35/t/jobs/t0013.fio:# Trigger the fio code that serializes overlapping I/O. The job size is very
+fio-3.35/t/jobs/t0013.fio:size=4K
+fio-3.35/t/jobs/t0013.fio:blocksize=4K
+fio-3.35/t/jobs/t0014.fio:size=100g
+fio-3.35/t/jobs/t0015-e78980ff.fio:size=1M
+fio-3.35/t/jobs/t0016-d54ae22.fio:size=1M
+fio-3.35/t/jobs/t0017.fio:size=1M
+fio-3.35/t/jobs/t0018.fio:filesize=256K
+fio-3.35/t/jobs/t0019.fio:filesize=1M
+fio-3.35/t/jobs/t0020.fio:filesize=1M
+fio-3.35/t/jobs/t0021.fio:filesize=1M
+fio-3.35/t/jobs/t0022.fio:filesize=1M
+fio-3.35/t/jobs/t0023.fio:filesize=1M
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:filesize=1M
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match
+fio-3.35/t/jobs/t0025.fio:size=128k
+fio-3.35/t/jobs/t0026.fio:size=1M
+fio-3.35/t/jobs/t0026.fio:size=1M
+fio-3.35/t/jobs/t0027.fio:size=16k
+fio-3.35/t/jobs/t0028-c6cade16.fio:size=16k

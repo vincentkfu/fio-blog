@@ -1,0 +1,28 @@
+fio-3.35/t/random_seed.py:# - make sure that randseed overrides randrepeat and allrandrepeat
+fio-3.35/t/random_seed.py:# - make sure that seeds differ across invocations when [all]randrepeat=0 and randseed is not set
+fio-3.35/t/random_seed.py:# - make sure that seeds are always the same when [all]randrepeat=1 and randseed is not set
+fio-3.35/t/random_seed.py:        for opt in ['randseed', 'randrepeat', 'allrandrepeat']:
+fio-3.35/t/random_seed.py:    Test object when randseed=something controls the generated seeds. If run
+fio-3.35/t/random_seed.py:    for the first time for a given randseed just collect the seeds. For later
+fio-3.35/t/random_seed.py:        """Check output for randseed=something."""
+fio-3.35/t/random_seed.py:        randseed = self.test_options['randseed']
+fio-3.35/t/random_seed.py:            print("randseed = ", randseed)
+fio-3.35/t/random_seed.py:        if randseed not in TestRS.seeds:
+fio-3.35/t/random_seed.py:            TestRS.seeds[randseed] = rand_seeds
+fio-3.35/t/random_seed.py:            if TestRS.seeds[randseed] != rand_seeds:
+fio-3.35/t/random_seed.py:        # Now try to find seeds generated using a different randseed and make
+fio-3.35/t/random_seed.py:            if key != randseed:
+fio-3.35/t/random_seed.py:                    print("TestRS: randseeds differ but generated seeds match.")
+fio-3.35/t/random_seed.py:                        print("TestRS: randseeds differ and generated seeds also differ.")
+fio-3.35/t/random_seed.py:            "randseed": "12345",
+fio-3.35/t/random_seed.py:            "randseed": "12345",
+fio-3.35/t/random_seed.py:            "randseed": "12345",
+fio-3.35/t/random_seed.py:            "randseed": "12345",
+fio-3.35/t/random_seed.py:            "randseed": "12345",
+fio-3.35/t/random_seed.py:            "randseed": "67890",
+fio-3.35/t/random_seed.py:            "randseed": "67890",
+fio-3.35/t/random_seed.py:            "randseed": "67890",
+fio-3.35/t/random_seed.py:            "randseed": "67890",
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name="$dev" --filename="$dev" "$@" --randseed="$r"	\
+fio-3.35/t/zbd/test-zbd-support:    run_fio --filename="$dev" --randseed="$r" "${write_opts[@]}" \
+fio-3.35/t/zbd/test-zbd-support:	    --size=$zone_size --loops=$loops --randseed="$r"		\

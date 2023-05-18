@@ -1,0 +1,171 @@
+fio-3.35/t/jsonplus2csv_test.py:import os
+fio-3.35/t/jsonplus2csv_test.py:import sys
+fio-3.35/t/jsonplus2csv_test.py:import platform
+fio-3.35/t/jsonplus2csv_test.py:import argparse
+fio-3.35/t/jsonplus2csv_test.py:import subprocess
+fio-3.35/t/latency_percentiles.py:# This is mostly to test the code changes to allow reporting
+fio-3.35/t/latency_percentiles.py:#   unified rw reporting
+fio-3.35/t/latency_percentiles.py:#       --rw=randrw --unified_rw_reporting=1
+fio-3.35/t/latency_percentiles.py:import os
+fio-3.35/t/latency_percentiles.py:import csv
+fio-3.35/t/latency_percentiles.py:import sys
+fio-3.35/t/latency_percentiles.py:import json
+fio-3.35/t/latency_percentiles.py:import math
+fio-3.35/t/latency_percentiles.py:import time
+fio-3.35/t/latency_percentiles.py:import argparse
+fio-3.35/t/latency_percentiles.py:import platform
+fio-3.35/t/latency_percentiles.py:import subprocess
+fio-3.35/t/latency_percentiles.py:from collections import Counter
+fio-3.35/t/latency_percentiles.py:from pathlib import Path
+fio-3.35/t/latency_percentiles.py:            "--group_reporting=1",
+fio-3.35/t/latency_percentiles.py:                    'unified_rw_reporting', 'fsync', 'fdatasync', 'numjobs',
+fio-3.35/t/latency_percentiles.py:        unified             True if fio is reporting unified r/w data
+fio-3.35/t/latency_percentiles.py:                # produces values that mostly match what fio reports
+fio-3.35/t/latency_percentiles.py:                # The theory in stat.h says that the proportional error will be
+fio-3.35/t/latency_percentiles.py:                          "fio: %d, expected: %d, proportional delta: %f" %
+fio-3.35/t/latency_percentiles.py:        that the proportional error will be less than 1/128. This function checks whether this
+fio-3.35/t/latency_percentiles.py:        sample size reported by fio
+fio-3.35/t/latency_percentiles.py:            print('reported min %d does not match json+ min %d' % (jsondata['min'], smallest))
+fio-3.35/t/latency_percentiles.py:            print('reported max %d does not match json+ max %d' % (jsondata['max'], biggest))
+fio-3.35/t/latency_percentiles.py:            print('reported sample size %d does not match json+ total count %d' % \
+fio-3.35/t/latency_percentiles.py:        All we can check is that some percentiles are reported, unless we have json+ data.
+fio-3.35/t/latency_percentiles.py:        unified             True if fio is reporting unified r/w data
+fio-3.35/t/latency_percentiles.py:    """Run tests of fio latency percentile reporting"""
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/log_compression.py:import os
+fio-3.35/t/log_compression.py:import sys
+fio-3.35/t/log_compression.py:import platform
+fio-3.35/t/log_compression.py:import argparse
+fio-3.35/t/log_compression.py:import subprocess
+fio-3.35/t/random_seed.py:import os
+fio-3.35/t/random_seed.py:import sys
+fio-3.35/t/random_seed.py:import time
+fio-3.35/t/random_seed.py:import locale
+fio-3.35/t/random_seed.py:import argparse
+fio-3.35/t/random_seed.py:import subprocess
+fio-3.35/t/random_seed.py:from pathlib import Path
+fio-3.35/t/readonly.py:import sys
+fio-3.35/t/readonly.py:import argparse
+fio-3.35/t/readonly.py:import subprocess
+fio-3.35/t/run-fio-tests.py:# - CUnit support (unittests)
+fio-3.35/t/run-fio-tests.py:import os
+fio-3.35/t/run-fio-tests.py:import sys
+fio-3.35/t/run-fio-tests.py:import json
+fio-3.35/t/run-fio-tests.py:import time
+fio-3.35/t/run-fio-tests.py:import shutil
+fio-3.35/t/run-fio-tests.py:import logging
+fio-3.35/t/run-fio-tests.py:import argparse
+fio-3.35/t/run-fio-tests.py:import platform
+fio-3.35/t/run-fio-tests.py:import traceback
+fio-3.35/t/run-fio-tests.py:import subprocess
+fio-3.35/t/run-fio-tests.py:import multiprocessing
+fio-3.35/t/run-fio-tests.py:from pathlib import Path
+fio-3.35/t/run-fio-tests.py:from statsmodels.sandbox.stats.runs import runstest_1samp
+fio-3.35/t/run-fio-tests.py:                print("Unable to open '/proc/kallsyms' to probe for io_uring support")
+fio-3.35/t/run-fio-tests.py:        """Is ZBD support available?"""
+fio-3.35/t/run-fio-tests.py:        return Requirements._zbd, "Zoned block device support required"
+fio-3.35/t/run-fio-tests.py:        return Requirements._zoned_nullb, "Zoned null block device support required"
+fio-3.35/t/run-fio-tests.py:        return Requirements._unittests, "Unittests support required"
+fio-3.35/t/run-fio-tests.py:        # mac os does not support CPU affinity
+fio-3.35/t/sgunmap-perf.py:from __future__ import absolute_import
+fio-3.35/t/sgunmap-perf.py:from __future__ import print_function
+fio-3.35/t/sgunmap-perf.py:import sys
+fio-3.35/t/sgunmap-perf.py:import json
+fio-3.35/t/sgunmap-perf.py:import argparse
+fio-3.35/t/sgunmap-perf.py:import subprocess
+fio-3.35/t/sgunmap-perf.py:from six.moves import range
+fio-3.35/t/sgunmap-test.py:# This checks only the three sets of reported iodepths
+fio-3.35/t/sgunmap-test.py:from __future__ import absolute_import
+fio-3.35/t/sgunmap-test.py:from __future__ import print_function
+fio-3.35/t/sgunmap-test.py:import sys
+fio-3.35/t/sgunmap-test.py:import json
+fio-3.35/t/sgunmap-test.py:import argparse
+fio-3.35/t/sgunmap-test.py:import traceback
+fio-3.35/t/sgunmap-test.py:import subprocess
+fio-3.35/t/steadystate_tests.py:from __future__ import absolute_import
+fio-3.35/t/steadystate_tests.py:from __future__ import print_function
+fio-3.35/t/steadystate_tests.py:import os
+fio-3.35/t/steadystate_tests.py:import sys
+fio-3.35/t/steadystate_tests.py:import json
+fio-3.35/t/steadystate_tests.py:import pprint
+fio-3.35/t/steadystate_tests.py:import argparse
+fio-3.35/t/steadystate_tests.py:import subprocess
+fio-3.35/t/steadystate_tests.py:from scipy import stats
+fio-3.35/t/steadystate_tests.py:                            "--group_reporting",
+fio-3.35/t/steadystate_tests.py:                                line = 'FAILED ' + line + ' target {0} < limit {1} but fio reports ss not attained '.format(target, job['ss_limit'])
+fio-3.35/t/steadystate_tests.py:                                line = 'FAILED ' + line + ' target {0} < threshold {1} but fio reports ss not attained '.format(target, job['ss_limit'])
+fio-3.35/t/strided.py:from __future__ import absolute_import
+fio-3.35/t/strided.py:from __future__ import print_function
+fio-3.35/t/strided.py:import os
+fio-3.35/t/strided.py:import sys
+fio-3.35/t/strided.py:import argparse
+fio-3.35/t/strided.py:import subprocess
+fio-3.35/t/zbd/functions:zbc_report_zones=$(type -p zbc_report_zones 2>/dev/null)
+fio-3.35/t/zbd/functions:       { [ -z "${zbc_report_zones}" ] || [ -z "${zbc_reset_zone}" ]; }; then
+fio-3.35/t/zbd/functions:    echo "Error: neither blkzone nor zbc_report_zones is available"
+fio-3.35/t/zbd/functions:       { [ -z "${zbc_report_zones}" ] || [ -z "${zbc_reset_zone}" ] ||
+fio-3.35/t/zbd/functions:    echo "Error: zbc_report_zones, or zbc_reset_zone or zbc_info is not available"
+fio-3.35/t/zbd/functions:blkzone_reports_capacity() {
+fio-3.35/t/zbd/functions:		"${blkzone}" report -c 1 -o 0 "${dev}" | grep -q 'cap '
+fio-3.35/t/zbd/functions:	# If the device supports zone capacity, mandate zone capacity report by
+fio-3.35/t/zbd/functions:				! blkzone_reports_capacity "${dev}"; then
+fio-3.35/t/zbd/functions:		echo "Error: blkzone does not report zone capacity"
+fio-3.35/t/zbd/functions:# Check zone capacity of each zone and report block size aligned to the zone
+fio-3.35/t/zbd/functions:# capacities. If zone capacity is same as zone size for zones, report zone size.
+fio-3.35/t/zbd/functions:	# test device, or when blkzone command does not report capacity,
+fio-3.35/t/zbd/functions:		   ! blkzone_reports_capacity "${dev}"; then
+fio-3.35/t/zbd/functions:	done < <(blkzone report "${dev}" | sed -n "${sed_str}")
+fio-3.35/t/zbd/functions:# Reports the starting sector and length of the first sequential zone of device
+fio-3.35/t/zbd/functions:	${blkzone} report "$dev" |
+fio-3.35/t/zbd/functions:	${zbc_report_zones} "$dev" |
+fio-3.35/t/zbd/functions:# Reports the summed zone capacity of $1 number of zones starting from offset $2
+fio-3.35/t/zbd/functions:		if blkzone_reports_capacity "${dev}"; then
+fio-3.35/t/zbd/functions:			# If zone capacity is not reported, refer zone length.
+fio-3.35/t/zbd/functions:		done < <(${blkzone} report -c "$nr_zones" -o "$sector" "$dev" |
+fio-3.35/t/zbd/functions:		done < <(${zbc_report_zones} -nz "$nr_zones" -start "$sector" \
+fio-3.35/t/zbd/functions:# Reports the starting sector and length of the first zone of device $1
+fio-3.35/t/zbd/functions:	${blkzone} report "$dev" |
+fio-3.35/t/zbd/functions:	${zbc_report_zones} "$dev" |
+fio-3.35/t/zbd/functions:# Reports the starting sector and length of the last zone of device $1
+fio-3.35/t/zbd/functions:	${blkzone} report "$dev" |
+fio-3.35/t/zbd/functions:	${zbc_report_zones} "$dev" |
+fio-3.35/t/zbd/functions:# max_open_zones in sysfs, or which lacks zoned block device support completely.
+fio-3.35/t/zbd/functions:	${zbc_report_zones} "$dev" |
+fio-3.35/t/zbd/run-tests-against-nullb:# Run t/zbd/test-zbd-support script against a variety of conventional,
+fio-3.35/t/zbd/run-tests-against-nullb:	echo "This script runs the tests from t/zbd/test-zbd-support script"
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t-q Quit t/zbd/test-zbd-support run after any failed test."
+fio-3.35/t/zbd/run-tests-against-nullb:			if ((!zcap_supported)); then
+fio-3.35/t/zbd/run-tests-against-nullb:				echo "null_blk does not support zone capacity"
+fio-3.35/t/zbd/run-tests-against-nullb:			if ((!conv_supported)); then
+fio-3.35/t/zbd/run-tests-against-nullb:				echo "null_blk does not support conventional zones"
+fio-3.35/t/zbd/run-tests-against-nullb:zcap_supported=1
+fio-3.35/t/zbd/run-tests-against-nullb:conv_supported=1
+fio-3.35/t/zbd/run-tests-against-nullb:# Test creating null_blk device and check if newer features are supported
+fio-3.35/t/zbd/run-tests-against-nullb:	zcap_supported=0
+fio-3.35/t/zbd/run-tests-against-nullb:	conv_supported=0
+fio-3.35/t/zbd/run-tests-against-nullb:		./test-zbd-support ${zbd_test_opts[@]} /dev/nullb0 &
+fio-3.35/t/zbd/test-zbd-support:# Run fio against an empty zone. This causes fio to report "No I/O performed".
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" --group_reporting=1	\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--max_open_zones=4" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:		   --group_reporting=1 --numjobs=8 \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$size" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:		--direct=1 --group_reporting=1 ${job_var_opts[@]} \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--thread=1" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'not support experimental verify' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:		       --group_reporting=1 \
+fio-3.35/t/zbd/test-zbd-support:		--filename="$dev" --group_reporting=1 \
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:group_reporting=1
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:group_reporting=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:group_reporting=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:group_reporting=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:group_reporting=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:group_reporting=1

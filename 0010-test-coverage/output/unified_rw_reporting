@@ -1,0 +1,10 @@
+fio-3.35/t/latency_percentiles.py:#       --rw=randrw --unified_rw_reporting=1
+fio-3.35/t/latency_percentiles.py:                    'unified_rw_reporting', 'fsync', 'fdatasync', 'numjobs',
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,
+fio-3.35/t/latency_percentiles.py:            # 50/50 r/w, aio, unified_rw_reporting
+fio-3.35/t/latency_percentiles.py:            'unified_rw_reporting': 1,

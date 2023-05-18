@@ -1,0 +1,29 @@
+fio-3.35/t/zbd/test-zbd-support:		   --bs="$bs" --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5 --size="$size"		\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --bsrange=4K-64K --do_verify=1 --verify=md5		\
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=1 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=4 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:	    --thread=1 --do_verify=1 --verify=md5 --direct=1 --bs=4K	\
+fio-3.35/t/zbd/test-zbd-support:			--verify=crc32c --do_verify=1 ${job_var_opts[@]} \
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --size="$zone_size" --do_verify=1 --verify=md5 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:		--verify=crc32c --do_verify=1 --verify_backlog=2 \
+fio-3.35/t/zbd/test-zbd-support:			       --size=$size --loops=$loops --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:		       --do_verify=1 --verify=md5 --experimental_verify=1 \
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:do_verify=1
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:do_verify=0
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:do_verify=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:do_verify=0
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:do_verify=0
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:do_verify=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:do_verify=1
+fio-3.35/t/jobs/t0025.fio:do_verify=1
+fio-3.35/t/jobs/t0026.fio:do_verify=1
+fio-3.35/t/jobs/t0026.fio:do_verify=1

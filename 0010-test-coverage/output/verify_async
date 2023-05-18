@@ -1,0 +1,2 @@
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async=6
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async_cpus=0-3

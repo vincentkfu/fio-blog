@@ -1,0 +1,62 @@
+fio-3.35/t/latency_percentiles.py:#   produce both terse, JSON output and confirm that they match
+fio-3.35/t/latency_percentiles.py:#   confirm that sync_lat data appears
+fio-3.35/t/latency_percentiles.py:# echo confirm that clat and lat percentiles appear
+fio-3.35/t/latency_percentiles.py:# echo confirm that only lat percentiles appear
+fio-3.35/t/latency_percentiles.py:# echo confirm that only clat percentiles appear
+fio-3.35/t/latency_percentiles.py:# echo confirm that slat, clat, lat percentiles appear
+fio-3.35/t/latency_percentiles.py:# echo confirm that clat and lat percentiles appear
+fio-3.35/t/latency_percentiles.py:# echo confirm that clat percentiles appear for reads and writes
+fio-3.35/t/latency_percentiles.py:# echo confirm that slat percentiles appear for both reads and writes
+fio-3.35/t/latency_percentiles.py:# echo confirm that slat, clat, and lat percentiles appear for 'mixed' IOs
+fio-3.35/t/latency_percentiles.py:# echo confirm that fsync latencies appear
+fio-3.35/t/latency_percentiles.py:            # the bins, we can be confident that the bin
+fio-3.35/t/run-fio-tests.py:            config_file = os.path.join(fio_root, "config-host.h")
+fio-3.35/t/run-fio-tests.py:            contents, success = FioJobTest.get_file(config_file)
+fio-3.35/t/run-fio-tests.py:                print("Unable to open {0} to check requirements".format(config_file))
+fio-3.35/t/run-fio-tests.py:    for config in TEST_LIST:
+fio-3.35/t/run-fio-tests.py:        if (args.skip and config['test_id'] in args.skip) or \
+fio-3.35/t/run-fio-tests.py:           (args.run_only and config['test_id'] not in args.run_only):
+fio-3.35/t/run-fio-tests.py:            print("Test {0} SKIPPED (User request)".format(config['test_id']))
+fio-3.35/t/run-fio-tests.py:        if issubclass(config['test_class'], FioJobTest):
+fio-3.35/t/run-fio-tests.py:            if config['pre_job']:
+fio-3.35/t/run-fio-tests.py:                                           config['pre_job'])
+fio-3.35/t/run-fio-tests.py:            if config['pre_success']:
+fio-3.35/t/run-fio-tests.py:                fio_pre_success = config['pre_success']
+fio-3.35/t/run-fio-tests.py:            if 'output_format' in config:
+fio-3.35/t/run-fio-tests.py:                output_format = config['output_format']
+fio-3.35/t/run-fio-tests.py:            test = config['test_class'](
+fio-3.35/t/run-fio-tests.py:                os.path.join(fio_root, 't', 'jobs', config['job']),
+fio-3.35/t/run-fio-tests.py:                config['success'],
+fio-3.35/t/run-fio-tests.py:            desc = config['job']
+fio-3.35/t/run-fio-tests.py:        elif issubclass(config['test_class'], FioExeTest):
+fio-3.35/t/run-fio-tests.py:            exe_path = os.path.join(fio_root, config['exe'])
+fio-3.35/t/run-fio-tests.py:            if config['parameters']:
+fio-3.35/t/run-fio-tests.py:                parameters = [p.format(fio_path=fio_path) for p in config['parameters']]
+fio-3.35/t/run-fio-tests.py:            if config['test_id'] in pass_through:
+fio-3.35/t/run-fio-tests.py:                parameters += pass_through[config['test_id']].split()
+fio-3.35/t/run-fio-tests.py:            test = config['test_class'](exe_path, parameters,
+fio-3.35/t/run-fio-tests.py:                                        config['success'])
+fio-3.35/t/run-fio-tests.py:            desc = config['exe']
+fio-3.35/t/run-fio-tests.py:            print("Test {0} FAILED: unable to process test config".format(config['test_id']))
+fio-3.35/t/run-fio-tests.py:            for req in config['requirements']:
+fio-3.35/t/run-fio-tests.py:                logging.debug("Test %d: Requirement '%s' met? %s", config['test_id'], reason,
+fio-3.35/t/run-fio-tests.py:                print("Test {0} SKIPPED ({1}) {2}".format(config['test_id'], reason, desc))
+fio-3.35/t/run-fio-tests.py:            test.setup(artifact_root, config['test_id'])
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d exception:\n%s\n", config['test_id'], traceback.format_exc())
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stderr:\n%s", config['test_id'], contents)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stdout:\n%s", config['test_id'], contents)
+fio-3.35/t/run-fio-tests.py:        print("Test {0} {1} {2}".format(config['test_id'], result, desc))
+fio-3.35/t/steadystate_tests.py:                    # check runtime, confirm criterion calculation, and confirm that criterion was not met
+fio-3.35/t/zbd/functions:	f=/sys/kernel/config/nullb/$(basename "${1}")
+fio-3.35/t/zbd/run-tests-against-nullb:# zoned and mixed zone configurations.
+fio-3.35/t/zbd/run-tests-against-nullb:	echo "configurations."
+fio-3.35/t/zbd/run-tests-against-nullb:	for d in /sys/kernel/config/nullb/*; do [ -d "$d" ] && rmdir "$d"; done
+fio-3.35/t/zbd/run-tests-against-nullb:	for d in /sys/kernel/config/nullb/*; do
+fio-3.35/t/zbd/run-tests-against-nullb:	cd /sys/kernel/config/nullb &&
+fio-3.35/t/zbd/run-tests-against-nullb:configure_nullb()
+fio-3.35/t/zbd/run-tests-against-nullb:show_nullb_config()
+fio-3.35/t/zbd/run-tests-against-nullb:if ! cat /sys/kernel/config/nullb/features | grep -q zone_capacity; then
+fio-3.35/t/zbd/run-tests-against-nullb:if ! cat /sys/kernel/config/nullb/features | grep -q zone_nr_conv; then
+fio-3.35/t/zbd/run-tests-against-nullb:		configure_nullb
+fio-3.35/t/zbd/run-tests-against-nullb:		show_nullb_config
+fio-3.35/t/zbd/test-zbd-support:			  "--show-confl-seg=no");

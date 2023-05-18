@@ -1,0 +1,12 @@
+fio-3.35/t/random_seed.py:# - make sure that randseed overrides randrepeat and allrandrepeat
+fio-3.35/t/random_seed.py:        for opt in ['randseed', 'randrepeat', 'allrandrepeat']:
+fio-3.35/t/random_seed.py:        """Check output for allrandrepeat=1."""
+fio-3.35/t/random_seed.py:        opt = 'randrepeat' if 'randrepeat' in self.test_options else 'allrandrepeat'
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,

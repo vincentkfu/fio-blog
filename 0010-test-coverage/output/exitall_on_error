@@ -1,0 +1,1 @@
+fio-3.35/t/zbd/test-zbd-support:		       --exitall_on_error=1 \

@@ -1,0 +1,76 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--runtime=3s",
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:#./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:            "--runtime={runtime}".format(**self.test_options),
+fio-3.35/t/latency_percentiles.py:            "runtime": 2,
+fio-3.35/t/latency_percentiles.py:            "runtime": 2,
+fio-3.35/t/latency_percentiles.py:            "runtime": 2,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 2,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 2,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/latency_percentiles.py:            "runtime": 5,
+fio-3.35/t/readonly.py:                "--runtime=1s",
+fio-3.35/t/run-fio-tests.py:    Confirm that runtime >= 60s"""
+fio-3.35/t/sgunmap-perf.py:def runtest(fio, dev, rw, qd, batch, bs='512', runtime='30s'):
+fio-3.35/t/sgunmap-perf.py:                  "--runtime={0}".format(runtime),
+fio-3.35/t/sgunmap-test.py:                           "--runtime=30s",
+fio-3.35/t/sgunmap-test.py:                   "--runtime=30s",
+fio-3.35/t/steadystate_tests.py:# min runtime:
+fio-3.35/t/steadystate_tests.py:# if ss attained: min runtime = ss_dur + ss_ramp
+fio-3.35/t/steadystate_tests.py:# if not attained: runtime = timeout
+fio-3.35/t/steadystate_tests.py:#   check that runtime is less than job time
+fio-3.35/t/steadystate_tests.py:#   check that runtime is what was specified
+fio-3.35/t/steadystate_tests.py:                            "--runtime={0}".format(job['timeout']) ])
+fio-3.35/t/steadystate_tests.py:                    # check runtime >= ss_dur + ss_ramp, check criterion, check criterion < limit
+fio-3.35/t/steadystate_tests.py:                    actual = jsonjob['read']['runtime']
+fio-3.35/t/steadystate_tests.py:                        line = 'FAILED ' + line + ' ss attained, runtime {0} < ss_dur {1} + ss_ramp {2}'.format(actual, job['ss_dur'], job['ss_ramp'])
+fio-3.35/t/steadystate_tests.py:                        line = line + ' ss attained, runtime {0} > ss_dur {1} + ss_ramp {2},'.format(actual, job['ss_dur'], job['ss_ramp'])
+fio-3.35/t/steadystate_tests.py:                    # check runtime, confirm criterion calculation, and confirm that criterion was not met
+fio-3.35/t/steadystate_tests.py:                    actual = jsonjob['read']['runtime']
+fio-3.35/t/steadystate_tests.py:                        line = 'FAILED ' + line + ' ss not attained, expected runtime {0} != actual runtime {1}'.format(expected, actual)
+fio-3.35/t/steadystate_tests.py:                        line = line + ' ss not attained, runtime {0} != ss_dur {1} + ss_ramp {2},'.format(actual, job['ss_dur'], job['ss_ramp'])
+fio-3.35/t/steadystate_tests.py:                actual = jsonjob['read']['runtime']
+fio-3.35/t/steadystate_tests.py:                line = result + line + ' no ss, expected runtime {0} ~= actual runtime {1}'.format(expected, actual)
+fio-3.35/t/zbd/test-zbd-support:		    --loops=2 --time_based --runtime=30s --norandommap=1\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--thread=1" "--time_based" "--runtime=30" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--thread=1" "--time_based" "--runtime=30")
+fio-3.35/t/zbd/test-zbd-support:			"$(ioengine "libaio")" --time_based=1 --runtime=15s \
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--time_based" "--runtime=30")
+fio-3.35/t/zbd/test-zbd-support:		--time_based --runtime=3 --zonemode=zbd --zonesize=${zone_size}\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--time_based" "--runtime=30" "--rw=randwrite")
+fio-3.35/t/zbd/test-zbd-support:		--time_based=1 --runtime=30s --continue_on_error=0 \
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "libaio")" --time_based=1 --runtime=30s \
+fio-3.35/t/zbd/test-zbd-support:	    --time_based --runtime=30s --flow=128 "${job_var_opts[@]}" \
+fio-3.35/t/zbd/test-zbd-support:	    --time_based --runtime=30s --flow=1 "${job_var_opts[@]}" \
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:# runtime=216000
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:#runtime=3600
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:runtime=1m
+fio-3.35/t/jobs/t0011-5d2788d5.fio:runtime=10
+fio-3.35/t/jobs/t0012.fio:runtime=12
+fio-3.35/t/jobs/t0013.fio:runtime=10
+fio-3.35/t/jobs/t0014.fio:runtime=12
+fio-3.35/t/jobs/t0014.fio:runtime=5
+fio-3.35/t/jobs/t0018.fio:runtime=3s
+fio-3.35/t/jobs/t0026.fio:runtime=5

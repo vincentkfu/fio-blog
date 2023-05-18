@@ -1,0 +1,18 @@
+fio-3.35/t/readonly.py:# readonly.py
+fio-3.35/t/readonly.py:# Do some basic tests of the --readonly parameter
+fio-3.35/t/readonly.py:# python readonly.py [-f fio-executable]
+fio-3.35/t/readonly.py:# python t/readonly.py
+fio-3.35/t/readonly.py:# python t/readonly.py -f ./fio
+fio-3.35/t/readonly.py:                "--name=readonly",
+fio-3.35/t/readonly.py:    if 'readonly-pre' in test:
+fio-3.35/t/readonly.py:        fio_args.insert(0, "--readonly")
+fio-3.35/t/readonly.py:    if 'readonly-post' in test:
+fio-3.35/t/readonly.py:        fio_args.append("--readonly")
+fio-3.35/t/readonly.py:    if 'readonly-pre' in test or 'readonly-post' in test:
+fio-3.35/t/readonly.py:                    "readonly-pre": 1,
+fio-3.35/t/readonly.py:                    "readonly-pre": 1,
+fio-3.35/t/readonly.py:                    "readonly-pre": 1,
+fio-3.35/t/readonly.py:                    "readonly-post": 1,
+fio-3.35/t/readonly.py:                    "readonly-post": 1,
+fio-3.35/t/readonly.py:                    "readonly-post": 1,
+fio-3.35/t/run-fio-tests.py:        'exe':              't/readonly.py',

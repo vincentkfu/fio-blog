@@ -1,0 +1,113 @@
+fio-3.35/t/run-fio-tests.py:# - kernel 4.19 or later for zoned null block devices (zbd tests)
+fio-3.35/t/run-fio-tests.py:    the blocks originally written will be read."""
+fio-3.35/t/run-fio-tests.py:                        self.failure_reason += " {0}: block size does not match: {1}".format(
+fio-3.35/t/run-fio-tests.py:                self.failure_reason += " {0}: block size {1} not a multiple of sector size " \
+fio-3.35/t/run-fio-tests.py:        return Requirements._zbd, "Zoned block device support required"
+fio-3.35/t/run-fio-tests.py:        """Are zoned null block devices available?"""
+fio-3.35/t/run-fio-tests.py:        return Requirements._zoned_nullb, "Zoned null block device support required"
+fio-3.35/t/sgunmap-perf.py:# sgunmap-perf.py char-device block-device fio-executable
+fio-3.35/t/sgunmap-perf.py:                        help='block device target (e.g., /dev/sda)')
+fio-3.35/t/sgunmap-perf.py:                  "--blocksize={0}".format(bs),
+fio-3.35/t/sgunmap-test.py:# sgunmap-test.py char-device block-device fio-executable
+fio-3.35/t/sgunmap-test.py:# For both char-dev and block-dev these are the expected
+fio-3.35/t/sgunmap-test.py:#                       blockdev                chardev
+fio-3.35/t/sgunmap-test.py:    parser.add_argument('blockdev',
+fio-3.35/t/sgunmap-test.py:                        help='block device target (e.g., /dev/sda)')
+fio-3.35/t/sgunmap-test.py:# With block devices,
+fio-3.35/t/sgunmap-test.py:def check(jsondata, parameters, block, qd, qdbatch, rw):
+fio-3.35/t/sgunmap-test.py:        if block:
+fio-3.35/t/sgunmap-test.py:    block = False
+fio-3.35/t/sgunmap-test.py:    for dev in [args.chardev, args.blockdev]:
+fio-3.35/t/sgunmap-test.py:            check(jobdata, parameters, block, qd, batch, rw)
+fio-3.35/t/sgunmap-test.py:        block = True
+fio-3.35/t/strided.py:#       zonesize=zonerange  all blocks in zonerange touched
+fio-3.35/t/strided.py:#       zonesize>zonerange  all blocks touched and roll-over back into zone
+fio-3.35/t/strided.py:#       zonesize<zonerange  all blocks inside zone
+fio-3.35/t/strided.py:#   w/o randommap       all blocks inside zone
+fio-3.35/t/strided.py:        # so all blocks should be unique and we should have
+fio-3.35/t/strided.py:        block = (offset - zonestart) / test['bs']
+fio-3.35/t/strided.py:        if block in zoneset:
+fio-3.35/t/strided.py:        zoneset.add(block)
+fio-3.35/t/strided.py:                print("Expected {0} blocks in zone but only saw {1}".format(
+fio-3.35/t/zbd/functions:	s=/sys/block/$(basename "${1}")/device/subsystem
+fio-3.35/t/zbd/functions:	[[ $(</sys/block/$(basename "${1}")/queue/zoned) == host-managed ]]
+fio-3.35/t/zbd/functions:# Check zone capacity of each zone and report block size aligned to the zone
+fio-3.35/t/zbd/functions:		# For regular block devices, handle zone size as zone capacity.
+fio-3.35/t/zbd/functions:# max_open_zones in sysfs, or which lacks zoned block device support completely.
+fio-3.35/t/zbd/functions:# Get minimum block size to write to seq zones. Refer the sysfs attribute
+fio-3.35/t/zbd/functions:# block device type. If the sysfs attribute is not available, refer physical
+fio-3.35/t/zbd/functions:# block size for rotational SMR drives. For non-rotational devices such as ZNS
+fio-3.35/t/zbd/functions:# devices, refer logical block size.
+fio-3.35/t/zbd/functions:	local sys_path="/sys/block/$1/queue"
+fio-3.35/t/zbd/functions:		cat "$sys_path/physical_block_size"
+fio-3.35/t/zbd/functions:		cat "$sys_path/logical_block_size"
+fio-3.35/t/zbd/functions:	[[ -z "$(${zbc_info} "$dev" | grep "is not a zoned block device")" ]]
+fio-3.35/t/zbd/functions:zbc_physical_block_size() {
+fio-3.35/t/zbd/functions:		grep "physical blocks" |
+fio-3.35/t/zbd/functions:		sed -n 's/^[[:blank:]]*[0-9]* physical blocks of[[:blank:]]*//p' |
+fio-3.35/t/zbd/run-tests-against-nullb:		echo ${dev_blocksize} > blocksize &&
+fio-3.35/t/zbd/run-tests-against-nullb:dev_blocksize=4096
+fio-3.35/t/zbd/test-zbd-support:    [ -e "/sys/block/$dev" ] || return $?
+fio-3.35/t/zbd/test-zbd-support:    if [ -e "/sys/block/$dev/mq" ]; then
+fio-3.35/t/zbd/test-zbd-support:    echo "$sched" >"/sys/block/$dev/queue/scheduler"
+fio-3.35/t/zbd/test-zbd-support:    for f in /sys/class/scsi_device/*/device/block/"$d"; do
+fio-3.35/t/zbd/test-zbd-support:		SKIP_REASON="$dev is not a zoned block device"
+fio-3.35/t/zbd/test-zbd-support:require_regular_block_dev() {
+fio-3.35/t/zbd/test-zbd-support:		SKIP_REASON="$dev is not a regular block device"
+fio-3.35/t/zbd/test-zbd-support:require_block_dev() {
+fio-3.35/t/zbd/test-zbd-support:	SKIP_REASON="$dev is not a block device"
+fio-3.35/t/zbd/test-zbd-support:# Check whether buffered writes are refused for block devices.
+fio-3.35/t/zbd/test-zbd-support:    require_block_dev || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:# Random write to sequential zones, libaio, queue depth 64, random block size.
+fio-3.35/t/zbd/test-zbd-support:# Write to sequential zones with a block size that is not a divisor of the
+fio-3.35/t/zbd/test-zbd-support:# Test repeated async write job with verify using two unaligned block sizes.
+fio-3.35/t/zbd/test-zbd-support:	local -a block_sizes
+fio-3.35/t/zbd/test-zbd-support:	block_sizes=($((4096 * 7)) $(($(min ${zone_capacity} 4194304) - 4096)))
+fio-3.35/t/zbd/test-zbd-support:	for bs in ${block_sizes[@]}; do
+fio-3.35/t/zbd/test-zbd-support:# Read one block from a block device.
+fio-3.35/t/zbd/test-zbd-support:read_one_block() {
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio accepts --zonemode=none for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio accepts --zonemode=strided for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided |
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided --zonesize=$bs >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio checks the zone size for zoned block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=$((2 * zone_size)) |
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=0 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    require_regular_block_dev || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=0 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'Specifying the zone size is mandatory for regular file/block device with --zonemode=zbd'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=1 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    require_regular_block_dev || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q "fio: first I/O failed. If .* is a zoned block device, consider --zonemode=zbd"
+fio-3.35/t/zbd/test-zbd-support:# Check if fio handles --zonecapacity on a normal block device correctly
+fio-3.35/t/zbd/test-zbd-support:    require_regular_block_dev || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:	require_regular_block_dev || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:# in-flight, when the block size is not a divisor of the zone size.
+fio-3.35/t/zbd/test-zbd-support:	disk_size=$(($(<"/sys/dev/block/$major:$minor/size")*512))
+fio-3.35/t/zbd/test-zbd-support:	if [[ -r "/sys/dev/block/$major:$minor/partition" ]]; then
+fio-3.35/t/zbd/test-zbd-support:		realsysfs=$(readlink "/sys/dev/block/$major:$minor")
+fio-3.35/t/zbd/test-zbd-support:	case "$(<"/sys/class/block/$basename/queue/zoned")" in
+fio-3.35/t/zbd/test-zbd-support:	if ! min_seq_write_size=($(zbc_physical_block_size "$dev")); then
+fio-3.35/t/zbd/test-zbd-support:		echo "Failed to determine physical block size"
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=1M
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=1M
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=512
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=1M
+fio-3.35/t/jobs/t0013.fio:blocksize=4K
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0023.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:# 			block sizes 8k for both write and trim
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match
+fio-3.35/t/jobs/t0024.fio:# 			block sizes match

@@ -1,0 +1,17 @@
+fio-3.35/t/latency_percentiles.py:                    'cmdprio_percentage', 'bssplit', 'cmdprio_bssplit']:
+fio-3.35/t/latency_percentiles.py:            # test bssplit and cmdprio_bssplit
+fio-3.35/t/latency_percentiles.py:            'bssplit': '64k/40:1024k/60',
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:            'bssplit': '64k/40:1024k/60',
+fio-3.35/t/latency_percentiles.py:            'cmdprio_bssplit': '64k/25/1/1:64k/75/3/2:1024k/0',
+fio-3.35/t/latency_percentiles.py:             ('cmdprio_percentage' in test or 'cmdprio_bssplit' in test):
+fio-3.35/t/run-fio-tests.py:        self.check_trimwrite("bssplit_bw.log")
+fio-3.35/t/run-fio-tests.py:        self.check_trimwrite("bssplit_no_rm_bw.log")
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_trimwrite("bssplit_bw.log")
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:bssplit=512/50:1M/50
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:bssplit=512/50:1M/50
+fio-3.35/t/jobs/t0023.fio:[bssplit]
+fio-3.35/t/jobs/t0023.fio:[bssplit_no_rm]
+fio-3.35/t/jobs/t0024.fio:[bssplit]

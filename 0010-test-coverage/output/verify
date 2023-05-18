@@ -1,0 +1,75 @@
+fio-3.35/t/run-fio-tests.py:    reads will include the initial phase as well as the verify phase where all
+fio-3.35/t/run-fio-tests.py:    """Test experimental verify read backs written data pattern."""
+fio-3.35/t/run-fio-tests.py:        'parameters':       ['0xFFFFFF', '0', '0', 'verify'],
+fio-3.35/t/zbd/test-zbd-support:		   --bs="$bs" --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5 --size="$size"		\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --do_verify=1 --verify=md5				\
+fio-3.35/t/zbd/test-zbd-support:		   --bsrange=4K-64K --do_verify=1 --verify=md5		\
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=1 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=4 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:		    --verify=md5 --offset=$off --size=$size\
+fio-3.35/t/zbd/test-zbd-support:	    --thread=1 --do_verify=1 --verify=md5 --direct=1 --bs=4K	\
+fio-3.35/t/zbd/test-zbd-support:# test but also allows to verify the performance of a drive.
+fio-3.35/t/zbd/test-zbd-support:# also allows to verify the performance of a drive.
+fio-3.35/t/zbd/test-zbd-support:# Test repeated async write job with verify using two unaligned block sizes.
+fio-3.35/t/zbd/test-zbd-support:			--verify=crc32c --do_verify=1 ${job_var_opts[@]} \
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --iodepth=1 --rw=write --do_verify=1 --verify=md5	\
+fio-3.35/t/zbd/test-zbd-support:		    --size="$zone_size" --do_verify=1 --verify=md5 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:		    --verify=md5  --size=${size} >>"${logfile}.${test_number}" 2>&1 ||
+fio-3.35/t/zbd/test-zbd-support:# Test read/write mix with verify.
+fio-3.35/t/zbd/test-zbd-support:		--verify=crc32c --do_verify=1 --verify_backlog=2 \
+fio-3.35/t/zbd/test-zbd-support:# Test zone_reset_threshold with verify.
+fio-3.35/t/zbd/test-zbd-support:			       --size=$size --loops=$loops --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:			       --verify=md5 --zone_reset_frequency=.9 \
+fio-3.35/t/zbd/test-zbd-support:# Test fio errors out experimental_verify option with zonemode=zbd.
+fio-3.35/t/zbd/test-zbd-support:		       --do_verify=1 --verify=md5 --experimental_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'not support experimental verify' "${logfile}.${test_number}"
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:do_verify=1
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:verify=md5
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:verify_fatal=1
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:do_verify=0
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:verify=md5
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:# Expected result: verify fails.
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:do_verify=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:verify=md5
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:verify_fatal=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:verify_dump=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:do_verify=0
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:verify=md5
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:verify_dump=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:do_verify=0
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:verify=md5
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:verify_dump=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:verify_interval=1M
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:verify_interval=512
+fio-3.35/t/jobs/t0005-f7078f7b.fio:verify=md5
+fio-3.35/t/jobs/t0005-f7078f7b.fio:verify_backlog=32
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify=meta
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify_backlog=1024
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify_fatal=1
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify_pattern=0xaaa
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:verify=crc32c
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:do_verify=1
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:verify_backlog=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify=crc32c-intel
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_backlog=1m
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:do_verify=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async=6
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async_cpus=0-3
+fio-3.35/t/jobs/t0025.fio:do_verify=1
+fio-3.35/t/jobs/t0025.fio:verify=md5
+fio-3.35/t/jobs/t0025.fio:experimental_verify=1
+fio-3.35/t/jobs/t0026.fio:do_verify=1
+fio-3.35/t/jobs/t0026.fio:verify=md5
+fio-3.35/t/jobs/t0026.fio:experimental_verify=1
+fio-3.35/t/jobs/t0026.fio:do_verify=1
+fio-3.35/t/jobs/t0026.fio:verify=md5
+fio-3.35/t/jobs/t0026.fio:experimental_verify=1
+fio-3.35/t/jobs/t0027.fio:verify=pattern
+fio-3.35/t/jobs/t0027.fio:verify_pattern='t0027.pattern'

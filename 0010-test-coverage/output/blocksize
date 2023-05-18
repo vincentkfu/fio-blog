@@ -1,0 +1,10 @@
+fio-3.35/t/sgunmap-perf.py:                  "--blocksize={0}".format(bs),
+fio-3.35/t/zbd/run-tests-against-nullb:		echo ${dev_blocksize} > blocksize &&
+fio-3.35/t/zbd/run-tests-against-nullb:dev_blocksize=4096
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=1M
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=512
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:blocksize=1M
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=512
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:blocksize=1M
+fio-3.35/t/jobs/t0013.fio:blocksize=4K

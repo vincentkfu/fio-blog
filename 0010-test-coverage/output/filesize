@@ -1,0 +1,34 @@
+fio-3.35/t/log_compression.py:        '--filesize=1000M',
+fio-3.35/t/log_compression.py:    filesize = 1000*1024*1024
+fio-3.35/t/log_compression.py:    ios = filesize//bs
+fio-3.35/t/random_seed.py:            "--filesize=32k",
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        if len(offsets) == filesize/bs:
+fio-3.35/t/run-fio-tests.py:    def check_all_offsets(self, filename, sectorsize, filesize):
+fio-3.35/t/run-fio-tests.py:        if len(offsets) != filesize/sectorsize:
+fio-3.35/t/run-fio-tests.py:                filename, len(offsets), filesize/sectorsize)
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        filesize = 1024*1024
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/strided.py:        fio_args.append('--filesize={filesize})'.format(**test))
+fio-3.35/t/strided.py:        fio_args.append('--filesize={size})'.format(**test))
+fio-3.35/t/strided.py:            if zonestart >= test['filesize']:
+fio-3.35/t/strided.py:        filesize = statinfo.st_size
+fio-3.35/t/strided.py:        if filesize == 0:
+fio-3.35/t/strided.py:            filesize = os.lseek(f, 0, os.SEEK_END)
+fio-3.35/t/strided.py:            test['filesize'] = filesize
+fio-3.35/t/strided.py:            test['filesize'] = test['size']
+fio-3.35/t/jobs/t0018.fio:filesize=256K
+fio-3.35/t/jobs/t0019.fio:filesize=1M
+fio-3.35/t/jobs/t0020.fio:filesize=1M
+fio-3.35/t/jobs/t0021.fio:filesize=1M
+fio-3.35/t/jobs/t0022.fio:filesize=1M
+fio-3.35/t/jobs/t0023.fio:filesize=1M
+fio-3.35/t/jobs/t0024.fio:filesize=1M

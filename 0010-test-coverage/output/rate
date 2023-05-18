@@ -1,0 +1,14 @@
+fio-3.35/t/jsonplus2csv_test.py:    """Run fio to generate json+ data.
+fio-3.35/t/jsonplus2csv_test.py:    """Run t/fio_jsonplus_clat2csv and validate the generated CSV files
+fio-3.35/t/log_compression.py:    for line_number,line in enumerate(log_lines):
+fio-3.35/t/random_seed.py:    Test object when randseed=something controls the generated seeds. If run
+fio-3.35/t/random_seed.py:        # Now try to find seeds generated using a different randseed and make
+fio-3.35/t/random_seed.py:                    print("TestRS: randseeds differ but generated seeds match.")
+fio-3.35/t/random_seed.py:                        print("TestRS: randseeds differ and generated seeds also differ.")
+fio-3.35/t/run-fio-tests.py:        # test job1 and job2 succeeded to recalibrate
+fio-3.35/t/run-fio-tests.py:    re-calibrate the activity dynamically"""
+fio-3.35/t/run-fio-tests.py:        # test job1 and job2 succeeded to recalibrate
+fio-3.35/t/run-fio-tests.py:class FioJobTest_iops_rate(FioJobTest):
+fio-3.35/t/run-fio-tests.py:        super(FioJobTest_iops_rate, self).check_result()
+fio-3.35/t/run-fio-tests.py:        'test_class':       FioJobTest_iops_rate,
+fio-3.35/t/jobs/t0011-5d2788d5.fio:rate_iops=1000

@@ -1,0 +1,165 @@
+fio-3.35/t/log_compression.py:# Expected result: 8000 log entries, offset starting at 0 and increasing by bs
+fio-3.35/t/log_compression.py:        '--log_offset=1',
+fio-3.35/t/log_compression.py:    expected_offset = 0
+fio-3.35/t/log_compression.py:        log_offset = int(line.split(',')[4])
+fio-3.35/t/log_compression.py:        if log_offset != expected_offset:
+fio-3.35/t/log_compression.py:            print('wrong offset ({}) for io number {} in log; should be {}'.format(
+fio-3.35/t/log_compression.py:                log_offset, line_number, expected_offset))
+fio-3.35/t/log_compression.py:        expected_offset += bs
+fio-3.35/t/random_seed.py:            offsets = 0
+fio-3.35/t/random_seed.py:                    offsets = int(tokens[len(tokens)-1])
+fio-3.35/t/random_seed.py:            if offsets == 0:
+fio-3.35/t/run-fio-tests.py:    Confirm that all offsets were touched sequentially"""
+fio-3.35/t/run-fio-tests.py:                self.failure_reason = "offsets {0}, {1} not sequential".format(prev, cur)
+fio-3.35/t/run-fio-tests.py:            self.failure_reason = "unexpected last offset {0}".format(cur)
+fio-3.35/t/run-fio-tests.py:    Confirm that almost all offsets were touched non-sequentially"""
+fio-3.35/t/run-fio-tests.py:        offsets = []
+fio-3.35/t/run-fio-tests.py:            offsets.append(prev/4096)
+fio-3.35/t/run-fio-tests.py:        if len(offsets) != 256:
+fio-3.35/t/run-fio-tests.py:            self.failure_reason += " number of offsets is {0} instead of 256".format(len(offsets))
+fio-3.35/t/run-fio-tests.py:            if not i in offsets:
+fio-3.35/t/run-fio-tests.py:                self.failure_reason += " missing offset {0}".format(i*4096)
+fio-3.35/t/run-fio-tests.py:        (z, p) = runstest_1samp(list(offsets))
+fio-3.35/t/run-fio-tests.py:        offsets = set()
+fio-3.35/t/run-fio-tests.py:            offsets.add(prev/bs)
+fio-3.35/t/run-fio-tests.py:            self.failure_reason = "too many ({0}) consecutive offsets".format(seq_count)
+fio-3.35/t/run-fio-tests.py:        if len(offsets) == filesize/bs:
+fio-3.35/t/run-fio-tests.py:            self.failure_reason += " no duplicate offsets found with norandommap=1"
+fio-3.35/t/run-fio-tests.py:        """Make sure that trims are followed by writes of the same size at the same offset."""
+fio-3.35/t/run-fio-tests.py:            offset = int(vals[4])
+fio-3.35/t/run-fio-tests.py:                    if prev_offset != offset:
+fio-3.35/t/run-fio-tests.py:                        self.failure_reason += " {0}: offset does not match: {1}".format(
+fio-3.35/t/run-fio-tests.py:            prev_offset = offset
+fio-3.35/t/run-fio-tests.py:    def check_all_offsets(self, filename, sectorsize, filesize):
+fio-3.35/t/run-fio-tests.py:        """Make sure all offsets were touched."""
+fio-3.35/t/run-fio-tests.py:        offsets = set()
+fio-3.35/t/run-fio-tests.py:            offset = int(vals[4])
+fio-3.35/t/run-fio-tests.py:            if offset % sectorsize != 0:
+fio-3.35/t/run-fio-tests.py:                self.failure_reason += " {0}: offset {1} not a multiple of sector size {2}".format(
+fio-3.35/t/run-fio-tests.py:                    filename, offset, sectorsize)
+fio-3.35/t/run-fio-tests.py:                offsets.add(offset/sectorsize + i)
+fio-3.35/t/run-fio-tests.py:        if len(offsets) != filesize/sectorsize:
+fio-3.35/t/run-fio-tests.py:            self.failure_reason += " {0}: only {1} offsets touched; expected {2}".format(
+fio-3.35/t/run-fio-tests.py:                filename, len(offsets), filesize/sectorsize)
+fio-3.35/t/run-fio-tests.py:            logging.debug("%s: %d sectors touched", filename, len(offsets))
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("basic_bw.log", 4096, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bs_bw.log", 8192, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bsrange_bw.log", 512, filesize)
+fio-3.35/t/run-fio-tests.py:        self.check_all_offsets("bssplit_bw.log", 512, filesize)
+fio-3.35/t/strided.py:                "--log_offset=1",
+fio-3.35/t/strided.py:    if 'offset' in test:
+fio-3.35/t/strided.py:        fio_args.append('--offset={offset}'.format(**test))
+fio-3.35/t/strided.py:    zonestart = 0 if 'offset' not in test else test['offset']
+fio-3.35/t/strided.py:                zonestart = 0 if 'offset' not in test else test['offset']
+fio-3.35/t/strided.py:        offset = int(tokens[4])
+fio-3.35/t/strided.py:        if offset < zonestart or offset >= zonestart + test['zonerange']:
+fio-3.35/t/strided.py:                    offset, zonestart))
+fio-3.35/t/strided.py:        block = (offset - zonestart) / test['bs']
+fio-3.35/t/strided.py:            print("Offset {0} in zone already touched".format(offset))
+fio-3.35/t/strided.py:                    "offset": 8*4096,
+fio-3.35/t/strided.py:                    "offset": 8*4096*1024,
+fio-3.35/t/strided.py:                    "offset": 8*4096,
+fio-3.35/t/zbd/functions:# Reports the summed zone capacity of $1 number of zones starting from offset $2
+fio-3.35/t/zbd/functions:		    read -r offset b0 b1 b2 b3 trailer || return $?
+fio-3.35/t/zbd/functions:# Reset the write pointer of one zone on device $1 at offset $2. The offset
+fio-3.35/t/zbd/functions:    local dev=$1 offset=$2 sectors
+fio-3.35/t/zbd/functions:	if [ "$offset" -lt 0 ]; then
+fio-3.35/t/zbd/functions:	    ${blkzone} reset -o "${offset}" -c 1 "$dev"
+fio-3.35/t/zbd/functions:	if [ "$offset" -lt 0 ]; then
+fio-3.35/t/zbd/functions:	    ${zbc_reset_zone} -sector "$dev" "${offset}" >/dev/null
+fio-3.35/t/zbd/test-zbd-support:    local write_offset="${1}"
+fio-3.35/t/zbd/test-zbd-support:		      --offset="${write_offset}" --size="${write_size}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--offset=$((first_sequential_zone_sector * 512))")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--offset=$off" "--bs=$bs" "--size=$bs")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off" "--bs=4K")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off")
+fio-3.35/t/zbd/test-zbd-support:	    --offset="${off}" \
+fio-3.35/t/zbd/test-zbd-support:		    --verify=md5 --offset=$off --size=$size\
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --offset=$off --loops=2 --norandommap=1 \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--offset=$((first_sequential_zone_sector*512 + zone_size*i))")
+fio-3.35/t/zbd/test-zbd-support:	    --offset=$off						\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--offset=$off" "--size=$((inc * nz))" "--io_size=$((bs * nz))")
+fio-3.35/t/zbd/test-zbd-support:    opts=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:			--bs="${bs}" --offset="${off}" \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:# Test 4/4 for the I/O boundary rounding code: $offset > $disk_size - $zone_size
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --rw=read "$(ioengine "psync")" --offset=$off --bs=$bs \
+fio-3.35/t/zbd/test-zbd-support:		    --offset=$((first_sequential_zone_sector * 512)) \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=${dev} --offset=${off} --bs=64K \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--max_open_zones=2" "--offset=$off")
+fio-3.35/t/zbd/test-zbd-support:		--io_size=$((io_size)) "$(ioengine "psync")" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((4 * zone_size)) "$(ioengine "psync")" --offset=${off}\
+fio-3.35/t/zbd/test-zbd-support:		--offset=$((first_sequential_zone_sector * 512)) \
+fio-3.35/t/zbd/test-zbd-support:	# offset=1z + offset_increment=10z + size=2z
+fio-3.35/t/zbd/test-zbd-support:		--offset_increment=10z	\
+fio-3.35/t/zbd/test-zbd-support:		--offset=1z		\
+fio-3.35/t/zbd/test-zbd-support:		--offset="${off}" --size=$((4 * zone_size)) --iodepth=256 \
+fio-3.35/t/zbd/test-zbd-support:            --offset="${off}" --size=$((zone_size * 16)) --bs="${bs}" \
+fio-3.35/t/zbd/test-zbd-support:	    --offset="${off}" --size="${size}" --bs="${bs}" \
+fio-3.35/t/zbd/test-zbd-support:	    --offset="${off}" --size="${size}" --bs="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		       --numjobs=2 --offset_increment="$zone_size" \
+fio-3.35/t/zbd/test-zbd-support:		--name=r --rw=read --offset=$off1 "${job_var_opts[@]}" \
+fio-3.35/t/zbd/test-zbd-support:		--name=w --rw=write --offset=$off2 "${job_var_opts[@]}" \
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:offset=0G
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:offset=4G
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:offset=0G
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:offset=4G
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:offset=0G
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:offset=1G
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:offset=0G
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:offset=1G
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:offset=0G
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:offset=1G
+fio-3.35/t/jobs/t0019.fio:# Expected result: offsets are accessed sequentially and all offsets are read
+fio-3.35/t/jobs/t0019.fio:# Buggy result: offsets are not accessed sequentially and one or more offsets are missed
+fio-3.35/t/jobs/t0019.fio:# run with --debug=io or logging to see which offsets are accessed
+fio-3.35/t/jobs/t0019.fio:log_offset=1
+fio-3.35/t/jobs/t0020.fio:# Expected result: offsets are not accessed sequentially and all offsets are touched
+fio-3.35/t/jobs/t0020.fio:# Buggy result: offsets are accessed sequentially and one or more offsets are missed
+fio-3.35/t/jobs/t0020.fio:# run with --debug=io or logging to see which offsets are read
+fio-3.35/t/jobs/t0020.fio:log_offset=1
+fio-3.35/t/jobs/t0021.fio:# make sure the lfsr random generator actually does touch all the offsets
+fio-3.35/t/jobs/t0021.fio:# Expected result: offsets are not accessed sequentially and all offsets are touched
+fio-3.35/t/jobs/t0021.fio:# Buggy result: offsets are accessed sequentially and one or more offsets are missed
+fio-3.35/t/jobs/t0021.fio:# run with --debug=io or logging to see which offsets are read
+fio-3.35/t/jobs/t0021.fio:log_offset=1
+fio-3.35/t/jobs/t0022.fio:# make sure that when we enable norandommap we touch some offsets more than once
+fio-3.35/t/jobs/t0022.fio:# Expected result: at least one offset is touched more than once
+fio-3.35/t/jobs/t0022.fio:# Buggy result: each offset is touched only once
+fio-3.35/t/jobs/t0022.fio:log_offset=1
+fio-3.35/t/jobs/t0023.fio:log_offset=1
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# 			all offsets touched
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# 			all offsets trimmed
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# 			all offsets trimmed
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# 			all offsets trimmed
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0023.fio:# Expected result: 	trim issued to random offset followed by write to same offset
+fio-3.35/t/jobs/t0024.fio:log_offset=1
+fio-3.35/t/jobs/t0024.fio:# Expected result: 	trim issued to sequential offsets followed by write to same offset
+fio-3.35/t/jobs/t0024.fio:# 			all offsets touched
+fio-3.35/t/jobs/t0024.fio:# Expected result: 	trim issued to sequential offsets followed by write to same offset
+fio-3.35/t/jobs/t0024.fio:# 			all offsets trimmed
+fio-3.35/t/jobs/t0024.fio:# Expected result: 	trim issued to sequential offsets followed by write to same offset
+fio-3.35/t/jobs/t0024.fio:# 			all offsets trimmed
+fio-3.35/t/jobs/t0024.fio:# Expected result: 	trim issued to sequential offsets followed by write to same offset
+fio-3.35/t/jobs/t0024.fio:# 			all offsets trimmed

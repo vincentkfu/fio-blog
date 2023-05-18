@@ -1,0 +1,4 @@
+fio-3.35/t/steadystate_tests.py:                            "--stonewall",
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:stonewall
+fio-3.35/t/jobs/t0026.fio:stonewall=1
+fio-3.35/t/jobs/t0027.fio:stonewall=1

@@ -1,0 +1,5 @@
+fio-3.35/t/zbd/test-zbd-support:# Test fio errors out experimental_verify option with zonemode=zbd.
+fio-3.35/t/zbd/test-zbd-support:		       --do_verify=1 --verify=md5 --experimental_verify=1 \
+fio-3.35/t/jobs/t0025.fio:experimental_verify=1
+fio-3.35/t/jobs/t0026.fio:experimental_verify=1
+fio-3.35/t/jobs/t0026.fio:experimental_verify=1

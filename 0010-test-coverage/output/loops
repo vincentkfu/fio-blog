@@ -1,0 +1,23 @@
+fio-3.35/t/zbd/test-zbd-support:		    --offset=$off --loops=2 --norandommap=1 \
+fio-3.35/t/zbd/test-zbd-support:    local bs loops=9 size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:		   --size=$size --loops=$loops				\
+fio-3.35/t/zbd/test-zbd-support:    check_written $((capacity * loops)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    local loops=4 r
+fio-3.35/t/zbd/test-zbd-support:	    --size=$zone_size --loops=$loops --randseed="$r"		\
+fio-3.35/t/zbd/test-zbd-support:    check_written $((loops * capacity)) || return $?
+fio-3.35/t/zbd/test-zbd-support:		    --loops=2 --time_based --runtime=30s --norandommap=1\
+fio-3.35/t/zbd/test-zbd-support:	local off bs loops=2 size=$((zone_size)) w
+fio-3.35/t/zbd/test-zbd-support:			       --size=$size --loops=$loops --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:	local bs loops=2 size=$((zone_size))
+fio-3.35/t/zbd/test-zbd-support:		       --size=$size --loops=$loops --numjobs=2 \
+fio-3.35/t/zbd/test-zbd-support:	check_written $((size * loops * 2)) || return $?
+fio-3.35/t/zbd/test-zbd-support:	local bs loops=2 size=$((zone_size)) off1 off2
+fio-3.35/t/zbd/test-zbd-support:	run_fio "$(ioengine "psync")" --bs="$bs" --size=$size --loops=$loops \
+fio-3.35/t/zbd/test-zbd-support:	check_written $((size * loops)) || return $?
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:loops=1
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:loops=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:loops=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:loops=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:loops=1
+fio-3.35/t/jobs/t0013.fio:loops=1000000
+fio-3.35/t/jobs/t0026.fio:loops=8

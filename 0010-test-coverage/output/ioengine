@@ -1,0 +1,140 @@
+fio-3.35/t/jsonplus2csv_test.py:# We need an async ioengine to get submission latencies
+fio-3.35/t/jsonplus2csv_test.py:        "--ioengine=" + aio,
+fio-3.35/t/latency_percentiles.py:#       null ioengine
+fio-3.35/t/latency_percentiles.py:#       libaio ioengine
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=0 --clat_percentiles=0 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=0 --clat_percentiles=1 --lat_percentiles=0
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=0 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio -rw=randrw
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=0 --lat_percentiles=0 --rw=randrw
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1 \
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1 \
+fio-3.35/t/latency_percentiles.py:            "--ioengine={ioengine}".format(**self.test_options),
+fio-3.35/t/latency_percentiles.py:            # because the null ioengine is synchronous
+fio-3.35/t/latency_percentiles.py:            "ioengine": 'null',
+fio-3.35/t/latency_percentiles.py:            "ioengine": 'null',
+fio-3.35/t/latency_percentiles.py:            "ioengine": 'null',
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": 'null',
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            # because the null ioengine is synchronous
+fio-3.35/t/latency_percentiles.py:            "ioengine": 'null',
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/latency_percentiles.py:            "ioengine": aio,
+fio-3.35/t/log_compression.py:# Test log_compression and log_store_compressed. Uses null ioengine.
+fio-3.35/t/log_compression.py:        '--ioengine=null',
+fio-3.35/t/random_seed.py:            "--ioengine=null",
+fio-3.35/t/readonly.py:                "--ioengine=null",
+fio-3.35/t/run-fio-tests.py:# - Linux (libaio ioengine, zbd tests, etc)
+fio-3.35/t/sgunmap-perf.py:# Basic performance testing using fio's sg ioengine
+fio-3.35/t/sgunmap-perf.py:def fulldevice(fio, dev, ioengine='psync', rw='trim', bs='1M'):
+fio-3.35/t/sgunmap-perf.py:                  "--ioengine={0}".format(ioengine),
+fio-3.35/t/sgunmap-perf.py:                  "--ioengine=sg",
+fio-3.35/t/sgunmap-perf.py:    fulldevice(args.fior, args.cdev, ioengine='sg')
+fio-3.35/t/sgunmap-test.py:# Limited functionality test for trim workloads using fio's sg ioengine
+fio-3.35/t/sgunmap-test.py:                           "--ioengine=sg",
+fio-3.35/t/sgunmap-test.py:                   "--ioengine=sg",
+fio-3.35/t/steadystate_tests.py:                            "--ioengine=null",
+fio-3.35/t/strided.py:# Test zonemode=strided. This uses the null ioengine when no file is
+fio-3.35/t/strided.py:        fio_args.append('--ioengine=null')
+fio-3.35/t/zbd/functions:# feature to get max_open_zones from the device through sysfs or ioengine
+fio-3.35/t/zbd/test-zbd-support:	echo -e "\t-l Test with libzbc ioengine"
+fio-3.35/t/zbd/test-zbd-support:	echo -e "\t-u Use io_uring ioengine in place of libaio"
+fio-3.35/t/zbd/test-zbd-support:ioengine() {
+fio-3.35/t/zbd/test-zbd-support:		echo -n "--ioengine=libzbc"
+fio-3.35/t/zbd/test-zbd-support:		echo -n "--ioengine=io_uring"
+fio-3.35/t/zbd/test-zbd-support:		echo -n "--ioengine=$1"
+fio-3.35/t/zbd/test-zbd-support:    write_opts=(--name="write_job" --rw=write "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" --size="${zone_size}" --thread=1	\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--disable_lat=1")
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --iodepth=1 --rw=write	\
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" --iodepth=1 --rw=read --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=1 --rw=randwrite	\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=64 --rw=randwrite	\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq --ioengine=sg					\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq --ioengine=sg 					\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=64 --rw=randwrite	\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=64 --rw=randwrite --bs=16K \
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=64 --rw=randwrite --bs=16K \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "libaio")" --iodepth=64 --rw=randwrite --bs=16K \
+fio-3.35/t/zbd/test-zbd-support:		    "$(ioengine "psync")" --rw=read --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:		    "$(ioengine "libaio")" --iodepth=64 --rw=randread --bs=16K \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "libaio")" --iodepth=8 --rw=randrw --bs=4K \
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --rw=write --bs="$bs"		\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "$(ioengine "psync")" "--rw=write" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name="$dev" --filename="$dev" "$(ioengine "psync")" --rw="$1" \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "--io_size=$capacity" "$(ioengine "psync")" "--rw=randwrite")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "libaio")" --iodepth=8 --rw=randrw	\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=$bs" "$(ioengine "psync")" "--rw=randread" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=128K" "$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --iodepth=1 --rw=write	\
+fio-3.35/t/zbd/test-zbd-support:			"$(ioengine "libaio")" --time_based=1 --runtime=15s \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --rw=read "$(ioengine "psync")" --offset=$off --bs=$bs \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "psync")" --iodepth=1 --rw=randwrite --bs=$bs\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "libaio")" --iodepth=64 --rw=randwrite --bs=4K \
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --rw=write --bs=$bs --zoneskip=1 \
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "libaio")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "psync")" --rw=write \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((16 * zone_size)) "$(ioengine "libaio")" --rw=randread\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$((16 * zone_size))" "$(ioengine "libaio")")
+fio-3.35/t/zbd/test-zbd-support:		--io_size=$((io_size)) "$(ioengine "psync")" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((4 * zone_size)) "$(ioengine "psync")" --offset=${off}\
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=${dev} "$(ioengine "libaio")" \
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "libaio")" --time_based=1 --runtime=30s \
+fio-3.35/t/zbd/test-zbd-support:            --name="precondition"  --rw=write "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "libaio")" --iodepth=8 \
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:		run_fio_on_seq "$(ioengine "psync")" --rw=${w} --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size=$zone_size \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size="$zone_size" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio "$(ioengine "psync")" --bs="$bs" --size=$size --loops=$loops \
+fio-3.35/t/jobs/t0001-52c58027.fio:ioengine=null
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:ioengine=libaio
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:ioengine=libaio
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:ioengine=libaio
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:ioengine=libaio
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:ioengine=libaio
+fio-3.35/t/jobs/t0005-f7078f7b.fio:ioengine=sync
+fio-3.35/t/jobs/t0006-82af2a7c.fio:ioengine=libaio
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:ioengine=null
+fio-3.35/t/jobs/t0010-b7aae4ba.fio:ioengine=null
+fio-3.35/t/jobs/t0011-5d2788d5.fio:ioengine=null
+fio-3.35/t/jobs/t0012.fio:ioengine=null
+fio-3.35/t/jobs/t0013.fio:ioengine=null
+fio-3.35/t/jobs/t0014.fio:ioengine=null
+fio-3.35/t/jobs/t0015-e78980ff.fio:ioengine=libaio
+fio-3.35/t/jobs/t0016-d54ae22.fio:ioengine=null
+fio-3.35/t/jobs/t0017.fio:ioengine=posixaio
+fio-3.35/t/jobs/t0018.fio:ioengine=io_uring
+fio-3.35/t/jobs/t0019.fio:ioengine=null
+fio-3.35/t/jobs/t0020.fio:ioengine=null
+fio-3.35/t/jobs/t0021.fio:ioengine=null
+fio-3.35/t/jobs/t0022.fio:ioengine=null
+fio-3.35/t/jobs/t0023.fio:ioengine=null
+fio-3.35/t/jobs/t0024.fio:ioengine=null
+fio-3.35/t/jobs/t0028-c6cade16.fio:ioengine=null

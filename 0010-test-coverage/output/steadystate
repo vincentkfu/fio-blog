@@ -1,0 +1,15 @@
+fio-3.35/t/run-fio-tests.py:# - SciPy (steadystate_tests.py)
+fio-3.35/t/run-fio-tests.py:        'exe':              't/steadystate_tests.py',
+fio-3.35/t/steadystate_tests.py:# steadystate_tests.py
+fio-3.35/t/steadystate_tests.py:# steadystate_tests.py --read file-for-read-testing --write file-for-write-testing ./fio
+fio-3.35/t/steadystate_tests.py:        tf = "steadystate_job{0}.json".format(jobnum)
+fio-3.35/t/steadystate_tests.py:                if jsonjob['steadystate']['attained'] == 1:
+fio-3.35/t/steadystate_tests.py:                        objsame, met, mean, target = check(data=jsonjob['steadystate']['data'],
+fio-3.35/t/steadystate_tests.py:                            criterion=jsonjob['steadystate']['criterion'])
+fio-3.35/t/steadystate_tests.py:                            line = 'FAILED ' + line + ' fio criterion {0} != calculated criterion {1} '.format(jsonjob['steadystate']['criterion'], target)
+fio-3.35/t/steadystate_tests.py:                        objsame, met, mean, target = check(data=jsonjob['steadystate']['data'],
+fio-3.35/t/steadystate_tests.py:                            criterion=jsonjob['steadystate']['criterion'])
+fio-3.35/t/steadystate_tests.py:                                line = 'FAILED ' + line + ' fio criterion {0} != calculated criterion {1} '.format(jsonjob['steadystate']['criterion'], target)
+fio-3.35/t/steadystate_tests.py:                                line = 'PASSED ' + line + ' fio criterion {0} == 0.0 since ss_dur + ss_ramp has not elapsed '.format(jsonjob['steadystate']['criterion'])
+fio-3.35/t/steadystate_tests.py:            if 'steadystate' in jsonjob:
+fio-3.35/t/steadystate_tests.py:                pp.pprint(jsonjob['steadystate'])

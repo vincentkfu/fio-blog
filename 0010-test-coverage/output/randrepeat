@@ -1,0 +1,39 @@
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:#./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:            "--randrepeat=0",
+fio-3.35/t/random_seed.py:# - make sure that randseed overrides randrepeat and allrandrepeat
+fio-3.35/t/random_seed.py:# - make sure that seeds differ across invocations when [all]randrepeat=0 and randseed is not set
+fio-3.35/t/random_seed.py:# - make sure that seeds are always the same when [all]randrepeat=1 and randseed is not set
+fio-3.35/t/random_seed.py:        for opt in ['randseed', 'randrepeat', 'allrandrepeat']:
+fio-3.35/t/random_seed.py:    Test object for [all]randrepeat. If run for the first time just collect the
+fio-3.35/t/random_seed.py:    # one set of seeds is for randrepeat=0 and the other is for randrepeat=1
+fio-3.35/t/random_seed.py:        """Check output for allrandrepeat=1."""
+fio-3.35/t/random_seed.py:        opt = 'randrepeat' if 'randrepeat' in self.test_options else 'allrandrepeat'
+fio-3.35/t/random_seed.py:            "randrepeat": 0,
+fio-3.35/t/random_seed.py:            "randrepeat": 0,
+fio-3.35/t/random_seed.py:            "randrepeat": 1,
+fio-3.35/t/random_seed.py:            "randrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "randrepeat": 0,
+fio-3.35/t/random_seed.py:            "randrepeat": 0,
+fio-3.35/t/random_seed.py:            "randrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/random_seed.py:            "randrepeat": 0,
+fio-3.35/t/random_seed.py:            "randrepeat": 1,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 0,
+fio-3.35/t/random_seed.py:            "allrandrepeat": 1,
+fio-3.35/t/strided.py:                "--randrepeat=0",
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:randrepeat=0
+fio-3.35/t/jobs/t0023.fio:randrepeat=0
+fio-3.35/t/jobs/t0024.fio:randrepeat=0

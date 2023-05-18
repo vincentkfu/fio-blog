@@ -1,0 +1,40 @@
+fio-3.35/t/strided.py:        fio_args.append('--io_size={io_size}'.format(**test))
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096*1024,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*204,
+fio-3.35/t/strided.py:                    "io_size": 16*4096,
+fio-3.35/t/strided.py:                    "io_size": 256*1024*1024,
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "--io_size=$capacity" "$(ioengine "psync")" "--rw=randwrite")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$size" "--io_size=$zone_size" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--offset=$off" "--size=$((inc * nz))" "--io_size=$((bs * nz))")
+fio-3.35/t/zbd/test-zbd-support:    local bs io_size size
+fio-3.35/t/zbd/test-zbd-support:    io_size=$((5 * capacity))
+fio-3.35/t/zbd/test-zbd-support:		   --size=$size --io_size=$io_size --bs=$bs	\
+fio-3.35/t/zbd/test-zbd-support:    check_written $((io_size / bs * bs)) || return $?
+fio-3.35/t/zbd/test-zbd-support:    local bs off io_size size
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:    local bs off io_size size
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'io_size must be at least one zone' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--io_size=$zone_size" "--iodepth=256" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:	local off io_size
+fio-3.35/t/zbd/test-zbd-support:	io_size=$((zone_size * 16 / 8))
+fio-3.35/t/zbd/test-zbd-support:		--io_size=$((io_size)) "$(ioengine "psync")" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:	check_written ${io_size} || return $?
+fio-3.35/t/zbd/test-zbd-support:		--io_size=3z		\

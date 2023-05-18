@@ -1,0 +1,30 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--slat_percentiles=1",
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=0 --clat_percentiles=0 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=0 --clat_percentiles=1 --lat_percentiles=0
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=0 --clat_percentiles=1 --lat_percentiles=1
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=0 --lat_percentiles=0 --rw=randrw
+fio-3.35/t/latency_percentiles.py:#       --ioengine=libaio --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1 \
+fio-3.35/t/latency_percentiles.py:#       --ioengine=null --slat_percentiles=1 --clat_percentiles=1 --lat_percentiles=1 \
+fio-3.35/t/latency_percentiles.py:        for opt in ['slat_percentiles', 'clat_percentiles', 'lat_percentiles',
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 1,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,
+fio-3.35/t/latency_percentiles.py:            "slat_percentiles": 0,

@@ -1,0 +1,3 @@
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:verify_fatal=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:verify_fatal=1
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify_fatal=1

@@ -1,0 +1,14 @@
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:readwrite=read
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:readwrite=rw
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:readwrite=write
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:readwrite=rw
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:readwrite=read
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:readwrite=write
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:readwrite=write
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:rw=readwrite
+fio-3.35/t/jobs/t0025.fio:readwrite=write
+fio-3.35/t/jobs/t0026.fio:readwrite=randwrite
+fio-3.35/t/jobs/t0026.fio:readwrite=randrw
+fio-3.35/t/jobs/t0027.fio:readwrite=write
+fio-3.35/t/jobs/t0027.fio:readwrite=read
+fio-3.35/t/jobs/t0028-c6cade16.fio:readwrite=write

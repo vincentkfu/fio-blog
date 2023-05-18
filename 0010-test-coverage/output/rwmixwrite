@@ -1,0 +1,1 @@
+fio-3.35/t/zbd/test-zbd-support:		--rw=randrw:2 --rwmixwrite=25 --bsrange=4k-${zone_size} \

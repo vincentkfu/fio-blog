@@ -1,0 +1,18 @@
+fio-3.35/t/run-fio-tests.py:    _io_uring = False
+fio-3.35/t/run-fio-tests.py:                print("Unable to open '/proc/kallsyms' to probe for io_uring support")
+fio-3.35/t/run-fio-tests.py:                Requirements._io_uring = "io_uring_setup" in contents
+fio-3.35/t/run-fio-tests.py:                    Requirements.io_uring,
+fio-3.35/t/run-fio-tests.py:    def io_uring(cls):
+fio-3.35/t/run-fio-tests.py:        """Is io_uring available?"""
+fio-3.35/t/run-fio-tests.py:        return Requirements._io_uring, "io_uring required"
+fio-3.35/t/run-fio-tests.py:        'requirements':     [Requirements.linux, Requirements.io_uring],
+fio-3.35/t/zbd/test-zbd-support:	echo -e "\t-u Use io_uring ioengine in place of libaio"
+fio-3.35/t/zbd/test-zbd-support:	elif [ "$1" = "libaio" -a -n "$force_io_uring" ]; then
+fio-3.35/t/zbd/test-zbd-support:		echo -n "--ioengine=io_uring"
+fio-3.35/t/zbd/test-zbd-support:# Verify that conv zones are not locked and only seq zones are locked during
+fio-3.35/t/zbd/test-zbd-support:# Verify that conv zones are neither locked nor opened during random write on
+fio-3.35/t/zbd/test-zbd-support:# Test that repeated async write job does not cause zone reset during writes
+fio-3.35/t/zbd/test-zbd-support:force_io_uring=
+fio-3.35/t/zbd/test-zbd-support:    -u) force_io_uring=1; shift;;
+fio-3.35/t/zbd/test-zbd-support:if [ -n "$use_libzbc" -a -n "$force_io_uring" ]; then
+fio-3.35/t/jobs/t0018.fio:ioengine=io_uring

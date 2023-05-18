@@ -1,0 +1,8 @@
+fio-3.35/t/latency_percentiles.py:            # sum_thread_stats() changes
+fio-3.35/t/latency_percentiles.py:            # sum_thread_stats() changes
+fio-3.35/t/latency_percentiles.py:            # sum_thread_stats() changes
+fio-3.35/t/latency_percentiles.py:            # sum_thread_stats() changes
+fio-3.35/t/latency_percentiles.py:            # sum_thread_stats() changes
+fio-3.35/t/run-fio-tests.py:from statsmodels.sandbox.stats.runs import runstest_1samp
+fio-3.35/t/steadystate_tests.py:from scipy import stats
+fio-3.35/t/steadystate_tests.py:        m, intercept, r_value, p_value, std_err = stats.linregress(x,data)

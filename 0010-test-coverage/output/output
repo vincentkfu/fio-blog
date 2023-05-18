@@ -1,0 +1,192 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--output=fio-output.json",
+fio-3.35/t/jsonplus2csv_test.py:        "--output-format=json+",
+fio-3.35/t/jsonplus2csv_test.py:    output = subprocess.run([fio] + fio_args, stdout=subprocess.PIPE,
+fio-3.35/t/jsonplus2csv_test.py:    return output
+fio-3.35/t/jsonplus2csv_test.py:def check_output(fio_output, script_path):
+fio-3.35/t/jsonplus2csv_test.py:    against the original json+ fio output.
+fio-3.35/t/jsonplus2csv_test.py:        fio_output      subprocess.run object describing fio run.
+fio-3.35/t/jsonplus2csv_test.py:    if fio_output.returncode != 0:
+fio-3.35/t/jsonplus2csv_test.py:    script_args = ["fio-output.json", "fio-output.csv"]
+fio-3.35/t/jsonplus2csv_test.py:    script_output = subprocess.run(script + script_args)
+fio-3.35/t/jsonplus2csv_test.py:    if script_output.returncode != 0:
+fio-3.35/t/jsonplus2csv_test.py:    script_output = subprocess.run(script + script_args_validate)
+fio-3.35/t/jsonplus2csv_test.py:    if script_output.returncode != 0:
+fio-3.35/t/jsonplus2csv_test.py:    fio_output = run_fio(fio_path)
+fio-3.35/t/jsonplus2csv_test.py:    status = check_output(fio_output, script_path)
+fio-3.35/t/latency_percentiles.py:#   produce both terse, JSON output and confirm that they match
+fio-3.35/t/latency_percentiles.py:# - MANUAL TESTING normal output:
+fio-3.35/t/latency_percentiles.py:            "--output={0}.out".format(self.filename),
+fio-3.35/t/latency_percentiles.py:            "--output-format={output-format}".format(**self.test_options),
+fio-3.35/t/latency_percentiles.py:            if 'json' in self.test_options['output-format']:
+fio-3.35/t/latency_percentiles.py:            if 'terse' in self.test_options['output-format']:
+fio-3.35/t/latency_percentiles.py:        """Convert fio JSON output into a python JSON object"""
+fio-3.35/t/latency_percentiles.py:        # JSON output, especially under Windows. Try to decode output as JSON
+fio-3.35/t/latency_percentiles.py:        """Read fio output and return terse format data."""
+fio-3.35/t/latency_percentiles.py:        # If so, the line is probably terse output. Obviously, this only
+fio-3.35/t/latency_percentiles.py:        # multi-line terse output
+fio-3.35/t/latency_percentiles.py:                    print('%s percentiles not found in fio output' % lat)
+fio-3.35/t/latency_percentiles.py:                    print('bins not found with json+ output format')
+fio-3.35/t/latency_percentiles.py:                    print('json+ bins found with json output format')
+fio-3.35/t/latency_percentiles.py:                    print("Unexpected per priority latencies found in %s output" % ddir)
+fio-3.35/t/latency_percentiles.py:        """Check test output."""
+fio-3.35/t/latency_percentiles.py:        """Check Test 1 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 2 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected read data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 3 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected read data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 4, 13 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 5 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected read data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 6 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 7 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 8, 14 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected data direction found in fio output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 9 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected read data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 10 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 11 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 15 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 16 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected read data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 17 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected write data found in output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 18 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 19, 20 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected data direction found in fio output")
+fio-3.35/t/latency_percentiles.py:        """Check Test 21 output."""
+fio-3.35/t/latency_percentiles.py:            print("Unexpected trim data found in output")
+fio-3.35/t/latency_percentiles.py:    parser.add_argument('-d', '--debug', help='enable debug output', action='store_true')
+fio-3.35/t/latency_percentiles.py:            "output-format": "json",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "terse,json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "terse,json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/latency_percentiles.py:            "output-format": "json+",
+fio-3.35/t/log_compression.py:# Previous bugs have caused output in per I/O log files to be missing
+fio-3.35/t/log_compression.py:    subprocess.check_output([fio] + fio_args)
+fio-3.35/t/random_seed.py:        self.filenames['output'] = os.path.join(self.test_dir, f"{self.filename_stub}.output")
+fio-3.35/t/random_seed.py:            f"--output={self.filenames['output']}",
+fio-3.35/t/random_seed.py:        """Collect random seeds from --debug=random output."""
+fio-3.35/t/random_seed.py:        with open(self.filenames['output'], "r", encoding=locale.getpreferredencoding()) as out_file:
+fio-3.35/t/random_seed.py:        """Check test output."""
+fio-3.35/t/random_seed.py:        """Check output for allrandrepeat=1."""
+fio-3.35/t/random_seed.py:        """Check output for randseed=something."""
+fio-3.35/t/random_seed.py:    parser.add_argument('-d', '--debug', help='enable debug output', action='store_true')
+fio-3.35/t/readonly.py:    output = subprocess.run([fio] + fio_args, stdout=subprocess.PIPE,
+fio-3.35/t/readonly.py:    return output
+fio-3.35/t/readonly.py:def check_output(output, test):
+fio-3.35/t/readonly.py:#    print(output.stdout)
+fio-3.35/t/readonly.py:#    print(output.stderr)
+fio-3.35/t/readonly.py:    if output.returncode == 0:
+fio-3.35/t/readonly.py:        output = run_fio(fio_path, test, index)
+fio-3.35/t/readonly.py:        status = check_output(output, test)
+fio-3.35/t/run-fio-tests.py:        self.output = {}
+fio-3.35/t/run-fio-tests.py:            self.output['proc'] = proc
+fio-3.35/t/run-fio-tests.py:            self.output['failure'] = 'timeout'
+fio-3.35/t/run-fio-tests.py:            self.output['failure'] = 'exception'
+fio-3.35/t/run-fio-tests.py:            self.output['exc_info'] = sys.exc_info()
+fio-3.35/t/run-fio-tests.py:        if 'proc' not in self.output:
+fio-3.35/t/run-fio-tests.py:            if self.output['failure'] == 'timeout':
+fio-3.35/t/run-fio-tests.py:                assert self.output['failure'] == 'exception'
+fio-3.35/t/run-fio-tests.py:                    self.failure_reason, self.output['exc_info'][0],
+fio-3.35/t/run-fio-tests.py:                    self.output['exc_info'][1])
+fio-3.35/t/run-fio-tests.py:                if self.output['proc'].returncode != 0:
+fio-3.35/t/run-fio-tests.py:                if self.output['proc'].returncode == 0:
+fio-3.35/t/run-fio-tests.py:                 fio_pre_success=None, output_format="normal"):
+fio-3.35/t/run-fio-tests.py:        output_format:      normal (default), json, jsonplus, or terse
+fio-3.35/t/run-fio-tests.py:        self.output_format = output_format
+fio-3.35/t/run-fio-tests.py:        self.fio_output = "{0}.output".format(os.path.basename(self.fio_job))
+fio-3.35/t/run-fio-tests.py:            "--output-format={0}".format(self.output_format),
+fio-3.35/t/run-fio-tests.py:            "--output={0}".format(self.fio_output),
+fio-3.35/t/run-fio-tests.py:                            output_format=self.output_format)
+fio-3.35/t/run-fio-tests.py:            with open(filename, "r") as output_file:
+fio-3.35/t/run-fio-tests.py:                file_data = output_file.read()
+fio-3.35/t/run-fio-tests.py:            with open(filename, "r") as output_file:
+fio-3.35/t/run-fio-tests.py:                file_data = output_file.read()
+fio-3.35/t/run-fio-tests.py:        if 'json' not in self.output_format:
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(os.path.join(self.test_dir, self.fio_output))
+fio-3.35/t/run-fio-tests.py:        # JSON output, especially under Windows. Try to decode output as JSON
+fio-3.35/t/run-fio-tests.py:        self.output_file = os.path.join(self.test_dir, "t0027file")
+fio-3.35/t/run-fio-tests.py:        with open(self.output_file, "rb") as f:
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:        'output_format':    'json',
+fio-3.35/t/run-fio-tests.py:                        help='provide debug output')
+fio-3.35/t/run-fio-tests.py:            if 'output_format' in config:
+fio-3.35/t/run-fio-tests.py:                output_format = config['output_format']
+fio-3.35/t/run-fio-tests.py:                output_format = 'normal'
+fio-3.35/t/run-fio-tests.py:                output_format=output_format)
+fio-3.35/t/sgunmap-perf.py:                  "--output-format=json",
+fio-3.35/t/sgunmap-perf.py:    output = subprocess.check_output([fio] + parameters)
+fio-3.35/t/sgunmap-perf.py:    jsondata = json.loads(output)
+fio-3.35/t/sgunmap-perf.py:                  "--output-format=json",
+fio-3.35/t/sgunmap-perf.py:    output = subprocess.check_output([fio] + parameters)
+fio-3.35/t/sgunmap-perf.py:    jsondata = json.loads(output)
+fio-3.35/t/sgunmap-test.py:                           "--output-format=json",
+fio-3.35/t/sgunmap-test.py:            output = subprocess.check_output([args.fio] + parameters)
+fio-3.35/t/sgunmap-test.py:            jsondata = json.loads(output)
+fio-3.35/t/sgunmap-test.py:                   "--output-format=json",
+fio-3.35/t/sgunmap-test.py:    output = subprocess.check_output([args.fio] + parameters)
+fio-3.35/t/sgunmap-test.py:    jsondata = json.loads(output)
+fio-3.35/t/steadystate_tests.py:# On Windows I encounter frequent fio problems generating JSON output (nothing to decode)
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state IOPS threshold to 10.000000" },
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state threshold to 10.000000%" },
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state threshold to 0.100000%" },
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state threshold to 10.000000%" },
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state threshold to 0.100000%" },
+fio-3.35/t/steadystate_tests.py:                  'output': "set steady state BW threshold to 12" },
+fio-3.35/t/steadystate_tests.py:        output = subprocess.check_output([args.fio] + test['args'])
+fio-3.35/t/steadystate_tests.py:        if test['output'] in output.decode():
+fio-3.35/t/steadystate_tests.py:            print("PASSED '{0}' found with arguments {1}".format(test['output'], test['args']))
+fio-3.35/t/steadystate_tests.py:            print("FAILED '{0}' NOT found with arguments {1}".format(test['output'], test['args']))
+fio-3.35/t/steadystate_tests.py:                            "--output-format=json",
+fio-3.35/t/steadystate_tests.py:                            "--output={0}".format(tf),
+fio-3.35/t/steadystate_tests.py:        output = subprocess.call([args.fio] + parameters)
+fio-3.35/t/strided.py:                "--output={0}{1:03d}.out".format(filename, index),
+fio-3.35/t/strided.py:    output = subprocess.check_output([fio] + fio_args, universal_newlines=True)
+fio-3.35/t/strided.py:def check_output(iops_log, test):
+fio-3.35/t/strided.py:        status = check_output(iops_log, test)

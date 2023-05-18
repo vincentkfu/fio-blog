@@ -1,0 +1,7 @@
+fio-3.35/t/log_compression.py:        '--per_job_logs=0',
+fio-3.35/t/jobs/t0019.fio:per_job_logs=0
+fio-3.35/t/jobs/t0020.fio:per_job_logs=0
+fio-3.35/t/jobs/t0021.fio:per_job_logs=0
+fio-3.35/t/jobs/t0022.fio:per_job_logs=0
+fio-3.35/t/jobs/t0023.fio:per_job_logs=0
+fio-3.35/t/jobs/t0024.fio:per_job_logs=0

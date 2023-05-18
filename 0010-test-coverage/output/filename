@@ -1,0 +1,110 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--filename=fio_jsonplus_clat2csv.test",
+fio-3.35/t/latency_percentiles.py:        self.filename = None
+fio-3.35/t/latency_percentiles.py:        self.filename = "latency{:03d}".format(self.test_options['test_id'])
+fio-3.35/t/latency_percentiles.py:            "--write_lat_log={0}".format(self.filename),
+fio-3.35/t/latency_percentiles.py:            "--output={0}.out".format(self.filename),
+fio-3.35/t/latency_percentiles.py:        with open(os.path.join(self.test_dir, "{0}.command".format(self.filename)), "w+") as \
+fio-3.35/t/latency_percentiles.py:        stdout_file = open(os.path.join(self.test_dir, "{0}.stdout".format(self.filename)), "w+")
+fio-3.35/t/latency_percentiles.py:        stderr_file = open(os.path.join(self.test_dir, "{0}.stderr".format(self.filename)), "w+")
+fio-3.35/t/latency_percentiles.py:                                          "{0}.exitcode".format(self.filename)), "w+")
+fio-3.35/t/latency_percentiles.py:        filename = os.path.join(self.test_dir, "{0}.out".format(self.filename))
+fio-3.35/t/latency_percentiles.py:        with open(filename, 'r') as file:
+fio-3.35/t/latency_percentiles.py:        filename = os.path.join(self.test_dir, "{0}.out".format(self.filename))
+fio-3.35/t/latency_percentiles.py:        with open(filename, 'r') as file:
+fio-3.35/t/latency_percentiles.py:                lat_file = os.path.join(self.test_dir, "%s_%s.%s.log" % (self.filename, lat, i+1))
+fio-3.35/t/log_compression.py:    filename = 'test_bw.from_fz.log' if log_store_compressed else 'test_bw.log'
+fio-3.35/t/log_compression.py:    with open(filename,'rt') as f:
+fio-3.35/t/random_seed.py:        self.filename_stub = None
+fio-3.35/t/random_seed.py:        self.filenames = {}
+fio-3.35/t/random_seed.py:        self.filename_stub = f"random{self.test_options['test_id']:03d}"
+fio-3.35/t/random_seed.py:        self.filenames['command'] = os.path.join(self.test_dir, f"{self.filename_stub}.command")
+fio-3.35/t/random_seed.py:        self.filenames['stdout'] = os.path.join(self.test_dir, f"{self.filename_stub}.stdout")
+fio-3.35/t/random_seed.py:        self.filenames['stderr'] = os.path.join(self.test_dir, f"{self.filename_stub}.stderr")
+fio-3.35/t/random_seed.py:        self.filenames['exitcode'] = os.path.join(self.test_dir, f"{self.filename_stub}.exitcode")
+fio-3.35/t/random_seed.py:        self.filenames['output'] = os.path.join(self.test_dir, f"{self.filename_stub}.output")
+fio-3.35/t/random_seed.py:            f"--output={self.filenames['output']}",
+fio-3.35/t/random_seed.py:        with open(self.filenames['command'], "w+", encoding=locale.getpreferredencoding()) as command_file:
+fio-3.35/t/random_seed.py:            with open(self.filenames['stdout'], "w+", encoding=locale.getpreferredencoding()) as stdout_file, \
+fio-3.35/t/random_seed.py:                open(self.filenames['stderr'], "w+", encoding=locale.getpreferredencoding()) as stderr_file, \
+fio-3.35/t/random_seed.py:                open(self.filenames['exitcode'], "w+", encoding=locale.getpreferredencoding()) as exitcode_file:
+fio-3.35/t/random_seed.py:        with open(self.filenames['output'], "r", encoding=locale.getpreferredencoding()) as out_file:
+fio-3.35/t/run-fio-tests.py:    def get_file(cls, filename):
+fio-3.35/t/run-fio-tests.py:            with open(filename, "r") as output_file:
+fio-3.35/t/run-fio-tests.py:    def get_file_fail(self, filename):
+fio-3.35/t/run-fio-tests.py:            with open(filename, "r") as output_file:
+fio-3.35/t/run-fio-tests.py:            self.failure_reason += " unable to read file {0}".format(filename)
+fio-3.35/t/run-fio-tests.py:            filename = os.path.join(self.test_dir, "{0}_iops.{1}.log".format(os.path.basename(
+fio-3.35/t/run-fio-tests.py:            file_data = self.get_file_fail(filename)
+fio-3.35/t/run-fio-tests.py:            filename = os.path.join(self.test_dir, "{0}_iops.{1}.log".format(os.path.basename(
+fio-3.35/t/run-fio-tests.py:            file_data = self.get_file_fail(filename)
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(bw_log_filename)
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(bw_log_filename)
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(bw_log_filename)
+fio-3.35/t/run-fio-tests.py:    def check_trimwrite(self, filename):
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, filename)
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(bw_log_filename)
+fio-3.35/t/run-fio-tests.py:                        bw_log_filename, line)
+fio-3.35/t/run-fio-tests.py:                        bw_log_filename, line)
+fio-3.35/t/run-fio-tests.py:                            bw_log_filename, line)
+fio-3.35/t/run-fio-tests.py:                            bw_log_filename, line)
+fio-3.35/t/run-fio-tests.py:    def check_all_offsets(self, filename, sectorsize, filesize):
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(os.path.join(self.test_dir, filename))
+fio-3.35/t/run-fio-tests.py:                    filename, offset, sectorsize)
+fio-3.35/t/run-fio-tests.py:                    "{2}".format(filename, bs, sectorsize)
+fio-3.35/t/run-fio-tests.py:                filename, len(offsets), filesize/sectorsize)
+fio-3.35/t/run-fio-tests.py:            logging.debug("%s: %d sectors touched", filename, len(offsets))
+fio-3.35/t/sgunmap-perf.py:                  "--filename={0}".format(dev)]
+fio-3.35/t/sgunmap-perf.py:                  "--filename={0}".format(dev),
+fio-3.35/t/sgunmap-test.py:                           "--filename={0}".format(dev),
+fio-3.35/t/sgunmap-test.py:                   "--filename={0}".format(args.chardev),
+fio-3.35/t/strided.py:    parser.add_argument('-f', '--filename', help="file/device to test")
+fio-3.35/t/strided.py:    filename = "strided"
+fio-3.35/t/strided.py:                "--write_iops_log={0}{1:03d}".format(filename, index),
+fio-3.35/t/strided.py:                "--output={0}{1:03d}.out".format(filename, index),
+fio-3.35/t/strided.py:    if 'filename' in test:
+fio-3.35/t/strided.py:        fio_args.append('--filename={filename}'.format(**test))
+fio-3.35/t/strided.py:    f = open("{0}{1:03d}_iops.1.log".format(filename, index), "r")
+fio-3.35/t/strided.py:    if args.filename:
+fio-3.35/t/strided.py:        statinfo = os.stat(args.filename)
+fio-3.35/t/strided.py:            f = os.open(args.filename, os.O_RDONLY)
+fio-3.35/t/strided.py:        if args.filename:
+fio-3.35/t/strided.py:            test['filename'] = args.filename
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name="$dev" --filename="$dev" "$@" --randseed="$r"	\
+fio-3.35/t/zbd/test-zbd-support:    run_fio --filename="$dev" --randseed="$r" "${write_opts[@]}" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name=job1 --filename="$dev" --rw=write --direct=0 --bs=4K	\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=job1" "--filename=$dev" "--rw=write" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off" "--bs=4K")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--thread=1" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name="$dev" --filename="$dev" "$(ioengine "psync")" --rw="$1" \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:    opts=("--name=$dev" "--filename=$dev" "--rw=write" "--bs=${bs}")
+fio-3.35/t/zbd/test-zbd-support:    opts=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=$dev" "--filename=$dev" "--offset=$off" "--size=$size")
+fio-3.35/t/zbd/test-zbd-support:		run_fio --name=job --filename="${dev}" --rw=randwrite \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--offset=$off" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=${dev} --offset=${off} --bs=64K \
+fio-3.35/t/zbd/test-zbd-support:		opts+=("--name=job${i}" "--filename=$dev")
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=$dev --rw=randwrite --bs=$((zone_size/16))\
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=${dev} --rw=randrw --bs=64K \
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename=${dev} "$(ioengine "libaio")" \
+fio-3.35/t/zbd/test-zbd-support:		--filename=${dev}	\
+fio-3.35/t/zbd/test-zbd-support:		--filename=${dev}	\
+fio-3.35/t/zbd/test-zbd-support:	run_fio --name=job --filename="${dev}" --rw=randwrite --bs="${bs}" \
+fio-3.35/t/zbd/test-zbd-support:	    --filename="${dev}" --norandommap=1 \
+fio-3.35/t/zbd/test-zbd-support:		--filename="$dev" --group_reporting=1 \
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:filename=t0002file
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:filename=t0002file
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:filename=foo
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:filename=foo
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:filename=foo
+fio-3.35/t/jobs/t0005-f7078f7b.fio:filename=xxx
+fio-3.35/t/jobs/t0006-82af2a7c.fio:filename=foo
+fio-3.35/t/jobs/t0025.fio:filename=t0025file
+fio-3.35/t/jobs/t0026.fio:filename=t0026file
+fio-3.35/t/jobs/t0026.fio:filename=t0026file
+fio-3.35/t/jobs/t0027.fio:filename=t0027file

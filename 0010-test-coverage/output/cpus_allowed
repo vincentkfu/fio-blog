@@ -1,0 +1,2 @@
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:cpus_allowed=0-3
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:cpus_allowed_policy=split

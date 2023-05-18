@@ -1,0 +1,76 @@
+fio-3.35/t/latency_percentiles.py:# python3 latency-tests.py [-f fio-path] [-a artifact-root] [--debug]
+fio-3.35/t/latency_percentiles.py:    def __init__(self, artifact_root, test_options, debug):
+fio-3.35/t/latency_percentiles.py:        self.debug = debug
+fio-3.35/t/latency_percentiles.py:            elif self.debug:
+fio-3.35/t/latency_percentiles.py:                elif self.debug:
+fio-3.35/t/latency_percentiles.py:        if self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:            elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:        elif self.debug:
+fio-3.35/t/latency_percentiles.py:            elif self.debug:
+fio-3.35/t/latency_percentiles.py:    parser.add_argument('-d', '--debug', help='enable debug output', action='store_true')
+fio-3.35/t/latency_percentiles.py:            test_obj = test['test_obj'](artifact_root, test, args.debug)
+fio-3.35/t/random_seed.py:    def __init__(self, artifact_root, test_options, debug):
+fio-3.35/t/random_seed.py:        self.debug = debug
+fio-3.35/t/random_seed.py:            "--debug=random",
+fio-3.35/t/random_seed.py:        """Collect random seeds from --debug=random output."""
+fio-3.35/t/random_seed.py:            if self.debug:
+fio-3.35/t/random_seed.py:                    if self.debug:
+fio-3.35/t/random_seed.py:                    if self.debug:
+fio-3.35/t/random_seed.py:        if self.debug:
+fio-3.35/t/random_seed.py:            if self.debug:
+fio-3.35/t/random_seed.py:                if self.debug:
+fio-3.35/t/random_seed.py:                    if self.debug:
+fio-3.35/t/random_seed.py:    parser.add_argument('-d', '--debug', help='enable debug output', action='store_true')
+fio-3.35/t/random_seed.py:            test_obj = test['test_obj'](artifact_root, test, args.debug)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: return code: %d", self.testnum, proc.returncode)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: precondition step failed", self.testnum)
+fio-3.35/t/run-fio-tests.py:        logging.debug("Test %d: ratio: %f", self.testnum, ratio)
+fio-3.35/t/run-fio-tests.py:        logging.debug("Test %d: ratio: %f", self.testnum, ratio)
+fio-3.35/t/run-fio-tests.py:        logging.debug('Test %d: elapsed: %d', self.testnum, self.json_data['jobs'][0]['elapsed'])
+fio-3.35/t/run-fio-tests.py:            logging.debug("sample {0}: job1 iops={1} job2 iops={2} job3 iops={3} " \
+fio-3.35/t/run-fio-tests.py:            logging.debug("sample {0}: job1 iops={1} job2 iops={2} job3 iops={3} " \
+fio-3.35/t/run-fio-tests.py:        logging.debug('Test %d: slat %f, clat %f, tlat %f', self.testnum, slat, clat, tlat)
+fio-3.35/t/run-fio-tests.py:            logging.debug("%s: %d sectors touched", filename, len(offsets))
+fio-3.35/t/run-fio-tests.py:        logging.debug("Test %d: iops1: %f", self.testnum, iops1)
+fio-3.35/t/run-fio-tests.py:        logging.debug("Test %d: iops2: %f", self.testnum, iops2)
+fio-3.35/t/run-fio-tests.py:        logging.debug("Test %d: ratio: %f", self.testnum, ratio)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Requirements: Requirement '%s' met? %s", desc, value)
+fio-3.35/t/run-fio-tests.py:    parser.add_argument('-d', '--debug', action='store_true',
+fio-3.35/t/run-fio-tests.py:                        help='provide debug output')
+fio-3.35/t/run-fio-tests.py:    if args.debug:
+fio-3.35/t/run-fio-tests.py:        logging.debug("Pass-through arguments: %s", pass_through)
+fio-3.35/t/run-fio-tests.py:                logging.debug("Test %d: Requirement '%s' met? %s", config['test_id'], reason,
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d exception:\n%s\n", config['test_id'], traceback.format_exc())
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stderr:\n%s", config['test_id'], contents)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stdout:\n%s", config['test_id'], contents)
+fio-3.35/t/steadystate_tests.py:    parsing = [ { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=iops:10", "--ss_ramp=5"],
+fio-3.35/t/steadystate_tests.py:                { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=iops:10%", "--ss_ramp=5"],
+fio-3.35/t/steadystate_tests.py:                { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=iops:.1%", "--ss_ramp=5"],
+fio-3.35/t/steadystate_tests.py:                { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=bw:10%", "--ss_ramp=5"],
+fio-3.35/t/steadystate_tests.py:                { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=bw:.1%", "--ss_ramp=5"],
+fio-3.35/t/steadystate_tests.py:                { 'args': ["--parse-only", "--debug=parse", "--ss_dur=10s", "--ss=bw:12", "--ss_ramp=5"],
+fio-3.35/t/zbd/test-zbd-support:	echo -e "\t-z Run fio with debug=zbd option"
+fio-3.35/t/zbd/test-zbd-support:		   --debug=zbd >>"${logfile}.${test_number}" 2>&1 || return $?
+fio-3.35/t/zbd/test-zbd-support:		   --debug=zbd >>"${logfile}.${test_number}" 2>&1 || return $?
+fio-3.35/t/zbd/test-zbd-support:		   --debug=zbd						      \
+fio-3.35/t/zbd/test-zbd-support:    opts=("--debug=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts=("--debug=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--debug=zbd")
+fio-3.35/t/zbd/test-zbd-support:		${job_var_opts[@]} --debug=zbd \
+fio-3.35/t/zbd/test-zbd-support:		${job_var_opts[@]} --debug=zbd \
+fio-3.35/t/zbd/test-zbd-support:		${job_var_opts[@]} --debug=zbd \
+fio-3.35/t/zbd/test-zbd-support:		${job_var_opts[@]} --debug=zbd \
+fio-3.35/t/zbd/test-zbd-support:zbd_debug=
+fio-3.35/t/zbd/test-zbd-support:    -z) zbd_debug=1; shift;;
+fio-3.35/t/zbd/test-zbd-support:if [ -n "$zbd_debug" ]; then
+fio-3.35/t/zbd/test-zbd-support:    global_var_opts+=("--debug=zbd")
+fio-3.35/t/jobs/t0019.fio:# run with --debug=io or logging to see which offsets are accessed
+fio-3.35/t/jobs/t0020.fio:# run with --debug=io or logging to see which offsets are read
+fio-3.35/t/jobs/t0021.fio:# run with --debug=io or logging to see which offsets are read

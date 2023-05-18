@@ -1,0 +1,1 @@
+fio-3.35/t/zbd/test-zbd-support:		--alloc-size=65536 --random_generator=tausworthe64 \

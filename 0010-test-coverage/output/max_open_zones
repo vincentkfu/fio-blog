@@ -1,0 +1,45 @@
+fio-3.35/t/zbd/functions:# Get max_open_zones of SMR drives using sg_inq or libzbc tools. Two test cases
+fio-3.35/t/zbd/functions:# 31 and 32 use this max_open_zones value. The test case 31 uses max_open_zones
+fio-3.35/t/zbd/functions:# to decide number of write target zones. The test case 32 passes max_open_zones
+fio-3.35/t/zbd/functions:# value to fio with --max_open_zones option. Of note is that fio itself has the
+fio-3.35/t/zbd/functions:# feature to get max_open_zones from the device through sysfs or ioengine
+fio-3.35/t/zbd/functions:# specific implementation. This max_open_zones fetch by test script is required
+fio-3.35/t/zbd/functions:# max_open_zones in sysfs, or which lacks zoned block device support completely.
+fio-3.35/t/zbd/functions:max_open_zones() {
+fio-3.35/t/zbd/run-tests-against-nullb:	echo -e "\t-o <max_open_zones> Specify MaxOpen value, (${set_max_open} by default)."
+fio-3.35/t/zbd/test-zbd-support:	echo -e "\t-o <max_open_zones> Run fio with max_open_zones limit"
+fio-3.35/t/zbd/test-zbd-support:has_max_open_zones() {
+fio-3.35/t/zbd/test-zbd-support:		if [[ ${1} =~ "--max_open_zones" ]]; then
+fio-3.35/t/zbd/test-zbd-support:    # When max_open_zones option is specified to this test script, add
+fio-3.35/t/zbd/test-zbd-support:    # max_open_zones option to fio command unless the test case already add it.
+fio-3.35/t/zbd/test-zbd-support:    if [[ -n ${max_open_zones_opt} ]] && ! has_max_open_zones "${opts[@]}"; then
+fio-3.35/t/zbd/test-zbd-support:	    opts+=("--max_open_zones=${max_open_zones_opt}")
+fio-3.35/t/zbd/test-zbd-support:# max_open_zones option is specified, reset all zones of the test target to
+fio-3.35/t/zbd/test-zbd-support:# max_open_zones limit specified as the option or obtained from sysfs.
+fio-3.35/t/zbd/test-zbd-support:	[[ -n "${reset_before_write}" || -n "${max_open_zones_opt}" ]] &&
+fio-3.35/t/zbd/test-zbd-support:require_max_open_zones() {
+fio-3.35/t/zbd/test-zbd-support:	if ((max_open_zones !=0 && max_open_zones < min)); then
+fio-3.35/t/zbd/test-zbd-support:		SKIP_REASON="max_open_zones of $dev is smaller than $min"
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=1 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:    require_max_open_zones 4 || return $SKIP_TESTCASE
+fio-3.35/t/zbd/test-zbd-support:		   --max_open_zones=4 --size=$size --do_verify=1 --verify=md5 \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--max_open_zones=4" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	# max_open_zones is already specified
+fio-3.35/t/zbd/test-zbd-support:	opts+=($(job_var_opts_exclude "--max_open_zones"))
+fio-3.35/t/zbd/test-zbd-support:    # write target zones up to max_open_zones to keep test time reasonable.
+fio-3.35/t/zbd/test-zbd-support:    nz=$((max_open_zones))
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--max_open_zones=$max_open_zones" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--max_open_zones=4")
+fio-3.35/t/zbd/test-zbd-support:	# max_open_zones is already specified
+fio-3.35/t/zbd/test-zbd-support:	opts+=($(job_var_opts_exclude "--max_open_zones"))
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--max_open_zones=2" "--offset=$off")
+fio-3.35/t/zbd/test-zbd-support:		opts+=($(job_var_opts_exclude "--max_open_zones"))
+fio-3.35/t/zbd/test-zbd-support:max_open_zones_opt=
+fio-3.35/t/zbd/test-zbd-support:    -o) max_open_zones_opt="${2}"; shift; shift;;
+fio-3.35/t/zbd/test-zbd-support:		if ! max_open_zones=$(max_open_zones "$dev"); then
+fio-3.35/t/zbd/test-zbd-support:		max_open_zones=128
+fio-3.35/t/zbd/test-zbd-support:	if ! max_open_zones=$(max_open_zones "$dev"); then
+fio-3.35/t/zbd/test-zbd-support:if [[ -n ${max_open_zones_opt} ]]; then
+fio-3.35/t/zbd/test-zbd-support:	# Override max_open_zones with the script option value
+fio-3.35/t/zbd/test-zbd-support:	max_open_zones="${max_open_zones_opt}"
+fio-3.35/t/zbd/test-zbd-support:	job_var_opts+=("--max_open_zones=${max_open_zones_opt}")

@@ -1,0 +1,123 @@
+fio-3.35/t/jsonplus2csv_test.py:                        help='directory containing fio_jsonplus2csv script')
+fio-3.35/t/jsonplus2csv_test.py:        fio_path = os.path.join(os.path.dirname(__file__), '../fio')
+fio-3.35/t/jsonplus2csv_test.py:        script_path = os.path.join(os.path.dirname(__file__), '../tools/fio_jsonplus_clat2csv')
+fio-3.35/t/latency_percentiles.py:        artifact_root   root directory for artifacts (subdirectory will be created under here)
+fio-3.35/t/latency_percentiles.py:        self.test_dir = os.path.join(self.artifact_root,
+fio-3.35/t/latency_percentiles.py:        if not os.path.exists(self.test_dir):
+fio-3.35/t/latency_percentiles.py:            os.mkdir(self.test_dir)
+fio-3.35/t/latency_percentiles.py:        with open(os.path.join(self.test_dir, "{0}.command".format(self.filename)), "w+") as \
+fio-3.35/t/latency_percentiles.py:        stdout_file = open(os.path.join(self.test_dir, "{0}.stdout".format(self.filename)), "w+")
+fio-3.35/t/latency_percentiles.py:        stderr_file = open(os.path.join(self.test_dir, "{0}.stderr".format(self.filename)), "w+")
+fio-3.35/t/latency_percentiles.py:        exitcode_file = open(os.path.join(self.test_dir,
+fio-3.35/t/latency_percentiles.py:                                    cwd=self.test_dir,
+fio-3.35/t/latency_percentiles.py:        filename = os.path.join(self.test_dir, "{0}.out".format(self.filename))
+fio-3.35/t/latency_percentiles.py:        filename = os.path.join(self.test_dir, "{0}.out".format(self.filename))
+fio-3.35/t/latency_percentiles.py:    def check_latencies(self, jsondata, ddir, slat=True, clat=True, tlat=True, plus=False,
+fio-3.35/t/latency_percentiles.py:        ddir                data direction to check (0=read, 1=write, 2=trim)
+fio-3.35/t/latency_percentiles.py:                lat_file = os.path.join(self.test_dir, "%s_%s.%s.log" % (self.filename, lat, i+1))
+fio-3.35/t/latency_percentiles.py:                        if unified or int(line[2]) == ddir:
+fio-3.35/t/latency_percentiles.py:        for ddir in ['read', 'write', 'trim']:
+fio-3.35/t/latency_percentiles.py:            if ddir in job:
+fio-3.35/t/latency_percentiles.py:                if 'prios' in job[ddir]:
+fio-3.35/t/latency_percentiles.py:                    print("Unexpected per priority latencies found in %s output" % ddir)
+fio-3.35/t/latency_percentiles.py:            print("Unexpected data direction found in fio output")
+fio-3.35/t/latency_percentiles.py:            print("Unexpected data direction found in fio output")
+fio-3.35/t/latency_percentiles.py:    parser.add_argument('-a', '--artifact-root', help='artifact root directory')
+fio-3.35/t/latency_percentiles.py:    os.mkdir(artifact_root)
+fio-3.35/t/latency_percentiles.py:    print("Artifact directory is %s" % artifact_root)
+fio-3.35/t/log_compression.py:        fio_path = os.path.join(os.path.dirname(__file__), '../fio')
+fio-3.35/t/random_seed.py:        artifact_root   root directory for artifacts (subdirectory will be created under here)
+fio-3.35/t/random_seed.py:        self.test_dir = os.path.abspath(os.path.join(self.artifact_root,
+fio-3.35/t/random_seed.py:        if not os.path.exists(self.test_dir):
+fio-3.35/t/random_seed.py:            os.mkdir(self.test_dir)
+fio-3.35/t/random_seed.py:        self.filenames['command'] = os.path.join(self.test_dir, f"{self.filename_stub}.command")
+fio-3.35/t/random_seed.py:        self.filenames['stdout'] = os.path.join(self.test_dir, f"{self.filename_stub}.stdout")
+fio-3.35/t/random_seed.py:        self.filenames['stderr'] = os.path.join(self.test_dir, f"{self.filename_stub}.stderr")
+fio-3.35/t/random_seed.py:        self.filenames['exitcode'] = os.path.join(self.test_dir, f"{self.filename_stub}.exitcode")
+fio-3.35/t/random_seed.py:        self.filenames['output'] = os.path.join(self.test_dir, f"{self.filename_stub}.output")
+fio-3.35/t/random_seed.py:                                        cwd=self.test_dir,
+fio-3.35/t/random_seed.py:    parser.add_argument('-a', '--artifact-root', help='artifact root directory')
+fio-3.35/t/random_seed.py:    os.mkdir(artifact_root)
+fio-3.35/t/random_seed.py:    print(f"Artifact directory is {artifact_root}")
+fio-3.35/t/run-fio-tests.py:# - The artifact directory must be on a file system that accepts 512-byte IO
+fio-3.35/t/run-fio-tests.py:# - The artifact directory needs to be on an SSD. Otherwise tests that carry
+fio-3.35/t/run-fio-tests.py:        self.test_dir = None
+fio-3.35/t/run-fio-tests.py:        self.test_dir = os.path.join(artifact_root, "{:04d}".format(testnum))
+fio-3.35/t/run-fio-tests.py:        if not os.path.exists(self.test_dir):
+fio-3.35/t/run-fio-tests.py:            os.mkdir(self.test_dir)
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:                                    cwd=self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:            self.test_dir,
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(os.path.join(self.test_dir, self.fio_output))
+fio-3.35/t/run-fio-tests.py:            filename = os.path.join(self.test_dir, "{0}_iops.{1}.log".format(os.path.basename(
+fio-3.35/t/run-fio-tests.py:            filename = os.path.join(self.test_dir, "{0}_iops.{1}.log".format(os.path.basename(
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, "test_bw.log")
+fio-3.35/t/run-fio-tests.py:        bw_log_filename = os.path.join(self.test_dir, filename)
+fio-3.35/t/run-fio-tests.py:        prev_ddir = 1
+fio-3.35/t/run-fio-tests.py:            ddir = int(vals[2])
+fio-3.35/t/run-fio-tests.py:            if prev_ddir == 1:
+fio-3.35/t/run-fio-tests.py:                if ddir != 2:
+fio-3.35/t/run-fio-tests.py:                if ddir != 1:
+fio-3.35/t/run-fio-tests.py:            prev_ddir = ddir
+fio-3.35/t/run-fio-tests.py:        file_data = self.get_file_fail(os.path.join(self.test_dir, filename))
+fio-3.35/t/run-fio-tests.py:        self.pattern_file = os.path.join(self.test_dir, "t0027.pattern")
+fio-3.35/t/run-fio-tests.py:        self.output_file = os.path.join(self.test_dir, "t0027file")
+fio-3.35/t/run-fio-tests.py:                        help='artifact root directory')
+fio-3.35/t/run-fio-tests.py:    os.mkdir(artifact_root)
+fio-3.35/t/run-fio-tests.py:    print("Artifact directory is %s" % artifact_root)
+fio-3.35/t/zbd/run-tests-against-nullb:	for d in /sys/kernel/config/nullb/*; do [ -d "$d" ] && rmdir "$d"; done
+fio-3.35/t/zbd/run-tests-against-nullb:		[ -d "$d" ] && rmdir "$d"
+fio-3.35/t/zbd/run-tests-against-nullb:	mkdir nullb0 &&
+fio-3.35/t/zbd/run-tests-against-nullb:scriptdir="$(cd "$(dirname "$0")" && pwd)"
+fio-3.35/t/zbd/run-tests-against-nullb:		cd "${scriptdir}"
+fio-3.35/t/zbd/test-zbd-support:    fio=$(dirname "$0")/../../fio
+fio-3.35/t/zbd/test-zbd-support:	    --thread=1 --direct=1
+fio-3.35/t/zbd/test-zbd-support:		      --zonesize="${zone_size}" --thread=1 --direct=1 \
+fio-3.35/t/zbd/test-zbd-support:	    --name="$dev" --wait_for="write_job" "$@" --thread=1 --direct=1
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name=job1 --filename="$dev" --rw=write --direct=0 --bs=4K	\
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'Using direct I/O is mandatory for writing to ZBD drives'
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--name=job1" "--filename=$dev" "--rw=write" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--disable_lat=1")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--name=job$i" "--filename=$dev" "--thread=1" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:	    --thread=1 --do_verify=1 --verify=md5 --direct=1 --bs=4K	\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--thread=1" "--direct=1" "--zonemode=zbd")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    "$(dirname "$0")/../../fio" "${opts[@]}" >> "${logfile}.${test_number}" 2>&1
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=$bs" "$(ioengine "psync")" "--rw=randread" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=128K" "$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:			--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "libaio")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    fio=$(dirname "$0")/../../fio
+fio-3.35/t/zbd/test-zbd-support:		--direct=1 --group_reporting=1 ${job_var_opts[@]} \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--direct=1" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((8*zone_size)) --direct=1 --iodepth=1 \
+fio-3.35/t/zbd/test-zbd-support:		--direct=1		\
+fio-3.35/t/zbd/test-zbd-support:		--direct=1		\
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio --zonemode=zbd --direct=1 --zonesize="${zone_size}" --thread=1 \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize="$zone_size" --direct=1 \
+fio-3.35/t/zbd/test-zbd-support:source "$(dirname "$0")/functions" || exit $?
+fio-3.35/t/jobs/t0002-13af05ae-post.fio:direct=1
+fio-3.35/t/jobs/t0002-13af05ae-pre.fio:direct=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:direct=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:direct=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:direct=1
+fio-3.35/t/jobs/t0005-f7078f7b.fio:direct=1
+fio-3.35/t/jobs/t0006-82af2a7c.fio:direct=1
+fio-3.35/t/jobs/t0007-37cf9e3c.fio:direct=1
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:direct=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:direct=1
+fio-3.35/t/jobs/t0023.fio:# randtrimwrite data direction tests
+fio-3.35/t/jobs/t0024.fio:# trimwrite data direction tests

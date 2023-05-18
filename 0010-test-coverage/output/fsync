@@ -1,0 +1,8 @@
+fio-3.35/t/latency_percentiles.py:#       --rw=randrw --fsync=32
+fio-3.35/t/latency_percentiles.py:# echo confirm that fsync latencies appear
+fio-3.35/t/latency_percentiles.py:                    'unified_rw_reporting', 'fsync', 'fdatasync', 'numjobs',
+fio-3.35/t/latency_percentiles.py:        """Check fsync latency percentile data.
+fio-3.35/t/latency_percentiles.py:        jsondata        JSON data for fsync operations
+fio-3.35/t/latency_percentiles.py:            print("Error checking fsync latency data")
+fio-3.35/t/latency_percentiles.py:            # fsync
+fio-3.35/t/latency_percentiles.py:            'fsync': 32,

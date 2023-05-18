@@ -1,0 +1,73 @@
+fio-3.35/t/strided.py:#       zonesize=zonerange  all blocks in zonerange touched
+fio-3.35/t/strided.py:#       zonesize>zonerange  all blocks touched and roll-over back into zone
+fio-3.35/t/strided.py:#       zonesize<zonerange  all blocks inside zone
+fio-3.35/t/strided.py:                "--zonesize={zonesize}".format(**test),
+fio-3.35/t/strided.py:    iospersize = test['zonesize'] / test['bs']
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4*4096,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4*4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096*1024,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 16*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 8192,
+fio-3.35/t/strided.py:                    "zonesize": 32*1024*1024,
+fio-3.35/t/strided.py:                    "zonesize": 4096,
+fio-3.35/t/strided.py:                    "zonesize": 8*1024*1024,
+fio-3.35/t/zbd/test-zbd-support:		      --zonesize="${zone_size}" --thread=1 --direct=1 \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" 2>&1 |
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:	    --size="${size}" --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --do_verify=1 \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}"		\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	    --zonemode=zbd --zonesize="${zone_size}" --group_reporting=1	\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonesize=${zone_size}" "--group_reporting=1")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" --offset=$off\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=strided" "--zonesize=${bs}" "--zonerange=${inc}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:			--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:		    --bs=$bs --zonemode=zbd --zonesize="${zone_size}"	\
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonesize must be specified when using --zonemode=strided' ||
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=strided --zonesize=$bs >/dev/null || return $?
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=$((2 * zone_size)) |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'job parameter zonesize.*does not match disk zone size'
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=0 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=0 |
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonesize=1 correctly for regular block devices.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=zbd --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonemode=none --zonesize=1 correctly.
+fio-3.35/t/zbd/test-zbd-support:    read_one_block --zonemode=none --zonesize=1 |
+fio-3.35/t/zbd/test-zbd-support:	grep -q 'fio: --zonemode=none and --zonesize are not compatible'
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--zonemode=zbd" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		    --zonemode=zbd --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:		--time_based --runtime=3 --zonemode=zbd --zonesize=${zone_size}\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--zonemode=zbd" "--direct=1" "--zonesize=${zone_size}")
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize=${zone_size} \
+fio-3.35/t/zbd/test-zbd-support:		--zonesize=${zone_size}	\
+fio-3.35/t/zbd/test-zbd-support:		--zonesize=${zone_size}	\
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --direct=1 --zonesize="${zone_size}" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio --zonemode=zbd --direct=1 --zonesize="${zone_size}" --thread=1 \
+fio-3.35/t/zbd/test-zbd-support:		--zonemode=zbd --zonesize="$zone_size" --direct=1 \

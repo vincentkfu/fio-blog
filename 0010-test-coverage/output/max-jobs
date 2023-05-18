@@ -1,0 +1,7 @@
+fio-3.35/t/jsonplus2csv_test.py:        "--max-jobs=4",
+fio-3.35/t/latency_percentiles.py:            "--max-jobs=16",
+fio-3.35/t/readonly.py:                "--max-jobs=16",
+fio-3.35/t/run-fio-tests.py:            "--max-jobs=16",
+fio-3.35/t/steadystate_tests.py:        parameters = [ "--max-jobs=16", "--name=job{0}".format(jobnum) ]
+fio-3.35/t/strided.py:                "--max-jobs=16",
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--max-jobs=16" "--aux-path=/tmp" "--allow_file_create=0" \

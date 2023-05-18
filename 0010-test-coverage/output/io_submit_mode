@@ -1,0 +1,2 @@
+fio-3.35/t/jobs/t0010-b7aae4ba.fio:io_submit_mode=offload
+fio-3.35/t/jobs/t0013.fio:io_submit_mode=offload

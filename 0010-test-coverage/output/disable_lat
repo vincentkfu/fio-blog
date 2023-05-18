@@ -1,0 +1,1 @@
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--disable_lat=1")

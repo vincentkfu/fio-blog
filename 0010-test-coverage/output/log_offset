@@ -1,0 +1,11 @@
+fio-3.35/t/log_compression.py:        '--log_offset=1',
+fio-3.35/t/log_compression.py:        log_offset = int(line.split(',')[4])
+fio-3.35/t/log_compression.py:        if log_offset != expected_offset:
+fio-3.35/t/log_compression.py:                log_offset, line_number, expected_offset))
+fio-3.35/t/strided.py:                "--log_offset=1",
+fio-3.35/t/jobs/t0019.fio:log_offset=1
+fio-3.35/t/jobs/t0020.fio:log_offset=1
+fio-3.35/t/jobs/t0021.fio:log_offset=1
+fio-3.35/t/jobs/t0022.fio:log_offset=1
+fio-3.35/t/jobs/t0023.fio:log_offset=1
+fio-3.35/t/jobs/t0024.fio:log_offset=1

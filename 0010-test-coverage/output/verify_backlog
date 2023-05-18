@@ -1,0 +1,5 @@
+fio-3.35/t/zbd/test-zbd-support:		--verify=crc32c --do_verify=1 --verify_backlog=2 \
+fio-3.35/t/jobs/t0005-f7078f7b.fio:verify_backlog=32
+fio-3.35/t/jobs/t0006-82af2a7c.fio:verify_backlog=1024
+fio-3.35/t/jobs/t0008-ae2fafc8.fio:verify_backlog=1
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_backlog=1m

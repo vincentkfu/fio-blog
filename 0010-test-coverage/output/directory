@@ -1,0 +1,11 @@
+fio-3.35/t/jsonplus2csv_test.py:                        help='directory containing fio_jsonplus2csv script')
+fio-3.35/t/latency_percentiles.py:        artifact_root   root directory for artifacts (subdirectory will be created under here)
+fio-3.35/t/latency_percentiles.py:    parser.add_argument('-a', '--artifact-root', help='artifact root directory')
+fio-3.35/t/latency_percentiles.py:    print("Artifact directory is %s" % artifact_root)
+fio-3.35/t/random_seed.py:        artifact_root   root directory for artifacts (subdirectory will be created under here)
+fio-3.35/t/random_seed.py:    parser.add_argument('-a', '--artifact-root', help='artifact root directory')
+fio-3.35/t/random_seed.py:    print(f"Artifact directory is {artifact_root}")
+fio-3.35/t/run-fio-tests.py:# - The artifact directory must be on a file system that accepts 512-byte IO
+fio-3.35/t/run-fio-tests.py:# - The artifact directory needs to be on an SSD. Otherwise tests that carry
+fio-3.35/t/run-fio-tests.py:                        help='artifact root directory')
+fio-3.35/t/run-fio-tests.py:    print("Artifact directory is %s" % artifact_root)

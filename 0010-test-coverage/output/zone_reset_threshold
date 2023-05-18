@@ -1,0 +1,16 @@
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq --zone_reset_threshold=-1 |&
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq --zone_reset_threshold=2  |&
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq --zone_reset_threshold=.4:.6 |&
+fio-3.35/t/zbd/test-zbd-support:		   --zone_reset_frequency=.01 --zone_reset_threshold=.90 \
+fio-3.35/t/zbd/test-zbd-support:# Verify that zone_reset_threshold only accounts written bytes in seq
+fio-3.35/t/zbd/test-zbd-support:	# Set zone_reset_threshold as 0.1. The threshold size is less than
+fio-3.35/t/zbd/test-zbd-support:	# If fio would count the conv zones for zone_reset_threshold, the ratio
+fio-3.35/t/zbd/test-zbd-support:		--zone_reset_threshold=.1 --zone_reset_frequency=1.0 \
+fio-3.35/t/zbd/test-zbd-support:# Test zone_reset_threshold with verify.
+fio-3.35/t/zbd/test-zbd-support:			       --zone_reset_threshold=.1 \
+fio-3.35/t/zbd/test-zbd-support:# Test fio errors out zone_reset_threshold option for multiple jobs with
+fio-3.35/t/zbd/test-zbd-support:		       --zone_reset_threshold=0.1 --zone_reset_frequency=1 \
+fio-3.35/t/zbd/test-zbd-support:# Test zone_reset_threshold option works for multiple jobs with same write
+fio-3.35/t/zbd/test-zbd-support:		       --zone_reset_frequency=1 --zone_reset_threshold=.5 \
+fio-3.35/t/zbd/test-zbd-support:# Test zone_reset_threshold option works for a read job and a write job with
+fio-3.35/t/zbd/test-zbd-support:		--zone_reset_frequency=1 --zone_reset_threshold=.5 \

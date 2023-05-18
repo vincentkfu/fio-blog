@@ -1,0 +1,35 @@
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:# ./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:#./fio/fio --name=test --randrepeat=0 --norandommap --time_based --runtime=2s --size=512M \
+fio-3.35/t/latency_percentiles.py:            "--norandommap",
+fio-3.35/t/run-fio-tests.py:            self.failure_reason += " no duplicate offsets found with norandommap=1"
+fio-3.35/t/strided.py:    if 'norandommap' in test:
+fio-3.35/t/strided.py:        fio_args.append('--norandommap')
+fio-3.35/t/strided.py:        # skip next section if norandommap is enabled with no
+fio-3.35/t/strided.py:        if 'norandommap' in test:
+fio-3.35/t/strided.py:                # norandommap
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/strided.py:                    "norandommap": 1,
+fio-3.35/t/zbd/test-zbd-support:		    --offset=$off --loops=2 --norandommap=1 \
+fio-3.35/t/zbd/test-zbd-support:		    --loops=2 --time_based --runtime=30s --norandommap=1\
+fio-3.35/t/zbd/test-zbd-support:	    --filename="${dev}" --norandommap=1 \
+fio-3.35/t/jobs/t0007-37cf9e3c.fio:norandommap
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:norandommap
+fio-3.35/t/jobs/t0021.fio:norandommap=1
+fio-3.35/t/jobs/t0022.fio:# make sure that when we enable norandommap we touch some offsets more than once
+fio-3.35/t/jobs/t0022.fio:norandommap=1
+fio-3.35/t/jobs/t0023.fio:norandommap=1
+fio-3.35/t/jobs/t0023.fio:norandommap=1
+fio-3.35/t/jobs/t0023.fio:norandommap=1
+fio-3.35/t/jobs/t0023.fio:norandommap=1

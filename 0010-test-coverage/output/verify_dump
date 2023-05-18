@@ -1,0 +1,3 @@
+fio-3.35/t/jobs/t0003-0ae2c6e1-post.fio:verify_dump=1
+fio-3.35/t/jobs/t0003-0ae2c6e1-pre.fio:verify_dump=1
+fio-3.35/t/jobs/t0004-8a99fdf6.fio:verify_dump=1

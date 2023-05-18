@@ -1,0 +1,14 @@
+fio-3.35/t/log_compression.py:# Test log_compression and log_store_compressed. Uses null ioengine.
+fio-3.35/t/log_compression.py:# Buggy result: Log entries out of order (usually without log_store_compressed)
+fio-3.35/t/log_compression.py:# and/or missing log entries (usually with log_store_compressed)
+fio-3.35/t/log_compression.py:# With log_store_compressed=1 and log_compression=10K
+fio-3.35/t/log_compression.py:def run_fio(fio,log_store_compressed):
+fio-3.35/t/log_compression.py:    if log_store_compressed:
+fio-3.35/t/log_compression.py:        fio_args.append('--log_store_compressed=1')
+fio-3.35/t/log_compression.py:    if log_store_compressed:
+fio-3.35/t/log_compression.py:def check_log_file(log_store_compressed):
+fio-3.35/t/log_compression.py:    filename = 'test_bw.from_fz.log' if log_store_compressed else 'test_bw.log'
+fio-3.35/t/log_compression.py:    for log_store_compressed in [False, True]:
+fio-3.35/t/log_compression.py:        run_fio(fio_path, log_store_compressed)
+fio-3.35/t/log_compression.py:        passed = check_log_file(log_store_compressed)
+fio-3.35/t/log_compression.py:        print('Test with log_store_compressed={} {}'.format(log_store_compressed,

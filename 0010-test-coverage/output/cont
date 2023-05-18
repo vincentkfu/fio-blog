@@ -1,0 +1,34 @@
+fio-3.35/t/jsonplus2csv_test.py:                        help='directory containing fio_jsonplus2csv script')
+fio-3.35/t/latency_percentiles.py:            # chance to clean up and means that child processes may continue
+fio-3.35/t/latency_percentiles.py:                continue
+fio-3.35/t/latency_percentiles.py:                continue
+fio-3.35/t/random_seed.py:                # chance to clean up and means that child processes may continue
+fio-3.35/t/random_seed.py:                    continue
+fio-3.35/t/random_seed.py:    Test object when randseed=something controls the generated seeds. If run
+fio-3.35/t/run-fio-tests.py:            # chance to clean up and means that child processes may continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:            contents, success = FioJobTest.get_file(config_file)
+fio-3.35/t/run-fio-tests.py:                Requirements._zbd = "CONFIG_HAS_BLKZONED" in contents
+fio-3.35/t/run-fio-tests.py:                Requirements._libaio = "CONFIG_LIBAIO" in contents
+fio-3.35/t/run-fio-tests.py:            contents, success = FioJobTest.get_file("/proc/kallsyms")
+fio-3.35/t/run-fio-tests.py:                Requirements._io_uring = "io_uring_setup" in contents
+fio-3.35/t/run-fio-tests.py:            continue
+fio-3.35/t/run-fio-tests.py:            continue
+fio-3.35/t/run-fio-tests.py:                continue
+fio-3.35/t/run-fio-tests.py:            contents, _ = FioJobTest.get_file(test.stderr_file)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stderr:\n%s", config['test_id'], contents)
+fio-3.35/t/run-fio-tests.py:            contents, _ = FioJobTest.get_file(test.stdout_file)
+fio-3.35/t/run-fio-tests.py:            logging.debug("Test %d: stdout:\n%s", config['test_id'], contents)
+fio-3.35/t/strided.py:            continue
+fio-3.35/t/strided.py:                    continue
+fio-3.35/t/strided.py:                continue
+fio-3.35/t/zbd/functions:		((line[0] == line[1])) && continue
+fio-3.35/t/zbd/run-tests-against-nullb:		((rc == 2)) && continue
+fio-3.35/t/zbd/run-tests-against-nullb:		((list_only)) && continue
+fio-3.35/t/zbd/test-zbd-support:			continue
+fio-3.35/t/zbd/test-zbd-support:	# Total I/O size is 1/8 = 0.125 of the I/O range of cont + seq zones.
+fio-3.35/t/zbd/test-zbd-support:		--time_based=1 --runtime=30s --continue_on_error=0 \

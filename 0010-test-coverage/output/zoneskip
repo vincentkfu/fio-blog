@@ -1,0 +1,5 @@
+fio-3.35/t/strided.py:# --zonemode=strided, zoneskip unset
+fio-3.35/t/zbd/test-zbd-support:# Check whether fio handles --zonemode=zbd --zoneskip=1 correctly.
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --rw=write --bs=$bs --zoneskip=1 \
+fio-3.35/t/zbd/test-zbd-support:    grep -q 'zoneskip 1 is not a multiple of the device zone size' "${logfile}.${test_number}"
+fio-3.35/t/zbd/test-zbd-support:		--zoneskip=2z		\

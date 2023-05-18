@@ -1,0 +1,2 @@
+fio-3.35/t/jobs/t0027.fio:buffer_pattern='t0027.pattern'
+fio-3.35/t/jobs/t0028-c6cade16.fio:buffer_pattern="abcd"-120xdeadface

@@ -1,0 +1,60 @@
+fio-3.35/t/jsonplus2csv_test.py:# We need an async ioengine to get submission latencies
+fio-3.35/t/latency_percentiles.py:# - DONE sync_lat
+fio-3.35/t/latency_percentiles.py:#   confirm that sync_lat data appears
+fio-3.35/t/latency_percentiles.py:#       --rw=randrw --fsync=32
+fio-3.35/t/latency_percentiles.py:# echo confirm that fsync latencies appear
+fio-3.35/t/latency_percentiles.py:                    'unified_rw_reporting', 'fsync', 'fdatasync', 'numjobs',
+fio-3.35/t/latency_percentiles.py:    def check_sync_lat(self, jsondata, plus=False):
+fio-3.35/t/latency_percentiles.py:        """Check fsync latency percentile data.
+fio-3.35/t/latency_percentiles.py:        jsondata        JSON data for fsync operations
+fio-3.35/t/latency_percentiles.py:            print('sync sample sizes match: %d' % jsondata['total_ios'])
+fio-3.35/t/latency_percentiles.py:        if not self.check_sync_lat(job['sync'], plus=True):
+fio-3.35/t/latency_percentiles.py:            print("Error checking fsync latency data")
+fio-3.35/t/latency_percentiles.py:            # because the null ioengine is synchronous
+fio-3.35/t/latency_percentiles.py:            # all will appear because libaio is asynchronous
+fio-3.35/t/latency_percentiles.py:            # fsync
+fio-3.35/t/latency_percentiles.py:            'fsync': 32,
+fio-3.35/t/latency_percentiles.py:            # because the null ioengine is synchronous
+fio-3.35/t/latency_percentiles.py:            # all will appear because libaio is asynchronous
+fio-3.35/t/latency_percentiles.py:            # all will appear because libaio is asynchronous
+fio-3.35/t/sgunmap-perf.py:def fulldevice(fio, dev, ioengine='psync', rw='trim', bs='1M'):
+fio-3.35/t/zbd/test-zbd-support:    write_opts=(--name="write_job" --rw=write "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" --size="${zone_size}" --thread=1	\
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--thread=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("$(ioengine "psync")" "--rw=read" "--direct=1" "--disable_lat=1")
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --iodepth=1 --rw=write	\
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" --iodepth=1 --rw=read --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:		    "$(ioengine "psync")" --rw=read --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --rw=write --bs="$bs"		\
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "$(ioengine "psync")" "--rw=write" "--bs=16K")
+fio-3.35/t/zbd/test-zbd-support:    run_fio --name="$dev" --filename="$dev" "$(ioengine "psync")" --rw="$1" \
+fio-3.35/t/zbd/test-zbd-support:	opts+=("--size=$zone_size" "--io_size=$capacity" "$(ioengine "psync")" "--rw=randwrite")
+fio-3.35/t/zbd/test-zbd-support:	opts+=("$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=$bs" "$(ioengine "psync")" "--rw=randread" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    opts+=("--bs=128K" "$(ioengine "psync")" "--rw=randwrite" "--direct=1")
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --iodepth=1 --rw=write	\
+fio-3.35/t/zbd/test-zbd-support:# Test repeated async write job with verify using two unaligned block sizes.
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --offset=$off --size=$size "$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job --rw=read "$(ioengine "psync")" --offset=$off --bs=$bs \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "psync")" --iodepth=1 --rw=randwrite --bs=$bs\
+fio-3.35/t/zbd/test-zbd-support:    run_fio_on_seq "$(ioengine "psync")" --rw=write --bs=$bs --zoneskip=1 \
+fio-3.35/t/zbd/test-zbd-support:    run_one_fio_job "$(ioengine "psync")" --rw=write \
+fio-3.35/t/zbd/test-zbd-support:		--io_size=$((io_size)) "$(ioengine "psync")" --offset=$off \
+fio-3.35/t/zbd/test-zbd-support:		--size=$((4 * zone_size)) "$(ioengine "psync")" --offset=${off}\
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:		"$(ioengine "psync")"	\
+fio-3.35/t/zbd/test-zbd-support:# Test that repeated async write job does not cause zone reset during writes
+fio-3.35/t/zbd/test-zbd-support:            --name="precondition"  --rw=write "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:	    "$(ioengine "psync")" \
+fio-3.35/t/zbd/test-zbd-support:		run_fio_on_seq "$(ioengine "psync")" --rw=${w} --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size=$zone_size \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --size="$zone_size" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio_on_seq "$(ioengine "psync")" --rw=write --bs="$bs" \
+fio-3.35/t/zbd/test-zbd-support:	run_fio "$(ioengine "psync")" --bs="$bs" --size=$size --loops=$loops \
+fio-3.35/t/jobs/t0005-f7078f7b.fio:ioengine=sync
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async=6
+fio-3.35/t/jobs/t0009-f8b0bd10.fio:verify_async_cpus=0-3

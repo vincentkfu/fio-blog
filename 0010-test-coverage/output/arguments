@@ -1,0 +1,8 @@
+fio-3.35/t/jsonplus2csv_test.py:    """Parse command-line arguments."""
+fio-3.35/t/latency_percentiles.py:    """Parse command-line arguments."""
+fio-3.35/t/log_compression.py:    """Parse command-line arguments."""
+fio-3.35/t/random_seed.py:    """Parse command-line arguments."""
+fio-3.35/t/run-fio-tests.py:    """Parse command-line arguments."""
+fio-3.35/t/run-fio-tests.py:        logging.debug("Pass-through arguments: %s", pass_through)
+fio-3.35/t/steadystate_tests.py:            print("PASSED '{0}' found with arguments {1}".format(test['output'], test['args']))
+fio-3.35/t/steadystate_tests.py:            print("FAILED '{0}' NOT found with arguments {1}".format(test['output'], test['args']))
