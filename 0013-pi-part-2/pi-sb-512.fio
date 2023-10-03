@@ -1,0 +1,17 @@
+[global]
+filename=/dev/ng0n1
+ioengine=io_uring_cmd
+cmd_type=nvme
+size=1G
+iodepth=1
+bs=512
+pi_act=1
+pi_chk=GUARD,REFTAG
+thread=1
+stonewall=1
+ 
+[write]
+rw=write
+ 
+[read]
+rw=read
